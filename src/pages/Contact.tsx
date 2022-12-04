@@ -1,10 +1,16 @@
 import { useState } from "react";
 import {InputGroup,Form, Button} from "react-bootstrap"
+import sendEmail,{ sendEmailProps } from "../services/sendEmail";
 const Contact = ()=>{
 const [name,setName] = useState("");
 const [topic,setTopic] = useState("");
 const [message,setMessage] = useState("");
 const [email, setEmail] = useState("");
+const onSubmit=()=>{
+  const tosend:sendEmailProps = {name:name,email:email,topic:topic,message:message}
+  console.log(tosend)
+  sendEmail(tosend);
+}
 
 return (<>
     <Form style={{marginTop:50, width:"80%"}} id='contact_form'>
@@ -48,9 +54,9 @@ return (<>
         />
       </InputGroup>
       {name.length > 0 && topic.length > 0 && message.length && email.length > 0 ? (
-         <Button type="submit" style={{marginTop:20, backgroundColor:"rgba(50,200,0,1.0)"}} onClick={()=>{console.log("test")}}>Send</Button>
+         <Button style={{marginTop:20, backgroundColor:"rgba(50,200,0,1.0)"}} onClick={()=>{onSubmit()}}>Submit</Button>
       ) : (
-        <Button type="submit" style={{marginTop:20, backgroundColor:"rgba(100,0,0,1.0)"}}>Fill in all fields</Button> 
+        <Button style={{marginTop:20, backgroundColor:"rgba(100,0,0,1.0)"}}>Fill in all fields</Button> 
       )}
      
 
