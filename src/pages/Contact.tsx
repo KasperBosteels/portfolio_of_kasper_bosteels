@@ -54,9 +54,9 @@ return (<>
         />
       </InputGroup>
       {name.length > 0 && topic.length > 0 && message.length && email.length > 0 ? (
-         <Button style={{marginTop:20, backgroundColor:"rgba(50,200,0,1.0)"}} onClick={()=>{onSubmit()}}>Submit</Button>
+         <Button style={{marginTop:20, backgroundColor:"rgba(50,200,0,1.0)"}} onClick={()=>{onSubmit()}} active>Submit</Button>
       ) : (
-        <Button style={{marginTop:20, backgroundColor:"rgba(100,0,0,1.0)"}}>Fill in all fields</Button> 
+        <Button style={{marginTop:20, backgroundColor:"rgba(100,0,0,1.0)"}} disabled>Fill in all fields</Button> 
       )}
      
 
