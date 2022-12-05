@@ -4,8 +4,8 @@ import Contact from "./pages/Contact";
 import About from "./pages/About"
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import Layout from "./pages/Layout";
-
 function App() {
+
   return (
 <BrowserRouter>
     <Routes>

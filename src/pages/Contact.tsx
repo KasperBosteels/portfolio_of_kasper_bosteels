@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import {InputGroup,Form, Button} from "react-bootstrap"
 import sendEmail,{ sendEmailProps } from "../services/sendEmail";
+import { modeDataContext } from "./Layout";
 const Contact = ()=>{
+const {theme} = useContext(modeDataContext)
 const [name,setName] = useState("");
 const [topic,setTopic] = useState("");
 const [message,setMessage] = useState("");
@@ -13,7 +15,7 @@ const onSubmit=()=>{
 }
 
 return (<>
-    <Form style={{marginTop:50, width:"80%"}} id='contact_form'>
+    <Form style={{marginBottom:50,marginTop:50, width:"50%"}} id='contact_form'>
      <InputGroup className="mb-3">
         <Form.Control
           name="name"
@@ -54,9 +56,9 @@ return (<>
         />
       </InputGroup>
       {name.length > 0 && topic.length > 0 && message.length && email.length > 0 ? (
-         <Button style={{marginTop:20, backgroundColor:"rgba(50,200,0,1.0)"}} onClick={()=>{onSubmit()}} active>Submit</Button>
+         <Button style={{marginTop:20}}variant="success" onClick={()=>{onSubmit()}} active>Submit</Button>
       ) : (
-        <Button style={{marginTop:20, backgroundColor:"rgba(100,0,0,1.0)"}} disabled>Fill in all fields</Button> 
+        <Button style={{marginTop:20}}variant="danger" disabled>Fill in all fields</Button> 
       )}
      
 

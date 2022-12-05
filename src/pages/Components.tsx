@@ -1,5 +1,8 @@
 import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
+import useLocalStorage from "use-local-storage"
+import {modeDataContext} from "./Layout";
+import {useContext} from "react";
 interface components {
 name:string,
 description:string,
@@ -24,12 +27,13 @@ const componenten:components[] = [
 ];
 //todo: add navigation
 const Componenten = ()=>{
+    const {theme} = useContext(modeDataContext)
     return (
         <>
         <div className="container">
             <h2>Componenten</h2>
             <div className="listContainer">
-              <Table striped bordered hover>
+              <Table striped bordered hover variant={theme} style={{transition:"all",transitionDuration:".5s"}}>
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -39,13 +43,13 @@ const Componenten = ()=>{
                 </thead>
                 <tbody>
                 {componenten.map((component,index)=>(
-                <>
-                    <tr>
+                
+                    <tr key={index}>
                         <td>{component.name}</td>
                         <td>{component.description}</td>
                         <td><Button as="input" type="button" value="Open"/></td>
                     </tr>
-                </>))}
+                ))}
                 </tbody>
               </Table>
             </div>
