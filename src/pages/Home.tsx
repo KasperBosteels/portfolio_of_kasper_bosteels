@@ -1,18 +1,28 @@
-import Container from "react-bootstrap/Container"
+import LinearProgress from '@mui/material/LinearProgress';
+import Grid from '@mui/material/Unstable_Grid2'; // Grid version 2const HomePage = ()=>{
 const HomePage = ()=>{
-    return (
+return (
         <>
-        <div style={{display:"flex", flexDirection:"column"}}>
-        <Container style={{border: 2, borderColor:'rgba(0,100,0,0.3)', borderStyle:"solid", borderRadius:25, minHeight:500, width:"50%"}}>
-            <div style={{display:"flex", flexDirection:"row" }}>
-            <p style={{paddingRight:5}}>portfolio of</p><h2>Kasper Bosteels</h2>
-            <div style={{float:"left"}}>
-            <p>Hello,<br></br>I am a student at the Artesis Plantijn(AP). I am currently in my final year of my Graduates.
-            <br></br>this website will initially server as a project i had to complete and later on as my own website.</p>
+        <Grid container spacing={5}>
+        <Grid xs={8}>
+            <div style={{fontFamily:"roboto"}}>
+                <h2>Hi</h2>
+                <p>My name is Kasper Bosteels.<br></br>I am student programmer at Artesis Plantijn, following the graduates programming.<br></br>
+                I am in my final year, this website was one of our projects we had to make.<br></br>
+                For more information about me you can check out the About page, or email me via the Contact page.<br></br>
+                To check out some of my work, click the link to my github page at the bottom of this page, or go to components.</p>
             </div>
-            </div>
-       </Container>
-       </div>
+            </Grid>
+            <Grid xs={4}>
+                <h2>My skills</h2>
+                <label>JS</label><LinearProgress color="info" variant="determinate" value={50}/>
+                <label>TS</label><LinearProgress color="primary" variant="determinate" value={65}/>
+                <label>C#</label><LinearProgress color="secondary" variant="determinate" value={45}/>
+                <label>React</label><LinearProgress color="info" variant="determinate" value={30}/>
+                <label>Python</label><LinearProgress color="warning"variant="determinate" value={15}/>
+            </Grid>
+        </Grid>
+            
         </>
     )
 }
