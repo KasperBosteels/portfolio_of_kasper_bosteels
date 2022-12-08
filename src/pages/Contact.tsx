@@ -1,10 +1,8 @@
+import Paper from "@mui/material/Paper";
 import { useState, useContext } from "react";
 import {InputGroup,Form, Button} from "react-bootstrap"
-import { ThemeProvider } from "@mui/material";
 import sendEmail,{ sendEmailProps } from "../services/sendEmail";
-import { modeDataContext } from "./Layout";
 const Contact = ()=>{
-const {theme} = useContext(modeDataContext)
 const [name,setName] = useState("");
 const [topic,setTopic] = useState("");
 const [message,setMessage] = useState("");
@@ -15,6 +13,7 @@ const onSubmit=()=>{
 }
 
 return (<>
+<Paper>
     <Form style={{margin:"auto", marginTop:"5%", width:"50%"}} id='contact_form'>
      <InputGroup className="mb-3">
         <Form.Control
@@ -63,6 +62,7 @@ return (<>
      
 
       </Form>
+      </Paper>
     </>)
 }
 export default Contact;

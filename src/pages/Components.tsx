@@ -1,7 +1,6 @@
-import Button from "react-bootstrap/Button";
-import Table from "react-bootstrap/Table";
-import {modeDataContext} from "./Layout";
-import {useContext, useState} from "react";
+import {useContext} from "react";
+import Grid from "@mui/material/Unstable_Grid2";
+import { Paper } from "@mui/material";
 interface components {
 name:string,
 description:string,
@@ -26,32 +25,20 @@ const componenten:components[] = [
 ];
 //todo: add navigation
 const Componenten = ()=>{
-    const {theme} = useContext(modeDataContext)
     return (
         <>
-        <div className="container">
-            <h2>Componenten</h2>
-            <div className="listContainer">
-              <Table striped bordered hover variant={theme} style={{transition:"all",transitionDuration:".5s"}}>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Description</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                {componenten.map((component,index)=>(
-                    <tr key={index}>
-                        <td>{component.name}</td>
-                        <td>{component.description}</td>
-                        <td><Button as="input" type="button" value="Open"/></td>
-                    </tr>
-                ))}
-                </tbody>
-              </Table>
-            </div>
-        </div>
+        <Paper>
+        <Grid container spacing={5} style={{margin:"auto"}}>
+            {componenten.map((comp)=>(
+                <Grid xs={4}>
+                    <div>
+                    <h3>{comp.name}</h3>
+                    <p>{comp.description}</p>
+                    </div>
+                </Grid>
+            ))}
+        </Grid>
+        </Paper>
         </>
     )
 }

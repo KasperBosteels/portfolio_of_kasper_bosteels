@@ -23,8 +23,8 @@ const NavigationBar=({theme,toggle}:menuprops)=>{
     }
     return(
         <div>
-            <AppBar position="static">
-                <Toolbar variant="dense">
+            <AppBar position="static" >
+                <Toolbar variant="dense" color="">
                     <IconButton 
                         id="menuButton"
                         edge="start" 
@@ -43,7 +43,6 @@ const NavigationBar=({theme,toggle}:menuprops)=>{
                         <MenuItem><NavLink to="/">Home</NavLink></MenuItem>
                         <MenuItem><NavLink to="Contact">Contact</NavLink></MenuItem>
                         <MenuItem><NavLink to="Components">Components</NavLink></MenuItem>
-                        <MenuItem><NavLink to="About">About</NavLink></MenuItem>
                     </Menu>
                 <Typography variant="h6" color="inherit">
                     Portfolio of Kasper Bosteels
