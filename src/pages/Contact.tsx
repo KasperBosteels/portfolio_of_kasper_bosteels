@@ -9,11 +9,11 @@ const [message,setMessage] = useState("");
 const [email, setEmail] = useState("");
 const onSubmit=()=>{
   const tosend:sendEmailProps = {name:name,email:email,topic:topic,message:message}
-  sendEmail(tosend);
+ sendEmail(tosend);
+
 }
 
 return (<>
-<Paper>
     <Form style={{margin:"auto", marginTop:"5%", width:"50%"}} id='contact_form'>
      <InputGroup className="mb-3">
         <Form.Control
@@ -62,7 +62,6 @@ return (<>
      
 
       </Form>
-      </Paper>
     </>)
 }
 export default Contact;

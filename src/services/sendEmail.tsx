@@ -8,7 +8,8 @@ export interface sendEmailProps {
     topic:string,
     message:string
 };
-const sendEmail =async  (content:sendEmailProps)=>{
+const sendEmail =async  (content:sendEmailProps):Promise<number>=>{
+   let status:number = 201;
     const tosend = {
         name:content.name,
         email:content.email,
@@ -19,14 +20,14 @@ const sendEmail =async  (content:sendEmailProps)=>{
     init(userid)
     await send(serviceid,templateid,tosend)
         .then((res)=>{
-            console.log(res)
+        if(res.status == 200)return ('<Alert severity="success">This is a success message!</Alert>')
         }).catch((err)=>{
             console.log(err)
         })
     }catch(error){
         console.log(error)
     }finally{
-        console.log("mail should be send")
+        return status;
     }
 }
 export default sendEmail;

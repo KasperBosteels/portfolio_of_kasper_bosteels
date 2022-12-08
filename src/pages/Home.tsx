@@ -1,13 +1,19 @@
 import LinearProgress from '@mui/material/LinearProgress';
 import Grid from '@mui/material/Unstable_Grid2';
-import useTheme from '@mui/material/styles/useTheme';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
+import NYTimes from '../components/NYTimes';
+
+
+
+
+
+
+
 const HomePage = ()=>{
-return (
+    return (
         <>
         <Paper elevation={0}>
-
         <Grid container spacing={5} sx={{color:"text.primary", bgcolor:"background.default", marginTop:".5rem"}}>
         <Grid xs={8} >
             <Typography style={{fontFamily:"roboto", marginTop:50}}>
@@ -30,9 +36,9 @@ return (
                 </div >
                 </Typography>
             </Grid>
+            <NYTimes/>          
         </Grid>
         </Paper>
-
         </>
     )
 }
