@@ -2,7 +2,8 @@ import Homepage from "./pages/Home"
 import Componenten from "./pages/Components";
 import Contact from "./pages/Contact";
 import About from "./pages/About"
-import {BrowserRouter, Routes, Route} from "react-router-dom"
+import ErrorPage from "./pages/404";
+import {BrowserRouter, Routes, Route, createBrowserRouter, RouterProvider} from "react-router-dom"
 import Layout from "./pages/Layout";
 import useLocalStorage from "use-local-storage";
 
@@ -13,17 +14,36 @@ function App() {
    const newTheme = theme === "light" ? "dark" : "light";
    setTheme(newTheme);
   }
+  const router = createBrowserRouter([
+    {
+      path:"/",
+      element:<Layout theme={theme} toggle={toggle}/>,
+      children:[
+        {
+          path:"",
+          element: <Homepage />
+        },
+        {
+          path: "Contact",
+          element: <Contact/>
+        },
+        {
+          path:"Components",
+          element:<Componenten/>
+        },
+        {
+          path:"About",
+          element:<About/>
+        }
+      ],
+      errorElement:<ErrorPage/>
+    }
+  ])
   return (
-<BrowserRouter>
-    <Routes>
-    <Route path="/" element={<Layout theme={theme} toggle={toggle}/>}>
-      <Route index element={<Homepage/>}/>
-      <Route path="Contact" element={<Contact/>}/>
-      <Route path="Components" element={<Componenten/>}/>
-      <Route path="About" element={<About/>}/>
-    </Route>
-    </Routes>
-    </BrowserRouter>
+<>
+    <RouterProvider router={router}/>
+</>
+    
   );
 }
 
