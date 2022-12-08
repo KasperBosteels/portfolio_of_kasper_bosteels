@@ -1,5 +1,4 @@
 import {Outlet} from "react-router-dom"
-import React from "react"
 import { CssBaseline,  } from "@mui/material";
 import NavigationBar from "../components/Menu";
 export interface mode {

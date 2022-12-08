@@ -21,7 +21,7 @@ export const dark = {
 } 
 
 function App() {
-  const [theme,setTheme] = useState<boolean>(false);
+  const [theme,setTheme] = useLocalStorage<boolean>("dark-mode",false);
 
   const toggle = () =>{
    setTheme(!theme);
