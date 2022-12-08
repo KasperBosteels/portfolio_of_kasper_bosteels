@@ -1,8 +1,7 @@
 import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
-import useLocalStorage from "use-local-storage"
 import {modeDataContext} from "./Layout";
-import {useContext} from "react";
+import {useContext, useState} from "react";
 interface components {
 name:string,
 description:string,
@@ -43,7 +42,6 @@ const Componenten = ()=>{
                 </thead>
                 <tbody>
                 {componenten.map((component,index)=>(
-                
                     <tr key={index}>
                         <td>{component.name}</td>
                         <td>{component.description}</td>

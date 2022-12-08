@@ -11,12 +11,11 @@ const [message,setMessage] = useState("");
 const [email, setEmail] = useState("");
 const onSubmit=()=>{
   const tosend:sendEmailProps = {name:name,email:email,topic:topic,message:message}
-  console.log(tosend)
   sendEmail(tosend);
 }
 
 return (<>
-    <Form style={{marginBottom:50,marginTop:50, width:"50%"}} id='contact_form'>
+    <Form style={{margin:"auto", marginTop:"5%", width:"50%"}} id='contact_form'>
      <InputGroup className="mb-3">
         <Form.Control
           name="name"
