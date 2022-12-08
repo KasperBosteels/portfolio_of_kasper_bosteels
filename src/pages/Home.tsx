@@ -8,9 +8,9 @@ const theme = useContext(modeDataContext)
 return (
         <>
         <Grid container spacing={5}>
-        <Grid xs={8} spacing={2} >
-            <div style={{fontFamily:"roboto"}}>
-                <h2>Hi</h2>
+        <Grid xs={8} >
+            <div style={{fontFamily:"roboto", maxWidth:'50%', margin:"auto", marginTop:50}}>
+                <h2>Hi!</h2>
                 <p>My name is Kasper Bosteels.<br></br>I am student programmer at Artesis Plantijn, following the graduates programming.<br></br>
                 I am in my final year, this website was one of our projects we had to make.<br></br>
                 For more information about me you can check out the About page, or email me via the Contact page.<br></br>
@@ -18,7 +18,7 @@ return (
             </div>
             </Grid>
             <Grid xs={4} >
-                <div className="skilsContainer">
+                <div style={{minWidth:"50%", maxWidth:"70%", height:"100%", margin:"auto", borderWidth:5,borderColor:"rgba(0,0,0,0.3)",backgroundColor:"rgba(0,0,0,0.1)", borderStyle:"solid", borderRadius:"1rem", marginTop:50 }}>
                 <h2>My skills</h2>
                 <label>JS</label><LinearProgress color="info" variant="determinate" value={50}/>
                 <label>TS</label><LinearProgress color="primary" variant="determinate" value={65}/>

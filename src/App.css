@@ -29,7 +29,9 @@
 .App-link {
   color: #61dafb;
 }
-.skilsContainer{
+.MuiGrid-root{
  border-width:3;
  border-color:"rgba(0,0,0,0.5)";
+ border-radius: 2.5;
+
 }
