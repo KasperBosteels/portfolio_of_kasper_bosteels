@@ -36,7 +36,6 @@ function App() {
           element:<About/>
         }
       ],
-      errorElement:<ErrorPage/>
     }
   ])
   return (

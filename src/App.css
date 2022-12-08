@@ -11,7 +11,6 @@
 
 .App {
   text-align: center;
-  background-color: black;
   transition: all .5s;
 }
 
@@ -30,7 +29,7 @@
 .App-link {
   color: #61dafb;
 }
-.app-body {
-  background-color: black;
+.skilsContainer{
+ border-width:3;
+ border-color:"rgba(0,0,0,0.5)";
 }
-

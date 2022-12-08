@@ -58,7 +58,7 @@ const NavigationBar=({theme,toggle}:menuprops)=>{
                     left:0,
                     right:0 , 
                     height:"100%" ,
-                    backgroundColor:"black"}} 
+                    backgroundColor: theme == "dark" ? "white" : "black"}} 
                     onClick={()=>toggle()}>{theme == "light" ? (<DarkMode/>):(<LightMode/>)}</Button>
                 </Toolbar>
             </AppBar>

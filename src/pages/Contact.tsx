@@ -1,5 +1,6 @@
 import { useState, useContext } from "react";
 import {InputGroup,Form, Button} from "react-bootstrap"
+import { ThemeProvider } from "@mui/material";
 import sendEmail,{ sendEmailProps } from "../services/sendEmail";
 import { modeDataContext } from "./Layout";
 const Contact = ()=>{
@@ -63,7 +64,6 @@ return (<>
      
 
       </Form>
-     
     </>)
 }
 export default Contact;
