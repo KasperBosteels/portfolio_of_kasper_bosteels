@@ -10,10 +10,10 @@ interface articleProp {
 }
 const Article = ({data}:articleProp)=>{
 return (
-    <Card style={{maxWidth:345, float:"left"}}>
-        <CardHeader avatar={<Avatar sx={{bgcolor:"white"}}>NYT</Avatar>}
+    <Card style={{maxWidth:345,maxHeight:390, margin:"auto"}}>
+        <CardHeader avatar={<a href="https://developer.nytimes.com."><img src="/poweredby_nytimes_30a.png"/></a>}
         title={data.title}
-        subheader={new Date(data.published_date).toString()}/>
+        subheader={new Date(data.published_date).toDateString()}/>
         <CardMedia
             component="img"
             height="194"

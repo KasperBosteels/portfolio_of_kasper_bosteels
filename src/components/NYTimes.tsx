@@ -1,8 +1,9 @@
 import React,{ useState } from 'react';
-import { CircularProgress, Paper } from '@mui/material';
+import { CircularProgress, Grid, Paper } from '@mui/material';
 import axios from 'axios';
 import {Result} from "../interfaces"
 import Article from './articleComponent';
+import Typography from '@mui/material/Typography';
 const NYTimes = () =>{
 const [news,setNews] = useState<Result[]>([]);
     axios.get("https://api.nytimes.com/svc/topstories/v2/science.json?api-key=ZIdGxGbiWw9if9XwvGTQm26JA3jzYEXy").then((res)=>{
@@ -11,12 +12,11 @@ const [news,setNews] = useState<Result[]>([]);
     }).catch((err)=>console.log(err))
     return (
         <>
-        <Paper style={{alignItems:"center", justifyItems:"center"}}>
+        <Grid container direction={news.length > 0 ? "row" : "column"} style={{maxWidth:"90%", margin:"auto", maxHeight:345, verticalAlign:"center",justifyContent:"center",}}>
             {news.length > 0 ? (
             news.map((n)=>(<Article data={n}/>))
-            ) : <CircularProgress/>}
-        </Paper>
-        
+            ) : (<><Typography> assembling the news for you...</Typography><CircularProgress/></>)}
+        </Grid>
         </>
     )
    

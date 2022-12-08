@@ -3,6 +3,7 @@ import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import NYTimes from '../components/NYTimes';
+import { fontSize } from '@mui/system';
 
 
 
@@ -17,11 +18,13 @@ const HomePage = ()=>{
         <Grid container spacing={5} sx={{color:"text.primary", bgcolor:"background.default", marginTop:".5rem"}}>
         <Grid xs={8} >
             <Typography style={{fontFamily:"roboto", marginTop:50}}>
-                <h2>Hi!</h2>
-                <p>My name is Kasper Bosteels.<br></br>I am student programmer at Artesis Plantijn, following the graduates programming.<br></br>
-                I am in my final year, this website was one of our projects we had to make.<br></br>
-                For more information about me you can check out the About page, or email me via the Contact page.<br></br>
-                To check out some of my work, click the link to my github page at the bottom of this page, or go to components.</p>
+                <h3>welkom</h3>
+                <p>Welkom op mijn portfolio site! 
+                    Ik ben Kasper Bosteels, een ervaren ontwikkelaar met een passie voor het creëren van 
+                    slimme en gebruiksvriendelijke applicaties. Op deze site kunt u enkele van mijn recente 
+                    projecten bekijken, evenals informatie over mijn vaardigheden en werkervaring. Neem gerust contact 
+                    met mij op als u geïnteresseerd bent in mijn diensten of als u gewoon verder wilt praten over technologie en ontwikkeling.</p>
+                    <p className='tinyText'>(made by OpenAI)</p>
             </Typography>
             </Grid>
             <Grid xs={4} >
