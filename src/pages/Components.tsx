@@ -1,5 +1,5 @@
 import Grid from "@mui/material/Unstable_Grid2";
-import { Paper } from "@mui/material";
+import { Paper,Button } from "@mui/material";
 import Filtering from "../components/showroom/Filtering";
 import ShoppingList from "../components/showroom/Shoppinglist";
 import Slotmachine from "../components/showroom/slots/Slotmachine";
@@ -8,6 +8,7 @@ import DadJoke from "../components/showroom/DadJoke";
 import Pokedex from "../components/showroom/Pokedex";
 import Counter from "../components/showroom/counter";
 import TodoComponent from "../components/showroom/todo/Todo";
+import { useState } from "react";
 interface components {
 name:string,
 description:string,
@@ -54,21 +55,30 @@ const componenten:components[] = [
 ];
 //todo: add navigation
 const Componenten = ()=>{
+    const [active,setActive] = useState<number>(9);
     return (
-        <>
-        <Paper>
-        <Grid container spacing={5} style={{margin:"auto"}}>
-            {componenten.map((comp)=>(
-                <Grid xs={4}>
+        <Grid container spacing={8} style={{margin:"auto"}}>
+            {componenten.map((comp,i)=>(
+                active !== i ? (
+                    <Grid xs={8} style={{width:"90%", margin:"auto", borderColor:"rgb(0,0,0)", borderWidth:3, borderStyle:"solid"}}>
                     <div>
                     <h3>{comp.name}</h3>
                     <p>{comp.description}</p>
                     </div>
+                    <Button onClick={()=>setActive(i)}>Try me!</Button>
                 </Grid>
+                ):(
+                    <Grid xs={8} style={{width:"90%", margin:"auto", borderColor:"rgb(0,0,0)", borderWidth:3, borderStyle:"solid"}}>
+                        <div>
+                            <h3>{comp.name}</h3>
+                            <p>Beschrijving:<br></br>{comp.description}</p>
+                            {comp.component}
+                        </div>
+                    </Grid>
+                )
+                
             ))}
         </Grid>
-        </Paper>
-        </>
     )
 }
 export default Componenten;
