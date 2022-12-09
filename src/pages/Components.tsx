@@ -53,7 +53,7 @@ const componenten:components[] = [
         component:<TodoComponent/>
     }
 ];
-//todo: add navigation
+//todo: style individal comp.components :(
 const Componenten = ()=>{
     const [active,setActive] = useState<number>(9);
     return (
@@ -62,14 +62,25 @@ const Componenten = ()=>{
                 <Grid xs={8} style={{width:"95%", margin:"auto", padding:".3rem"}}>
                     <Paper elevation={8}>
                         <h3 style={{margin:"1.5rem"}}>{comp.name}</h3>
-                        {active !== i ? (<p>{comp.description}</p>):<></>}
+                        {active !== i ? (<p style={{marginLeft:"1.5rem"}}>{comp.description}</p>):<></>}
                         <Button variant="contained" 
                                 color={active !== i ? "success" : "error"}   
                                 onClick={()=>{active !== i ? setActive(i) : setActive(9)}}
                                 sx={{margin:"1rem"}}>
                                     {active !== i ? "Try me!" : "Close"}
                         </Button>
-                        {active === i ? (<Paper sx={{margin:"auto",justifyContent:"center", alignItems:"center"}}>{comp.component}</Paper>): (<></>)}
+                        {active === i ? (<Paper sx={{
+                            margin:"auto", 
+                            maxWidth:"70%", 
+                            borderWidth:3,
+                            borderColor:"red", 
+                            borderStyle:"solid",
+                            justifyContent:"center",
+                            alignItems:"center"}}>
+                                {comp.component}
+                                </Paper>
+                                ):
+                                (<></>)}
                     </Paper>
                 </Grid>
               
