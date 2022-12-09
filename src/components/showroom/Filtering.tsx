@@ -1,121 +1,70 @@
+import { Box, Button, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField } from "@mui/material";
 import { useState } from "react";
-
-interface IFiltering {}
+const studentNames:string[] = ["Jan","Jaap","Jonas","Jannick","Sarah","Steven","Karel","Kasper","Koen","Marie","Zhara","Albert","Brigitte"]
+const randomGen =(max:number= 100,min:number= 0)=>Math.floor(Math.random()*max-min)+min;
 interface IStudent {
   name: string;
   age: number;
   year: number;
 }
-const students: IStudent[] = [
-  { name: "Jan", age: 21, year: 2 },
-  { name: "Albert", age: 500, year: 1 },
-  { name: "Pierre", age: -500, year: 10 },
-  { name: "Peter", age: 58, year: 11 },
-];
-const sortByName = () => {
-  return students.sort((a, b) => (a.name < b.name ? -1 : 1));
-};
-const sortByAge = () => {
-  return students.sort((a, b) => (a.age < b.age ? -1 : 1));
-};
-const sortByYear = () => {
-  return students.sort((a, b) => (a.year < b.year ? -1 : 1));
-};
-const Filtering = (props: IFiltering) => {
-  const [filteredStudents, setFilteredStudents] = useState<IStudent[]>(
-    sortByName()
-  );
-  const [sortField, setSortFields] = useState<() => IStudent[]>();
+const students: IStudent[] =[]
+studentNames.map((n)=>students.push({name:n,age:randomGen(30,18),year:randomGen(7,1)}))
 
-  const insertfields = (field: string) => {
-    switch (field) {
-      case "name":
-        setSortFields(sortByName);
-        break;
-      case "age":
-        setSortFields(sortByAge);
-        break;
-      case "year":
-        setSortFields(sortByYear);
-        break;
 
-      default:
-        setSortFields(sortByName);
-        break;
+const Filtering = () => {
+  const [filteredStudents, setFilteredStudents] = useState<IStudent[]>(students);
+  const [sortby,setSortby] = useState<string>("name")
+
+  filteredStudents.sort((a,b)=>{
+    if(sortby === "name"){
+      return a.name.localeCompare(b.name)
+    }else if(sortby === "age"){
+        return a.age - b.age
+    }else {
+      return a.year - b.year
     }
-  };
+  })
   return (
     <>
-      <div>
-        <label>
-          Search:
-          <input
-            placeholder="name"
-            onChange={(event) => {
-              setFilteredStudents(
-                students.filter((student) =>
-                  student.name.includes(event.target.value)
-                )
-              );
-              setFilteredStudents(sortField!());
-            }}
-          />
-        </label>
-        <table>
-          <thead
-            style={{ border: "solid", borderWidth: 2, borderColor: "black" }}
-          >
-            <tr>
-              <th
-                style={{
-                  width: 50,
-                  height: 30,
-                  border: "solid",
-                  borderWidth: 2,
-                  borderColor: "black",
-                }}
-                onClick={() => insertfields("name")}
-              >
-                Name
-              </th>
-              <th
-                style={{
-                  width: 50,
-                  height: 30,
-                  border: "solid",
-                  borderWidth: 2,
-                  borderColor: "black",
-                }}
-                onClick={() => insertfields("age")}
-              >
-                Age
-              </th>
-              <th
-                style={{
-                  width: 50,
-                  height: 30,
-                  border: "solid",
-                  borderWidth: 2,
-                  borderColor: "black",
-                }}
-                onClick={() => insertfields("year")}
-              >
-                Year
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {filteredStudents?.map((student) => (
-              <tr>
-                <td>{student.name}</td>
-                <td>{student.age}</td>
-                <td>{student.year}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </>
-  );
+    <Paper>
+      <Box>
+        <TextField
+        label="Filter by Name"
+        size="small"
+        onChange={(e)=>{
+          setFilteredStudents(
+            students.filter((s)=>
+              s.name.toLowerCase().startsWith(e.target.value.toLowerCase())
+            )
+          );
+          }}/>
+          <Box>
+          <TableContainer>
+            <Table>
+              <caption>A list of students filterable by name, and sortable by name, age & year</caption>
+              <TableHead>
+                <TableRow>
+                  <TableCell><Button color={sortby == "name" ? "success" : "primary"} size="small" onClick={()=>{setSortby("name")}}>Name</Button></TableCell>
+                  <TableCell><Button color={sortby == "age" ? "success" : "primary"} size="small" onClick={()=>{setSortby("age")}}>Age</Button></TableCell>
+                  <TableCell><Button color={sortby == "year" ? "success" : "primary"} size="small" onClick={()=>{setSortby("year")}}>year</Button></TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {filteredStudents?.sort().map((s,i)=>(
+                  <TableRow key={i}>
+                    <TableCell>{s.name}</TableCell>
+                    <TableCell>{s.age}</TableCell>
+                    <TableCell>{s.year}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
+          </Box>
+      </Box>
+    </Paper>
+  </>
+  )
 };
+
 export default Filtering;
