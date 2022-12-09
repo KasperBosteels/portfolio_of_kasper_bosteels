@@ -21,5 +21,4 @@ const [news,setNews] = useState<Result[]>([]);
     )
    
 }
-
 export default NYTimes;
