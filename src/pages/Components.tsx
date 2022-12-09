@@ -59,23 +59,21 @@ const Componenten = ()=>{
     return (
         <Grid container spacing={8} style={{margin:"auto"}}>
             {componenten.map((comp,i)=>(
-                active !== i ? (
-                    <Grid xs={8} style={{width:"90%", margin:"auto", borderColor:"rgb(0,0,0)", borderWidth:3, borderStyle:"solid"}}>
-                    <div>
-                    <h3>{comp.name}</h3>
-                    <p>{comp.description}</p>
-                    </div>
-                    <Button onClick={()=>setActive(i)}>Try me!</Button>
+                <Grid xs={8} style={{width:"95%", margin:"auto", padding:".3rem"}}>
+                    <Paper elevation={8}>
+                        <h3 style={{margin:"1.5rem"}}>{comp.name}</h3>
+                        {active !== i ? (<p>{comp.description}</p>):<></>}
+                        <Button variant="contained" 
+                                color={active !== i ? "success" : "error"}   
+                                onClick={()=>{active !== i ? setActive(i) : setActive(9)}}
+                                sx={{margin:"1rem"}}>
+                                    {active !== i ? "Try me!" : "Close"}
+                        </Button>
+                        {active === i ? (<Paper sx={{margin:"auto",justifyContent:"center", alignItems:"center"}}>{comp.component}</Paper>): (<></>)}
+                    </Paper>
                 </Grid>
-                ):(
-                    <Grid xs={8} style={{width:"90%", margin:"auto", borderColor:"rgb(0,0,0)", borderWidth:3, borderStyle:"solid"}}>
-                        <div>
-                            <h3>{comp.name}</h3>
-                            <p>Beschrijving:<br></br>{comp.description}</p>
-                            {comp.component}
-                        </div>
-                    </Grid>
-                )
+              
+                
                 
             ))}
         </Grid>
