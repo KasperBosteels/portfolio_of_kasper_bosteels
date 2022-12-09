@@ -72,9 +72,6 @@ const Componenten = ()=>{
                         {active === i ? (<Paper sx={{
                             margin:"auto", 
                             maxWidth:"70%", 
-                            borderWidth:3,
-                            borderColor:"red", 
-                            borderStyle:"solid",
                             justifyContent:"center",
                             alignItems:"center"}}>
                                 {comp.component}
