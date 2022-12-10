@@ -1,3 +1,5 @@
+import { Paper, Box, Button } from "@mui/material";
+import { display } from "@mui/system";
 import { useState } from "react";
 import Slot from "./Slot";
 interface slotmachine {
@@ -14,7 +16,7 @@ const randomValues = (amount: number = 3): number[] => {
 const Slotmachine = (props: slotmachine) => {
   //create array fixed length
   const [Slots, setSlots] = useState<number[]>(randomValues(props.slots));
-  const [money, setMoney] = useState<number>(100);
+  const [money, setMoney] = useState<number>(10);
   const loseOrWinMoney = () => {
     if (
       Slots.filter((SlotsValue) => SlotsValue == Slots[0]).length ==
@@ -26,40 +28,39 @@ const Slotmachine = (props: slotmachine) => {
     }
   };
   return (
-    <div>
-      <div
-        style={{
-          width: 50,
-          height: 50,
-          backgroundColor: "grey",
-          borderRadius: 5,
-        }}
+    <Paper elevation={0} sx={{alignItems:"center",justifyItems:"center"}}>
+      <Box sx={{display:"flex", justifyContent:"center", verticalAlign:"center"}}>
+      <Button
+      sx={{width:"5rem",height:"5rem", margin:"1rem"}}
+        disabled={money <= 0 ? true : false}
+        color={money <= 0 ? "error" : "success"}
+        variant="contained"
         onClick={() => {
           if (money >= 1) {
             setSlots(randomValues(props.slots));
-            loseOrWinMoney();
-          }
-        }}
-      >
-        <p>pull lever</p>
-      </div>
+            loseOrWinMoney();}}}>
+        {money <= 0 ? "no more money" : "Pull the lever!"}
+      </Button>
       {Slots.map((currentslot) => (
         <Slot value={currentslot} />
       ))}
+      </Box>
+      <Box sx={{display:"flex", justifyContent:"center"}}>
       {Slots.filter((slotvalue) => slotvalue == Slots[0]).length ==
       Slots.length ? (
         <p>you won!!</p>
       ) : (
         <p>you did not win!</p>
       )}
-      <div>
+      </Box>
+      <Box sx={{display:"flex", justifyContent:"center"}}>
         {money <= 0 ? (
           <p>you have no money</p>
         ) : (
           <p>money remaining: {money}</p>
         )}
-      </div>
-    </div>
+      </Box>
+    </Paper>
   );
 };
 

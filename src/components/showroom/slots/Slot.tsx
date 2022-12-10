@@ -14,13 +14,13 @@ const Slot = (props: Slotprops) => {
       style={{
         border: "solid",
         borderColor: "black",
-        borderRadius: 5,
+        borderRadius: "2rem",
         borderWidth: 2,
         margin: 2,
         background: "black",
       }}
-      width={50}
-      height={50}
+      width={100}
+      height={100}
       src={fruits[props.value]}
       alt="iets"
     />
