@@ -12,6 +12,6 @@ const Timer = ({ interval }: ITimerProps) => {
       clearInterval(handle);
     };
   }, [interval]);
-  return <p>{Seconds}</p>;
+  return <p>Elapsed seconds since you opened this: {Seconds}</p>;
 };
 export default Timer;

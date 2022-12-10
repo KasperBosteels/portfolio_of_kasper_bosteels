@@ -13,7 +13,7 @@ const RandomValue = ({ interval }: IRandomValue) => {
       clearInterval(handle);
     };
   }, [interval]);
-  return <p>{randomValue}</p>;
+  return <p>Random value between 100 & 200: {randomValue}</p>;
 };
 export default RandomValue;
 const CreateRandomValue = () => {

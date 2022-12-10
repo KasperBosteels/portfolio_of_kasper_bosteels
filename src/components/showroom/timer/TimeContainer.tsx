@@ -5,9 +5,9 @@ const TimeContainer = ()=>{
     return (
         <>
         <div>
-            <Timer interval={1}/>
+            <Timer interval={1000}/>
             <CurrentTime interval={1}/>
-            <RandomValue interval={1}/>
+            <RandomValue interval={1000}/>
         </div>
         </>
     )
