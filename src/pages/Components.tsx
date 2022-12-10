@@ -70,9 +70,13 @@ const Componenten = ()=>{
                                     {active !== i ? "Try me!" : "Close"}
                         </Button>
                         {active === i ? (<Paper sx={{
-                            margin:"auto", 
+                            margin:"auto",
+                            padding:"2rem",
                             maxWidth:"70%", 
+                            width:"fit-content",
                             justifyContent:"center",
+                            borderTopRightRadius:"1.5rem",
+                            borderTopLeftRadius:"1.5rem",
                             alignItems:"center"}}>
                                 {comp.component}
                                 </Paper>

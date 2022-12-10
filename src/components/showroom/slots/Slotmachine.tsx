@@ -28,7 +28,7 @@ const Slotmachine = (props: slotmachine) => {
     }
   };
   return (
-    <Paper elevation={0} sx={{alignItems:"center",justifyItems:"center"}}>
+    <Box sx={{alignItems:"center",justifyItems:"center"}}>
       <Box sx={{display:"flex", justifyContent:"center", verticalAlign:"center"}}>
       <Button
       sx={{width:"5rem",height:"5rem", margin:"1rem"}}
@@ -60,7 +60,7 @@ const Slotmachine = (props: slotmachine) => {
           <p>money remaining: {money}</p>
         )}
       </Box>
-    </Paper>
+    </Box>
   );
 };
 
