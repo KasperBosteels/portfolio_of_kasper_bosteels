@@ -1,4 +1,6 @@
+import { Box, Button } from "@mui/material";
 import { useEffect, useState } from "react";
+import useLocalStorage from "use-local-storage";
 
 const DadJoke = () => {
   const [joke, setJoke] = useState("");
@@ -18,28 +20,36 @@ const DadJoke = () => {
   useEffect(() => {
     loadjoke();
   }, []);
+  useEffect(()=>{
+    localStorage.setItem("joke",favouritejoke)
+  },[favouritejoke])
   return (
     <>
-      <div
-        style={{
-          borderRadius: 5,
-          border: "solid",
-          borderColor: "black",
-          borderWidth: 3,
-        }}
+      <Box
+        sx={{display:"grid", justifyContent:"center"}}
       >
-        {favouritejoke ? <h3>{favouritejoke}</h3> : <h3>{joke}</h3>}
-        <input
-          type="button"
+        <Box>
+        <h4>{joke}</h4>
+        </Box>
+        <Box>
+        <Button
+          variant="contained"
+          sx={{margin:"1rem"}}
           value="load new joke"
-          onClick={(event) => loadjoke()}
-        />
-        <input
-          type="button"
+          onClick={() => loadjoke()}
+        >Load new</Button>
+        
+        <Button
+          variant="contained"
           value="save joke"
-          onClick={(event) => setvafjoke(joke)}
-        />
-      </div>
+          onClick={() => setvafjoke(joke)}
+        >Save joke</Button>
+        <Box>
+
+          {favouritejoke ? (<><p>your favourite joke:</p><p>{favouritejoke}</p></>) : <></>}
+        </Box>
+        </Box>
+      </Box>
     </>
   );
 };
