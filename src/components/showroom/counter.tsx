@@ -1,15 +1,30 @@
+import { Box, Button, Paper } from "@mui/material";
 import { count } from "console";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Counter = () => {
-  let [counters, setCounters] = useState<number[]>([0]);
+  const [counters, setCounters] = useState<number[]>([0]);
+  const [sumOfAllCounters,setSumOfAllCounters] = useState<number>(0)
   const changeValueofCounter = (index: number, value: number) => {
     let newCounters = [...counters];
     newCounters[index] += value;
     setCounters(newCounters);
   };
+  useEffect(() => {
+    let sum = 0
+    counters.map((c)=>sum+=c)
+    setSumOfAllCounters(sum)
+  }, [counters])
+  
   return (
-    <>
+    
+    <Box>
+      <Box sx={{display:"flex", justifyContent:"center"}}>
+      <Button color="warning" variant="contained" onClick={() =>setCounters([...counters, 0])}>Add counter</Button>
+      </Box>
+      <Box sx={{ justifyContent:"center"}}>
+
+      
       {counters.map((counter, index) => {
         let color = "black";
         if (counter > 0) {
@@ -18,43 +33,42 @@ const Counter = () => {
           color = "red";
         }
         return (
-          <div
+          <Box
             key={index}
             style={{
+              marginTop:"1rem",
               display: "flex",
               flexDirection: "row",
               alignItems: "center",
               justifyContent: "center",
             }}
           >
-            <input
-              type="button"
+            <Button
+              size="medium"
+              color="error"
+              variant="contained"
+              onClick={() => {changeValueofCounter(index, -1);}}>Decrease</Button>
+
+
+            <p style={{ color: color, paddingLeft: 10, paddingRight: 10 }}>{counter}</p>
+            <Button
+              size="medium"
               value="increase"
+              color="success"
+              variant="contained"
               onClick={() => {
                 changeValueofCounter(index, 1);
               }}
-            ></input>
-            <p style={{ color: color, paddingLeft: 10, paddingRight: 10 }}>
-              {counter}
-            </p>
-            <input
-              type="button"
-              value="decrease"
-              onClick={() => {
-                changeValueofCounter(index, -1);
-              }}
-            ></input>
-          </div>
+            >Increase</Button>
+          </Box>
+  
         );
       })}
-      <button
-        onClick={(event) => {
-          setCounters([...counters, 0]);
-        }}
-      >
-        add counter
-      </button>
-    </>
+      </Box>
+      <Box sx={{display:"flex", justifyContent:"center"}}>
+        <p> total sum: {sumOfAllCounters}</p>
+      </Box>
+    </Box>
   );
 };
 
