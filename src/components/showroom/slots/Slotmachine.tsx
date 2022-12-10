@@ -1,5 +1,4 @@
-import { Paper, Box, Button } from "@mui/material";
-import { display } from "@mui/system";
+import {  Box, Button } from "@mui/material";
 import { useState } from "react";
 import Slot from "./Slot";
 interface slotmachine {

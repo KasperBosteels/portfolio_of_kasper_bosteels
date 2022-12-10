@@ -1,4 +1,4 @@
-import { Button, TableCell, Typography } from "@mui/material";
+import { Button, TableCell } from "@mui/material";
 export interface todoItemprops {
     name:string,
     completed:boolean,

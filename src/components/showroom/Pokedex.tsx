@@ -1,7 +1,6 @@
 import { Box, Button, CircularProgress, TextField } from "@mui/material";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { RotatingTriangles } from "react-loader-spinner";
 interface IPokedex {
   limit: number;
 }

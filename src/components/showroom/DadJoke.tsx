@@ -1,7 +1,5 @@
 import { Box, Button } from "@mui/material";
 import { useEffect, useState } from "react";
-import useLocalStorage from "use-local-storage";
-
 const DadJoke = () => {
   const [joke, setJoke] = useState("");
   const [favouritejoke, setvafjoke] = useState(
