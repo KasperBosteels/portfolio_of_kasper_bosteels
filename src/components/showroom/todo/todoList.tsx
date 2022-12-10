@@ -2,8 +2,9 @@ import { Box, Table, TableBody, TableCell, TableContainer, TableHead, TableRow }
 import TodoItem, {todoItemprops} from "./todoItem";
 export interface todoListprops {
     todos:todoItemprops[]
+    markCompleted:(index:number,completed:boolean)=>void
   }
-const TodoList = ({todos}:todoListprops) =>{
+const TodoList = ({todos,markCompleted}:todoListprops) =>{
 return (
     <>
     <Box>
@@ -13,11 +14,10 @@ return (
             <TableRow>
               <TableCell>To do:</TableCell>
               <TableCell>Completed</TableCell>
-              <TableCell></TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-            {todos?.map((t,i)=>(<TableRow key={i}><TodoItem name={t.name} completed={t.completed} deletetodo={t.deletetodo} markCompleted={t.markCompleted} index={i}/></TableRow>))}
+            {todos?.map((t,i)=>(<TableRow key={i}><TodoItem todo={t} markCompleted={(completed:boolean)=>markCompleted(i,completed)}/></TableRow>))}
           </TableBody>
         </Table>
       </TableContainer>

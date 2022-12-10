@@ -6,16 +6,11 @@ import {Box} from "@mui/material"
 const TodoComponent = () =>{
     const [todos,setTodos] = useState<todoItemprops[]>([])
     const [todo,setTodo] = useState<string>("")
-    const removeTodo = (inputIndex:number)=>{
-        const filteredTodos = todos.filter((t,i)=>i !== inputIndex)
-        setTodos(filteredTodos);
-    } 
     const CompleteTodo = (index:number,completed:boolean)=>{
-
-        setTodos(todos.map((t,i)=>i===index ? {...t,completed:completed}:t))
+       setTodos(todos.map((todo,i)=>i === index ? {...todo,completed:completed}:todo))
         }
-    const addTodo = (todo:string)=>{
-        setTodos([...todos,{name:todo,completed:false,deletetodo:removeTodo,markCompleted:CompleteTodo,index:todos.length-1}]);
+        const addTodo = (todo:string)=>{
+        setTodos([...todos,{name:todo,completed:false}]);
         setTodo("");
     }
    
@@ -26,7 +21,7 @@ const TodoComponent = () =>{
                 <TodoInput todo={todo} button={addTodo} inputfield={setTodo}/>
             </Box>
             <div>
-                <TodoList todos={todos}/>
+                <TodoList todos={todos} markCompleted={CompleteTodo}/>
             </div>
         </Box>
     )
