@@ -3,7 +3,6 @@ import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import NYTimes from '../components/NYTimes';
-import { fontSize } from '@mui/system';
 
 
 

@@ -1,5 +1,4 @@
-import Paper from "@mui/material/Paper";
-import { useState, useContext } from "react";
+import { useState } from "react";
 import {InputGroup,Form, Button} from "react-bootstrap"
 import sendEmail,{ sendEmailProps } from "../services/sendEmail";
 const Contact = ()=>{

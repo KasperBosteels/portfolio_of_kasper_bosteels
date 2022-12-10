@@ -39,10 +39,19 @@ const NavigationBar=({theme,toggle}:menuprops)=>{
                     anchorEl={anchor}
                     open={open}
                     onClose={closeMenu}
+                    anchorOrigin={{
+                        vertical:"top",
+                        horizontal:"right"
+                    }}
+                    transformOrigin={{
+                        vertical:"top",
+                        horizontal:"right"
+                    }}
+                    onMouseLeave={closeMenu}
                     MenuListProps={{'aria-labelledby':'menuBUtton'}}>
-                        <MenuItem><NavLink to="/">Home</NavLink></MenuItem>
-                        <MenuItem><NavLink to="Contact">Contact</NavLink></MenuItem>
-                        <MenuItem><NavLink to="Components">Components</NavLink></MenuItem>
+                        <MenuItem><NavLink to="/" style={{ textDecoration:"none"}}><Typography color="text.primary"> Home</Typography></NavLink></MenuItem>
+                        <MenuItem><NavLink to="Contact" style={{ textDecoration:"none"}}><Typography color="text.primary">Contact</Typography></NavLink></MenuItem>
+                        <MenuItem><NavLink to="Components" style={{textDecoration:"none"}}><Typography color="text.primary">Components</Typography></NavLink></MenuItem>
                     </Menu>
                 <Typography variant="h6" color="inherit">
                     Portfolio of Kasper Bosteels
