@@ -11,7 +11,7 @@ const TodoItem = ({todo,markCompleted}:totoiprop)=>{
 return (
 <>
 <TableCell>
-    <span style={{textDecoration: todo.completed ? "line-trough" : "none"}}>{todo.name}</span>
+    {todo.completed ? (<p style={{textDecorationLine:"line-through"}}>{todo.name}</p>): (<p>{todo.name}</p>)}
 </TableCell>
 <TableCell>
     <Button 
