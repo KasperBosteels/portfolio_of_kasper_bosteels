@@ -1,38 +1,34 @@
 import {useState} from "react"
-import TodoList,{TodoItem} from "./todoList"
-import {Button} from "@mui/material"
+import TodoList from "./todoList"
+import TodoInput from "./todoInput"
+import { todoItemprops } from "./todoItem"
+import {Box} from "@mui/material"
 const TodoComponent = () =>{
-
-    const [todos,setTodos] = useState<TodoItem[]>([])
+    const [todos,setTodos] = useState<todoItemprops[]>([])
     const [todo,setTodo] = useState<string>("")
-    
-    const addTodo = (todo:string)=>{
-        setTodos([...todos,{name:todo,completed:false}]);
-        setTodo("");
-    }
-    
     const removeTodo = (inputIndex:number)=>{
         const filteredTodos = todos.filter((t,i)=>i !== inputIndex)
         setTodos(filteredTodos);
-    }
-    
+    } 
     const CompleteTodo = (index:number,completed:boolean)=>{
-    setTodos(todos.map((t,i)=>i===index ? {...t,completed:completed}:t))
+
+        setTodos(todos.map((t,i)=>i===index ? {...t,completed:completed}:t))
+        }
+    const addTodo = (todo:string)=>{
+        setTodos([...todos,{name:todo,completed:false,deletetodo:removeTodo,markCompleted:CompleteTodo,index:todos.length-1}]);
+        setTodo("");
     }
+   
 
     return (
-        <div>
+        <Box>
+            <Box>
+                <TodoInput todo={todo} button={addTodo} inputfield={setTodo}/>
+            </Box>
             <div>
-                <input  id="todo" 
-                        type="text" 
-                        value={todo} 
-                        onChange={(e)=>setTodo(e.target.value)}/>
-                <Button onClick={()=>addTodo(todo)}>Add</Button>
+                <TodoList todos={todos}/>
             </div>
-            <div>
-                <TodoList deletetodo={removeTodo} todos={todos}/>
-            </div>
-        </div>
+        </Box>
     )
 }
 export default TodoComponent;
