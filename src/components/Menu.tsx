@@ -56,6 +56,9 @@ const NavigationBar=({theme,toggle}:menuprops)=>{
                 <Typography variant="h6" color="inherit">
                     Portfolio of Kasper Bosteels
                 </Typography>
+                <NavLink className="topBarbuttons" to="/" style={{ textDecoration:"none"}}><Typography color="text.primary"> Home</Typography></NavLink>
+                <NavLink className="topBarbuttons" to="Contact" style={{ textDecoration:"none"}}><Typography color="text.primary">Contact</Typography></NavLink>
+               <NavLink className="topBarbuttons" to="Components" style={{textDecoration:"none"}}><Typography color="text.primary">Components</Typography></NavLink>
                 <Button style={{
                     transition:"all",
                     transitionDuration:".5s" ,

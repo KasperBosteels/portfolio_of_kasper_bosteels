@@ -18,11 +18,14 @@ const HomePage = ()=>{
         <Grid xs={8} >
             <Typography style={{fontFamily:"roboto", marginTop:50}}>
                 <h3>welkom</h3>
-                <p>Welkom op mijn portfolio site! 
-                    Ik ben Kasper Bosteels, een ervaren ontwikkelaar met een passie voor het creëren van 
-                    slimme en gebruiksvriendelijke applicaties. Op deze site kunt u enkele van mijn recente 
-                    projecten bekijken, evenals informatie over mijn vaardigheden en werkervaring. Neem gerust contact 
-                    met mij op als u geïnteresseerd bent in mijn diensten of als u gewoon verder wilt praten over technologie en ontwikkeling.</p>
+                <p>Mijn naam is Kasper Bosteels en ik ben een programmeur. Ik ben gespecialiseerd in talen zoals JavaScript, TypeScript, C#, Bash en een beetje PHP. Ik heb ook ervaring met technologieën zoals Typeorm, React.js en React.ts, MongoDB, MySQL, WordPress, Arduino en NPM.<br></br>
+
+Daarnaast spreek ik vloeiend Nederlands en Engels. Dit stelt me in staat om op een gemakkelijke manier te communiceren met zowel nationale als internationale klanten.<br></br>
+
+Ik ben altijd op zoek naar nieuwe uitdagingen en kansen om mijn vaardigheden te verbeteren en te laten groeien. Als u op zoek bent naar een professionele en gemotiveerde programmeur, aarzel dan niet om contact met me op te nemen.<br></br>
+
+Met vriendelijke groet,
+Kasper Bosteels</p>
                     <p className='tinyText'>(made by OpenAI)</p>
             </Typography>
             </Grid>

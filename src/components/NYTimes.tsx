@@ -13,7 +13,7 @@ const [news,setNews] = useState<Result[]>([]);
     }).catch((err)=>console.log(err))
     return (
         <>
-        <Grid container direction={news.length > 0 ? "row" : "column"} style={{maxWidth:"90%", margin:"auto", maxHeight:345, verticalAlign:"center",justifyContent:"center",}}>
+        <Grid container direction={news.length > 0 ? "row" : "column"} style={{maxWidth:"90%", margin:"auto", maxHeight:345, verticalAlign:"center",justifyContent:"center",marginTop:"10%",flexDirection:"inherit", marginBottom:"8%"}}>
             {news.length > 0 ? (
             news.map((n)=>(<Article data={n}/>))
             ) : (<><Typography color="text.primary"> assembling the news for you...</Typography><CircularProgress/></>)}
