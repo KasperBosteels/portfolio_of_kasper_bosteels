@@ -28,9 +28,10 @@ const Slotmachine = (props: slotmachine) => {
   };
   return (
     <Box sx={{alignItems:"center",justifyItems:"center"}}>
-      <Box sx={{display:"flex", justifyContent:"center", verticalAlign:"center"}}>
-      <Button
-      sx={{width:"5rem",height:"5rem", margin:"1rem"}}
+      <Box sx={{display:"flex",flexDirection:"column",alignItems:"center", justifyContent:"center", verticalAlign:"center"}}>
+      <Box sx={{width:"fit-content", height:"fit-content"}}>
+        <Button
+      sx={{width:"6rem",height:"3rem", margin:"1rem", fontSize:".8rem"}}
         disabled={money <= 0 ? true : false}
         color={money <= 0 ? "error" : "success"}
         variant="contained"
@@ -39,10 +40,14 @@ const Slotmachine = (props: slotmachine) => {
             setSlots(randomValues(props.slots));
             loseOrWinMoney();}}}>
         {money <= 0 ? "no more money" : "Pull the lever!"}
-      </Button>
+        </Button>
+      </Box>
+
+      <Box sx={{height:"fit-content",display:"flex",flexDirection:"row",margin:"auto",justifyContent:"center"}}>
       {Slots.map((currentslot) => (
         <Slot value={currentslot} />
       ))}
+      </Box>
       </Box>
       <Box sx={{display:"flex", justifyContent:"center"}}>
       {Slots.filter((slotvalue) => slotvalue == Slots[0]).length ==

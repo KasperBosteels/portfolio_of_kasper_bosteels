@@ -19,8 +19,8 @@ const Slot = (props: Slotprops) => {
         margin: 2,
         background: "black",
       }}
-      width={100}
-      height={100}
+      width="15%"
+      height="15%"
       src={fruits[props.value]}
       alt="iets"
     />
