@@ -57,8 +57,10 @@ function App() {
         {
           path:"Components",
           element:<Componenten/>,
-          children:[{path:"/:id", element: <ShowRoom/>}]
-        },
+        },{
+          path:"Components/:id",
+          element:<ShowRoom/>
+        }
        
       ],
     }
