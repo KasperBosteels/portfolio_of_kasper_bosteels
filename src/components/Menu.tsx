@@ -29,9 +29,7 @@ const NavigationBar=({theme,toggle}:menuprops)=>{
             <AppBar position="static" sx={{width:"100%"}}>
                 <Toolbar variant="dense" color="">
                     <IconButton 
-                        id="menuButton"
-                        edge="start" 
-                        color="inherit" 
+                        color="inherit"
                         aria-controls={open ? 'basic-menu' : undefined} 
                         aria-haspopup="true"
                         aria-expanded={open ? 'true' : undefined} 
@@ -42,23 +40,15 @@ const NavigationBar=({theme,toggle}:menuprops)=>{
                     anchorEl={anchor}
                     open={open}
                     onClose={closeMenu}
-                    anchorOrigin={{
-                        vertical:"top",
-                        horizontal:"right"
-                    }}
-                    transformOrigin={{
-                        vertical:"top",
-                        horizontal:"right",
-                    }}
-                    onMouseLeave={closeMenu}
+                    onMouseLeave={()=>closeMenu()}
                     MenuListProps={{'aria-labelledby':'menuBUtton'}}>
-                        <MenuItem><NavLink to="/" style={{ textDecoration:"none"}}><Typography color="text.primary">Home</Typography></NavLink></MenuItem>
-                        <MenuItem><NavLink to="Contact" style={{ textDecoration:"none"}}><Typography color="text.primary">Contact</Typography></NavLink></MenuItem>
-                        <MenuItem><NavLink to="Components" style={{textDecoration:"none"}}><Typography color="text.primary">Components</Typography></NavLink></MenuItem>
+                        <NavLink to="/" style={{ textDecoration:"none"}}><MenuItem><Typography color="text.primary">Home</Typography></MenuItem></NavLink>
+                        <NavLink to="Contact" style={{ textDecoration:"none"}}><MenuItem><Typography color="text.primary">Contact</Typography></MenuItem></NavLink>
+                        <NavLink to="Components" style={{textDecoration:"none"}}><MenuItem><Typography color="text.primary">Components</Typography></MenuItem></NavLink>
                     </Menu>
-                <Typography variant="h6" color="inherit">
-                    Portfolio of Kasper Bosteels
-                </Typography>
+                <NavLink to="/" style={{textDecoration:"none"}}>
+                    <Typography variant="h6" color="primary.dark">Portfolio of Kasper Bosteels</Typography>
+                </NavLink>
                 <NavLink className="topBarbuttons" to="/" style={{ textDecoration:"none"}}><Typography color="text.primary"> Home</Typography></NavLink>
                 <NavLink className="topBarbuttons" to="Contact" style={{ textDecoration:"none"}}><Typography color="text.primary">Contact</Typography></NavLink>
                <NavLink className="topBarbuttons" to="Components" style={{textDecoration:"none"}}><Typography color="text.primary">Components</Typography></NavLink>

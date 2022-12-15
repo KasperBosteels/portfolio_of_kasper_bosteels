@@ -5,15 +5,15 @@ import { createBrowserRouter, RouterProvider} from "react-router-dom"
 import Layout from "./pages/Layout";
 import useLocalStorage from "use-local-storage";
 import CssBaseline from "@mui/material/CssBaseline";
-import { createTheme, Divider, duration, ThemeProvider } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material";
 import ShowRoom from "./pages/showRoom";
-
+import "./App.css";
 
 const customtheme = createTheme({
   palette: {
     mode:"light",
     primary: {
-      dark:'#388E3C',
+      dark:'#212121',
       light: '#C8E6C9',
       main:"#4CAF50",
       contrastText:"#212121"
