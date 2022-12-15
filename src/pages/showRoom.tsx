@@ -57,8 +57,9 @@ const componenten:components[] = [
 
 const ShowRoom =()=>{
     let {id} = useParams();
-return (<>
-<Paper>
+return (
+<>
+<Paper sx={{width:"80%", alignContent:"center", margin:"auto", marginTop:"5%"}}>
     {id ? componenten[parseInt(id)].component:<ComponentDoesNotExist/>}
 </Paper>
 </>)

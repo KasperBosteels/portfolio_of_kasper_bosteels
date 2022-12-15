@@ -14,8 +14,9 @@ interface shoppingListItem {
   name:string,
   amount:number
 }
+const DefaultList = [{name:"butter",amount:2},{name:"olive oil",amount:500},{name:"oily oil",amount:1},{name:"fish",amount:60}]
 const ShoppingList = () => {
-  const [shoppinglist, setShoppingList] = useState<shoppingListItem[]>([]);
+  const [shoppinglist, setShoppingList] = useState<shoppingListItem[]>(DefaultList);
   const [nameinput, setNameInput] = useState<string>("");
   const [numberinput, setNumberInput] = useState<number>();
   const removeItem = (itemIndex: number) => {
@@ -62,7 +63,7 @@ const ShoppingList = () => {
         </Button>
         </Box>
         <Box sx={{margin:"auto"}}>
-          <TableContainer>
+          <TableContainer sx={{width:"fit-content", margin:"auto"}}>
             <Table>
               <caption>A neat table with all your shopping items.</caption>
               <TableHead>
