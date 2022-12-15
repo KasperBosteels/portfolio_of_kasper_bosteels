@@ -19,8 +19,6 @@ code {
 .topBarbuttons{
   margin-left: 2rem;
 }
-.footerBar {
-  min-height: fit-content;
-  height:"1%";
-  background-color: grey;
+.logo {
+  margin-bottom: 3;
 }

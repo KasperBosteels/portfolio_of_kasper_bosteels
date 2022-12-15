@@ -1,8 +1,8 @@
-import LinearProgress from '@mui/material/LinearProgress';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 import NYTimes from '../components/NYTimes';
 import Box from '@mui/material/Box';
+import SkillsPanel from '../components/SkillsPanel';
 
 const HomePage = ()=>{
     return (
@@ -29,18 +29,9 @@ const HomePage = ()=>{
                     <p className='tinyText'>(made by OpenAI)</p>
             </Typography>
             </Grid>
-            <Grid xs={4} >
-                <Typography>
-                <div className="skilsComponent">
-                <h2>My skills</h2>
-                <label>JS</label><LinearProgress color="info" variant="determinate" value={70}/>
-                <label>TS</label><LinearProgress color="primary" variant="determinate" value={65}/>
-                <label>C#</label><LinearProgress color="secondary" variant="determinate" value={50}/>
-                <label>React</label><LinearProgress color="info" variant="determinate" value={30}/>
-                <label>Python</label><LinearProgress color="warning"variant="determinate" value={15}/>
-                </div >
-                </Typography>
-            </Grid>
+           <Grid xs={4}>
+            <SkillsPanel/>
+           </Grid>
             <NYTimes/>          
         </Grid>
         </Box>
