@@ -25,7 +25,7 @@ const NavigationBar=({theme,toggle}:menuprops)=>{
     }
     return(
         <div>
-            <AppBar position="static" >
+            <AppBar position="static" sx={{width:"100vw"}}>
                 <Toolbar variant="dense" color="">
                     <IconButton 
                         id="menuButton"

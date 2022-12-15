@@ -6,18 +6,34 @@ import Layout from "./pages/Layout";
 import useLocalStorage from "use-local-storage";
 import CssBaseline from "@mui/material/CssBaseline";
 import { createTheme, ThemeProvider } from "@mui/material";
+import ShowRoom from "./components/showRoom";
 
 
-export const light = {
+const customtheme = createTheme({
   palette: {
-    mode:'light',
+    mode:"light",
+    primary: {
+      main: '#7611d9',
+    },
+    secondary: {
+      main: '#75d911',
+    },
   },
-}
-export const dark = {
+});
+
+const customDarkTheme = createTheme({
   palette: {
-    mode:"dark",
+    mode: 'dark',
+    primary: {
+      main: '#2b0451',
+    },
+    secondary: {
+      main: '#2a5104',
+    },
   },
-} 
+});
+
+
 
 function App() {
   const [theme,setTheme] = useLocalStorage<boolean>("dark-mode",false);
@@ -40,17 +56,14 @@ function App() {
         },
         {
           path:"Components",
-          element:<Componenten/>
+          element:<Componenten/>,
+          children:[{path:"/:id", element: <ShowRoom/>}]
         },
        
       ],
     }
   ])
-  const mode = createTheme({
-    palette:{
-      mode: theme ? "dark" : "light"
-    }
-  })
+  const mode = theme ? customDarkTheme : customtheme
   return (
 <>
     <ThemeProvider theme={mode}>
