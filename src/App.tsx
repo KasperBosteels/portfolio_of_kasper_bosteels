@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider} from "react-router-dom"
 import Layout from "./pages/Layout";
 import useLocalStorage from "use-local-storage";
 import CssBaseline from "@mui/material/CssBaseline";
-import { createTheme, ThemeProvider } from "@mui/material";
+import { createTheme, Divider, duration, ThemeProvider } from "@mui/material";
 import ShowRoom from "./pages/showRoom";
 
 
@@ -13,11 +13,16 @@ const customtheme = createTheme({
   palette: {
     mode:"light",
     primary: {
-      main: '#7611d9',
+      dark:'#388E3C',
+      light: '#C8E6C9',
+      main:"#4CAF50",
+      contrastText:"#212121"
     },
-    secondary: {
-      main: '#75d911',
+    secondary:{
+      main:"#607D8B",
+      contrastText:"#757575"
     },
+    divider:"#BDBDBD"
   },
 });
 
@@ -25,11 +30,16 @@ const customDarkTheme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: '#2b0451',
+      dark:'#D32F2F',
+      light: '#FFCDD2',
+      main:"#F44336",
+      contrastText:"#FFFFFF"
     },
-    secondary: {
-      main: '#2a5104',
+    secondary:{
+      main:"#9E9E9E",
+      contrastText:"#757575"
     },
+    divider:"#BDBDBD"
   },
 });
 

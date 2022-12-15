@@ -59,8 +59,8 @@ const ShowRoom =()=>{
     let {id} = useParams();
 return (
 <>
-<Paper sx={{width:"80%", alignContent:"center", margin:"auto", marginTop:"5%"}}>
-    {id ? componenten[parseInt(id)].component:<ComponentDoesNotExist/>}
+<Paper sx={{maxWidth:"80%",padding:"1%" ,alignContent:"center", margin:"auto", marginTop:"5%"}}>
+    {id &&  parseInt(id) >= 0 && parseInt(id) < componenten.length ? componenten[parseInt(id)].component:<ComponentDoesNotExist/>}
 </Paper>
 </>)
 }
