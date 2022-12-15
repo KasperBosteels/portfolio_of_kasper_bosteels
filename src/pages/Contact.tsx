@@ -1,14 +1,16 @@
-import { useState } from "react";
-import {InputGroup,Form, Button} from "react-bootstrap"
-import sendEmail,{ sendEmailProps } from "../services/sendEmail";
+import { useState } from "react"
+import Button from "@mui/material/Button"
+import sendEmail,{ sendEmailProps } from "../services/sendEmail"
+import InputGroup from "react-bootstrap/esm/InputGroup"
+import { Form } from "react-bootstrap"
 const Contact = ()=>{
-const [name,setName] = useState("");
-const [topic,setTopic] = useState("");
-const [message,setMessage] = useState("");
-const [email, setEmail] = useState("");
+const [name,setName] = useState("")
+const [topic,setTopic] = useState("")
+const [message,setMessage] = useState("")
+const [email, setEmail] = useState("")
 const onSubmit=()=>{
   const tosend:sendEmailProps = {name:name,email:email,topic:topic,message:message}
- sendEmail(tosend);
+ sendEmail(tosend)
 
 }
 
@@ -54,9 +56,9 @@ return (<>
         />
       </InputGroup>
       {name.length > 0 && topic.length > 0 && message.length && email.length > 0 ? (
-         <Button style={{marginTop:20}}variant="success" onClick={()=>{onSubmit()}} active>Submit</Button>
+         <Button sx={{marginTop:20}} variant="success" onClick={()=>{onSubmit()}} active>Submit</Button>
       ) : (
-        <Button style={{marginTop:20}}variant="danger" disabled>Fill in all fields</Button> 
+        <Button sx={{marginTop:20}} variant="danger" disabled>Fill in all fields</Button> 
       )}
      
 

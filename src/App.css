@@ -42,3 +42,25 @@
 .topBarbuttons{
   margin-left: 2rem;
 }
+
+.homeGrid {
+  color:"text.primary";
+  background-color:"background.default";
+  margin-top:".5rem";
+}
+
+.skilsComponent {
+  min-width:"50%";
+  height:"100%";
+  margin:"auto";
+  margin-top:50 ;
+  max-width:"70%"; 
+}
+.homeText {
+  font-family:"roboto";
+  margin-top:50;
+}
+
+.contactSubmitButton {
+  margin-top: 20;
+}

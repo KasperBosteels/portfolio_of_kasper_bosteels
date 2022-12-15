@@ -1,4 +1,13 @@
-import { Box, Button, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField } from "@mui/material";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Paper from "@mui/material/Paper";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import TextField from "@mui/material/TextField";
 import { useState } from "react";
 const studentNames:string[] = ["Jan","Jaap","Jonas","Jannick","Sarah","Steven","Karel","Kasper","Koen","Marie","Zhara","Albert","Brigitte"]
 const randomGen =(max:number= 100,min:number= 0)=>Math.floor(Math.random()*max-min)+min;

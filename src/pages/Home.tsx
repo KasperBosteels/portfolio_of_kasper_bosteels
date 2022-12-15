@@ -8,34 +8,35 @@ import NYTimes from '../components/NYTimes';
 
 
 
-
-
 const HomePage = ()=>{
     return (
         <>
         <Paper elevation={0}>
-        <Grid container spacing={5} sx={{color:"text.primary", bgcolor:"background.default", marginTop:".5rem"}}>
+        <Grid container spacing={5} className="homeGrid" sx={{color:"text.primary", 
+        bgcolor:"background.default", 
+        marginTop:".5rem"}}>
         <Grid xs={8} >
-            <Typography style={{fontFamily:"roboto", marginTop:50}}>
+            <Typography className="homeText">
                 <h3>welkom</h3>
-                <p>Mijn naam is Kasper Bosteels en ik ben een programmeur. Ik ben gespecialiseerd in talen zoals JavaScript, TypeScript, C#, Bash en een beetje PHP. Ik heb ook ervaring met technologieën zoals Typeorm, React.js en React.ts, MongoDB, MySQL, WordPress, Arduino en NPM.<br></br>
-
-Daarnaast spreek ik vloeiend Nederlands en Engels. Dit stelt me in staat om op een gemakkelijke manier te communiceren met zowel nationale als internationale klanten.<br></br>
-
-Ik ben altijd op zoek naar nieuwe uitdagingen en kansen om mijn vaardigheden te verbeteren en te laten groeien. Als u op zoek bent naar een professionele en gemotiveerde programmeur, aarzel dan niet om contact met me op te nemen.<br></br>
-
-Met vriendelijke groet,
-Kasper Bosteels</p>
+                <p>Mijn naam is Kasper Bosteels en ik ben een programmeur. 
+                    <br></br>Ik ben gespecialiseerd in talen zoals JavaScript, TypeScript, C#, Bash en een beetje PHP. 
+                    <br></br>Ik heb ook ervaring met technologieën zoals Typeorm, React.js en React.ts, MongoDB, MySQL, WordPress, Arduino,node, NPM, Uipath en DotNet.<br></br>
+                    Daarnaast spreek ik vloeiend Nederlands en Engels. 
+                    <br></br>Dit stelt me in staat om op een gemakkelijke manier te communiceren met zowel nationale als internationale klanten.<br></br>
+                    Ik ben altijd op zoek naar nieuwe uitdagingen en kansen om mijn vaardigheden te verbeteren en te laten groeien. 
+                    <br></br>Als u op zoek bent naar een professionele en gemotiveerde programmeur, aarzel dan niet om contact met me op te nemen.<br></br>
+                    <br></br>Met vriendelijke groet,
+                    <br></br>Kasper Bosteels</p>
                     <p className='tinyText'>(made by OpenAI)</p>
             </Typography>
             </Grid>
             <Grid xs={4} >
                 <Typography>
-                <div style={{minWidth:"50%", maxWidth:"70%", height:"100%", margin:"auto", marginTop:50 }}>
+                <div className="skilsComponent">
                 <h2>My skills</h2>
-                <label>JS</label><LinearProgress color="info" variant="determinate" value={50}/>
+                <label>JS</label><LinearProgress color="info" variant="determinate" value={70}/>
                 <label>TS</label><LinearProgress color="primary" variant="determinate" value={65}/>
-                <label>C#</label><LinearProgress color="secondary" variant="determinate" value={45}/>
+                <label>C#</label><LinearProgress color="secondary" variant="determinate" value={50}/>
                 <label>React</label><LinearProgress color="info" variant="determinate" value={30}/>
                 <label>Python</label><LinearProgress color="warning"variant="determinate" value={15}/>
                 </div >

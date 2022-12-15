@@ -1,4 +1,7 @@
-import { Box, Button, CircularProgress, TextField } from "@mui/material";
+import Box from "@mui/material/Box"
+import Button from "@mui/material/Button"
+import CircularProgress from "@mui/material/CircularProgress";
+import TextField from "@mui/material/TextField";
 import axios from "axios";
 import { useEffect, useState } from "react";
 interface IPokedex {
