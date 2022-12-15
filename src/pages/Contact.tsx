@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Button from "@mui/material/Button"
+import {Button} from "@mui/material"
 import sendEmail,{ sendEmailProps } from "../services/sendEmail"
 import InputGroup from "react-bootstrap/esm/InputGroup"
 import { Form } from "react-bootstrap"
@@ -56,9 +56,9 @@ return (<>
         />
       </InputGroup>
       {name.length > 0 && topic.length > 0 && message.length && email.length > 0 ? (
-         <Button sx={{marginTop:20}} variant="success" onClick={()=>{onSubmit()}} active>Submit</Button>
+         <Button sx={{marginTop:5}}variant="outlined" color="success" onClick={()=>{onSubmit()}}>Submit</Button>
       ) : (
-        <Button sx={{marginTop:20}} variant="danger" disabled>Fill in all fields</Button> 
+        <Button sx={{marginTop:5}}variant="outlined" color="error" disabled>Fill in all fields</Button> 
       )}
      
 
