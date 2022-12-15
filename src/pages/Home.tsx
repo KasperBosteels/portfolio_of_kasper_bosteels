@@ -2,18 +2,19 @@ import LinearProgress from '@mui/material/LinearProgress';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 import NYTimes from '../components/NYTimes';
+import Box from '@mui/material/Box';
 
 const HomePage = ()=>{
     return (
-        
+        <Box sx={{width:"100%", display:"flex", justifyContent:"center"}}>
         <Grid container className="homeGrid" sx={{
         color:"text.primary", 
         bgcolor:"background.default", 
         marginTop:"2rem",
         display:"flex",
-        width:"100%"
+        width:"90%"
         }}>
-        <Grid xs={7} >
+        <Grid xs={8} >
             <Typography className="homeText">
                 <h3>welkom</h3>
                 <p>Mijn naam is Kasper Bosteels en ik ben een programmeur. 
@@ -28,7 +29,7 @@ const HomePage = ()=>{
                     <p className='tinyText'>(made by OpenAI)</p>
             </Typography>
             </Grid>
-            <Grid xs={3} >
+            <Grid xs={4} >
                 <Typography>
                 <div className="skilsComponent">
                 <h2>My skills</h2>
@@ -42,6 +43,7 @@ const HomePage = ()=>{
             </Grid>
             <NYTimes/>          
         </Grid>
+        </Box>
     )
 }
 export default HomePage;
