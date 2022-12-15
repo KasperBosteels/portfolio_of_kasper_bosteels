@@ -1,5 +1,5 @@
 import Grid from "@mui/material/Unstable_Grid2";
-import { Paper,Button } from "@mui/material";
+import { Paper,Button, Box, TextField } from "@mui/material";
 import Filtering from "../components/showroom/Filtering";
 import ShoppingList from "../components/showroom/Shoppinglist";
 import Slotmachine from "../components/showroom/slots/Slotmachine";
@@ -56,9 +56,21 @@ const componenten:components[] = [
 //todo: style individal comp.components :(
 const Componenten = ()=>{
     const [active,setActive] = useState<number>(9);
+    const [filteredComponents,setFilteredComponents] = useState<components[]>(componenten)
+
+    
+    
     return (
         <Grid container spacing={8} style={{margin:"auto"}}>
-            {componenten.map((comp,i)=>(
+            <Box sx={{ width:"100%", display:"flex",justifyContent:"flex-end",}}>
+                <TextField 
+                    label="filter" 
+                    sx={{marginRight:"3%",
+                        marginTop:"2%", 
+                        height:"fit-content"}}
+                    onChange={(e)=>{setFilteredComponents(componenten.filter((c)=>c.name.toLowerCase().startsWith(e.target.value.toLowerCase())))}}/>
+            </Box>
+            {filteredComponents?.map((comp,i)=>(
                 <Grid xs={8} style={{width:"95%", margin:"auto", padding:".3rem"}}>
                     <Paper elevation={8}>
                         <h3 style={{margin:"1.5rem"}}>{comp.name}</h3>
