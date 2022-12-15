@@ -1,6 +1,6 @@
 import Grid from "@mui/material/Unstable_Grid2";
 import { Paper,Button, Box, TextField } from "@mui/material";
-
+import ComponentCard from "../components/ComponentCard";
 import { useState } from "react";
 interface components {
     name:string,
@@ -43,9 +43,6 @@ const componenten:components[] = [
 const Componenten = ()=>{
     const [active,setActive] = useState<number>(9);
     const [filteredComponents,setFilteredComponents] = useState<components[]>(componenten)
-
-    
-    
     return (
         <Grid container spacing={8} style={{margin:"auto"}}>
             <Box sx={{ width:"100%", display:"flex",justifyContent:"flex-end",}}>
@@ -57,31 +54,8 @@ const Componenten = ()=>{
                     onChange={(e)=>{setFilteredComponents(componenten.filter((c)=>c.name.toLowerCase().startsWith(e.target.value.toLowerCase())))}}/>
             </Box>
             {filteredComponents?.map((comp,i)=>(
-                <Grid xs={8} style={{width:"95%", margin:"auto", padding:".3rem"}}>
-                    <Paper elevation={8}>
-                        <h3 style={{margin:"1.5rem"}}>{comp.name}</h3>
-                        {active !== i ? (<p style={{marginLeft:"1.5rem"}}>{comp.description}</p>):<></>}
-                        <Button variant="contained" 
-                                color={active !== i ? "success" : "error"}   
-                                onClick={()=>{active !== i ? setActive(i) : setActive(9)}}
-                                sx={{margin:"1rem"}}>
-                                    {active !== i ? "Try me!" : "Close"}
-                        </Button>
-                        {active === i ? (<Paper sx={{
-                            margin:"auto",
-                            padding:"2rem",
-                            maxWidth:"70%", 
-                            width:"fit-content",
-                            justifyContent:"center",
-                            borderTopRightRadius:"1.5rem",
-                            borderTopLeftRadius:"1.5rem",
-                            alignItems:"center"}}>
-                            </Paper>):(<></>)}
-                    </Paper>
-                </Grid>
+               <ComponentCard Title={comp.name} Description={comp.description} Path={i}/>
               
-                
-                
             ))}
         </Grid>
     )
