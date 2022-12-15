@@ -10,6 +10,7 @@ import Menu from '@mui/material/Menu'
 import  MenuItem from "@mui/material/MenuItem"
 import Button from "@mui/material/Button"
 import { NavLink } from 'react-router-dom'
+import { Box } from '@mui/material'
 export interface menuprops{
     theme:string;
     toggle:()=>void;
@@ -61,6 +62,10 @@ const NavigationBar=({theme,toggle}:menuprops)=>{
                 <NavLink className="topBarbuttons" to="/" style={{ textDecoration:"none"}}><Typography color="text.primary"> Home</Typography></NavLink>
                 <NavLink className="topBarbuttons" to="Contact" style={{ textDecoration:"none"}}><Typography color="text.primary">Contact</Typography></NavLink>
                <NavLink className="topBarbuttons" to="Components" style={{textDecoration:"none"}}><Typography color="text.primary">Components</Typography></NavLink>
+               <Box sx={{minWidth:50,display:"flex",justifyContent:"end", flex:"auto"}}>
+               <a style={{marginRight:5}} href="https://github.com/KasperBosteels"><img width="20" src="./github-mark-white.png"></img></a>
+               <a style={{marginRight:5}} href="https://be.linkedin.com/in/kasper-bosteels"><img width="20" src="./In-Blue-26-Ôö¼┬½.png"></img></a>
+               </Box>
                 <Button style={{
                     transition:"all",
                     transitionDuration:".5s" ,
@@ -72,7 +77,8 @@ const NavigationBar=({theme,toggle}:menuprops)=>{
                     right:0 , 
                     height:"100%" ,
                     backgroundColor: theme == "dark" ? "white" : "black"}} 
-                    onClick={()=>toggle()}>{theme == "light" ? (<DarkMode/>):(<LightMode/>)}</Button>
+                    onClick={()=>toggle()}>{theme == "light" ? (<DarkMode/>):(<LightMode/>)}
+                    </Button>
                 </Toolbar>
             </AppBar>
         </div>

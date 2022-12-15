@@ -3,11 +3,11 @@ interface Slotprops {
 }
 const Slot = (props: Slotprops) => {
   const fruits: string[] = [
-    "./images/kpx3fxhl.bmp",
-    "./images/wisvpjc4.bmp",
-    "./images/xav8ui74.bmp",
-    "./images/xwxw8ydf.bmp",
-    "./images/zx5bv6uh.bmp",
+    "../images/cherry.bmp",
+    "../images/lemon.bmp",
+    "../images/melon.bmp",
+    "../images/purple.bmp",
+    "../images/seven.bmp",
   ];
   return (
     <img
