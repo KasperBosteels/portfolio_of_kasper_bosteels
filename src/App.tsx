@@ -6,7 +6,7 @@ import Layout from "./pages/Layout";
 import useLocalStorage from "use-local-storage";
 import CssBaseline from "@mui/material/CssBaseline";
 import { createTheme, ThemeProvider } from "@mui/material";
-import ShowRoom from "./components/showRoom";
+import ShowRoom from "./pages/showRoom";
 
 
 const customtheme = createTheme({

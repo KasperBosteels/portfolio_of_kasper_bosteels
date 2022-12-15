@@ -8,7 +8,7 @@ import Counter from "../components/showroom/counter";
 import TodoComponent from "../components/showroom/todo/Todo";
 import { Paper } from "@mui/material";
 import { useParams } from "react-router-dom";
-import ComponentDoesNotExist from "./ComponentDoesNotExist";
+import ComponentDoesNotExist from "../components/ComponentDoesNotExist";
 interface components {
     name:string,
     description:string,
