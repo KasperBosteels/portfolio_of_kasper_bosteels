@@ -1,17 +1,14 @@
 import {useState,MouseEvent} from 'react'
 import AppBar from "@mui/material/AppBar/AppBar"
-import IconButton from "@mui/material/IconButton/IconButton"
 import Toolbar from "@mui/material/Toolbar/Toolbar"
-import MenuIcon from "@mui/icons-material/Menu"
 import DarkMode from "@mui/icons-material/DarkMode"
 import LightMode from "@mui/icons-material/LightMode"
 import Typography from "@mui/material/Typography/Typography"
-import Menu from '@mui/material/Menu'
-import  MenuItem from "@mui/material/MenuItem"
 import Button from "@mui/material/Button"
 import { NavLink } from 'react-router-dom'
 import Box from '@mui/material/Box'
 import { Container } from '@mui/material'
+import VerticalMenu from './verticalMenu'
 export interface menuprops{
     theme:string;
     toggle:()=>void;
@@ -19,9 +16,11 @@ export interface menuprops{
 const NavigationBar=({theme,toggle}:menuprops)=>{
     const [anchor, setanchor] = useState<null | HTMLElement>(null);
     const open = Boolean(anchor);
+    
     const openMenu = (event: MouseEvent<HTMLButtonElement>)=>{
         setanchor(event.currentTarget);
     }
+
     const closeMenu = ()=>{
         setanchor(null);
     }
@@ -30,26 +29,7 @@ const NavigationBar=({theme,toggle}:menuprops)=>{
             <AppBar position="static" sx={{width:"100%"}} enableColorOnDark>
                 <Container>
                 <Toolbar variant="dense" color="" disableGutters>
-                <Box sx={{flexGrow:1,display:{xs:"flex",md:"none"}}}>
-                    <IconButton 
-                        color="inherit"
-                        aria-controls={open ? 'basic-menu' : undefined} 
-                        aria-haspopup="true"
-                        aria-expanded={open ? 'true' : undefined} 
-                        onClick={openMenu}>
-                    <MenuIcon/>
-                </IconButton>
-                <Menu 
-                    anchorEl={anchor}
-                    open={open}
-                    onClose={closeMenu}
-                    onMouseLeave={()=>closeMenu()}
-                    MenuListProps={{'aria-labelledby':'menuBUtton'}}>
-                        <NavLink to="/" style={{ textDecoration:"none"}}><MenuItem><Typography color="text.primary">Home</Typography></MenuItem></NavLink>
-                        <NavLink to="Contact" style={{ textDecoration:"none"}}><MenuItem><Typography color="text.primary">Contact</Typography></MenuItem></NavLink>
-                        <NavLink to="Components" style={{textDecoration:"none"}}><MenuItem><Typography color="text.primary">Components</Typography></MenuItem></NavLink>
-                    </Menu>
-                </Box>
+                <VerticalMenu open={open} anchor={anchor} setopen={openMenu} closeMenu={closeMenu}/>
                 <NavLink to="/" style={{textDecoration:"none"}}>
                     <Typography variant="h6" color="text.primary" sx={{display:{md:"flex",xs:"none"}}}>Portfolio van Kasper Bosteels</Typography>
                     <Typography variant="h6" color="text.primary" sx={{display:{md:"none",xs:"flex"}}}>Portfolio</Typography>
