@@ -25,7 +25,8 @@ const HomePage = ()=>{
             C#, JavaScript, TypeScript<br></br>
             en ik werk met frameworks en platformen zoals React, Material UI, Express,<br></br>DotNet Web API, Node en Git.<br></br>
             Verder heb ik ook kennis van databases zoals MySQL, MongoDB en TypeORM en ben ik ook<br></br>
-            bekend met tools zoals HeidiSQL. Daarnaast beheers ik ook HTML, CSS en heb ik kennis van UiPath.
+            bekend met tools zoals HeidiSQL, Oracle virtual Box, Windows Server 2019.<br></br>
+            Daarnaast beheers ik ook HTML, CSS en heb ik kennis van UiPath.
             <br></br>
             <br></br>
             Ik hoop dat u interessante projecten en informatie op mijn site zult vinden en aarzel niet om<br></br>

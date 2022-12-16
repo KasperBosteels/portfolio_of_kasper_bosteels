@@ -1,5 +1,5 @@
 import Grid from "@mui/material/Unstable_Grid2";
-import { Paper,Button, Box, TextField } from "@mui/material";
+import {Box, TextField } from "@mui/material";
 import ComponentCard from "../components/ComponentCard";
 import { useState } from "react";
 interface components {
@@ -41,7 +41,6 @@ const componenten:components[] = [
 
 //todo: style individal comp.components :(
 const Componenten = ()=>{
-    const [active,setActive] = useState<number>(9);
     const [filteredComponents,setFilteredComponents] = useState<components[]>(componenten)
     return (
         <Grid container spacing={8} style={{margin:"auto", display:"flex", justifyContent:"center"}}>
