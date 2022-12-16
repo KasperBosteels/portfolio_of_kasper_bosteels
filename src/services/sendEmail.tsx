@@ -20,7 +20,7 @@ const sendEmail =async  (content:sendEmailProps):Promise<number>=>{
     init(userid)
     await send(serviceid,templateid,tosend)
         .then((res)=>{
-        if(res.status == 200)return ('<Alert severity="success">This is a success message!</Alert>')
+        if(res.status === 200)return ('<Alert severity="success">This is a success message!</Alert>')
         }).catch((err)=>{
             console.log(err)
         })

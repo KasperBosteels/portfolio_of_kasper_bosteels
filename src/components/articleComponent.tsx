@@ -11,7 +11,7 @@ interface articleProp {
 const Article = ({data}:articleProp)=>{
 return (
     <Card style={{maxWidth:"28%",maxHeight:385,height:"114%", margin:"auto",backgroundColor:"palette.secondary.dark"}} elevation={10}>
-        <CardHeader avatar={<a href="https://developer.nytimes.com."><img src="/poweredby_nytimes_30a.png"/></a>}
+        <CardHeader avatar={<a href="https://developer.nytimes.com."><img src="/poweredby_nytimes_30a.png" alt="./logo192.png"/></a>}
         title={data.title}
         subheader={new Date(data.published_date).toDateString()}
         color="palette.text.primary"/>
