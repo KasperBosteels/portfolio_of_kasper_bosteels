@@ -11,6 +11,7 @@ import  MenuItem from "@mui/material/MenuItem"
 import Button from "@mui/material/Button"
 import { NavLink } from 'react-router-dom'
 import Box from '@mui/material/Box'
+import { Container } from '@mui/material'
 export interface menuprops{
     theme:string;
     toggle:()=>void;
@@ -27,7 +28,9 @@ const NavigationBar=({theme,toggle}:menuprops)=>{
     return(
         <div>
             <AppBar position="static" sx={{width:"100%"}} enableColorOnDark>
-                <Toolbar variant="dense" color="">
+                <Container>
+                <Toolbar variant="dense" color="" disableGutters>
+                <Box sx={{flexGrow:1,display:{xs:"flex",md:"none"}}}>
                     <IconButton 
                         color="inherit"
                         aria-controls={open ? 'basic-menu' : undefined} 
@@ -46,12 +49,17 @@ const NavigationBar=({theme,toggle}:menuprops)=>{
                         <NavLink to="Contact" style={{ textDecoration:"none"}}><MenuItem><Typography color="text.primary">Contact</Typography></MenuItem></NavLink>
                         <NavLink to="Components" style={{textDecoration:"none"}}><MenuItem><Typography color="text.primary">Components</Typography></MenuItem></NavLink>
                     </Menu>
+                </Box>
                 <NavLink to="/" style={{textDecoration:"none"}}>
-                    <Typography variant="h6" color="text.primary">Portfolio of Kasper Bosteels</Typography>
+                    <Typography variant="h6" color="text.primary" sx={{display:{md:"flex",xs:"none"}}}>Portfolio van Kasper Bosteels</Typography>
+                    <Typography variant="h6" color="text.primary" sx={{display:{md:"none",xs:"flex"}}}>Portfolio</Typography>
+
                 </NavLink>
+                <Box sx={{flexGrow:1, display:{xs:"none",md:"flex"}}}>
                 <NavLink className="topBarbuttons" to="/" style={{ textDecoration:"none"}}><Typography color="text.primary"> Home</Typography></NavLink>
                 <NavLink className="topBarbuttons" to="Contact" style={{ textDecoration:"none"}}><Typography color="text.primary">Contact</Typography></NavLink>
                <NavLink className="topBarbuttons" to="Components" style={{textDecoration:"none"}}><Typography color="text.primary">Components</Typography></NavLink>
+               </Box>
                <Box sx={{minWidth:50,display:"flex",justifyContent:"end", flex:"auto"}}>
                <a style={{marginRight:5}} href="https://github.com/KasperBosteels"><img width="20" src="./github-mark-white.png" alt="./logo192.png"></img></a>
                <a style={{marginRight:5}} href="https://be.linkedin.com/in/kasper-bosteels"><img width="20" src="./In-Blue-26-Ôö¼┬½.png" alt="./logo192.png"></img></a>
@@ -70,6 +78,8 @@ const NavigationBar=({theme,toggle}:menuprops)=>{
                     onClick={()=>toggle()}>{theme === "light" ? (<DarkMode/>):(<LightMode/>)}
                     </Button>
                 </Toolbar>
+                </Container>
+
             </AppBar>
         </div>
     )
