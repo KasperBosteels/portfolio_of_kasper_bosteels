@@ -19,17 +19,21 @@ const HomePage = ()=>{
         }}>
         <Grid xs={8} >
             <Typography className="homeText">
-                <h3>welkom</h3>
-                <p>Mijn naam is Kasper Bosteels en ik ben een programmeur. 
-                    <br></br>Ik ben gespecialiseerd in talen zoals JavaScript, TypeScript, C#, Bash en een beetje PHP. 
-                    <br></br>Ik heb ook ervaring met technologieën zoals Typeorm, React.js en React.ts, MongoDB, MySQL, WordPress, Arduino,node, NPM, Uipath en DotNet.<br></br>
-                    Daarnaast spreek ik vloeiend Nederlands en Engels. 
-                    <br></br>Dit stelt me in staat om op een gemakkelijke manier te communiceren met zowel nationale als internationale klanten.<br></br>
-                    Ik ben altijd op zoek naar nieuwe uitdagingen en kansen om mijn vaardigheden te verbeteren en te laten groeien. 
-                    <br></br>Als u op zoek bent naar een professionele en gemotiveerde programmeur, aarzel dan niet om contact met me op te nemen.<br></br>
-                    <br></br>Met vriendelijke groet,
-                    <br></br>Kasper Bosteels</p>
-                    <p className='tinyText'>(made by OpenAI)</p>
+            <h4>Beste bezoeker,</h4>
+            Welkom op mijn portfolio site! Mijn naam is Kasper Bosteels en ik ben een student aan Artesis Plantijn<br></br>
+            waar ik mijn opleiding tot programmeur volg. Mijn programmeervaardigheden omvatten<br></br> 
+            C#, JavaScript, TypeScript<br></br>
+            en ik werk met frameworks en platformen zoals React, Material UI, Express,<br></br>DotNet Web API, Node en Git.<br></br>
+            Verder heb ik ook kennis van databases zoals MySQL, MongoDB en TypeORM en ben ik ook<br></br>
+            bekend met tools zoals HeidiSQL. Daarnaast beheers ik ook HTML, CSS en heb ik kennis van UiPath.
+            <br></br>
+            <br></br>
+            Ik hoop dat u interessante projecten en informatie op mijn site zult vinden en aarzel niet om<br></br>
+            contact met mij op te nemen als u vragen of opmerkingen heeft.
+            <br></br>
+            <br></br>
+            Met vriendelijke groet,<br></br>
+            Kasper Bosteels
             </Typography>
             </Grid>
            <Grid xs={4}>
