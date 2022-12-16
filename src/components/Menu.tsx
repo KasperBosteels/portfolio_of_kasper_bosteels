@@ -26,7 +26,7 @@ const NavigationBar=({theme,toggle}:menuprops)=>{
     }
     return(
         <div>
-            <AppBar position="static" sx={{width:"100%"}}>
+            <AppBar position="static" sx={{width:"100%"}} enableColorOnDark>
                 <Toolbar variant="dense" color="">
                     <IconButton 
                         color="inherit"
@@ -47,7 +47,7 @@ const NavigationBar=({theme,toggle}:menuprops)=>{
                         <NavLink to="Components" style={{textDecoration:"none"}}><MenuItem><Typography color="text.primary">Components</Typography></MenuItem></NavLink>
                     </Menu>
                 <NavLink to="/" style={{textDecoration:"none"}}>
-                    <Typography variant="h6" color="primary.dark">Portfolio of Kasper Bosteels</Typography>
+                    <Typography variant="h6" color="text.primary">Portfolio of Kasper Bosteels</Typography>
                 </NavLink>
                 <NavLink className="topBarbuttons" to="/" style={{ textDecoration:"none"}}><Typography color="text.primary"> Home</Typography></NavLink>
                 <NavLink className="topBarbuttons" to="Contact" style={{ textDecoration:"none"}}><Typography color="text.primary">Contact</Typography></NavLink>
