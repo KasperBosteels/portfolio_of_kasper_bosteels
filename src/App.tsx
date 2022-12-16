@@ -8,6 +8,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { createTheme, ThemeProvider } from "@mui/material";
 import ShowRoom from "./pages/showRoom";
 import "./App.css";
+import ErrorPage from "./pages/404";
 
 const customtheme = createTheme({
   palette: {
@@ -70,6 +71,9 @@ function App() {
         },{
           path:"Components/:id",
           element:<ShowRoom/>
+        },{
+          path:"*",
+          element:<ErrorPage/>
         }
        
       ],
