@@ -44,11 +44,11 @@ const Componenten = ()=>{
     const [active,setActive] = useState<number>(9);
     const [filteredComponents,setFilteredComponents] = useState<components[]>(componenten)
     return (
-        <Grid container spacing={8} style={{margin:"auto"}}>
-            <Box sx={{ width:"100%", display:"flex",justifyContent:"flex-end",}}>
+        <Grid container spacing={8} style={{margin:"auto", display:"flex", justifyContent:"center"}}>
+            <Box sx={{ width:"90%", display:"flex",justifyContent:"flex-end",}}>
                 <TextField 
                     label="filter" 
-                    sx={{marginRight:"3%",
+                    sx={{
                         marginTop:"2%", 
                         height:"fit-content"}}
                     onChange={(e)=>{setFilteredComponents(componenten.filter((c)=>c.name.toLowerCase().startsWith(e.target.value.toLowerCase())))}}/>
