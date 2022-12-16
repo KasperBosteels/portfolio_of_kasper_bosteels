@@ -9,6 +9,7 @@ import { NavLink } from 'react-router-dom'
 import Box from '@mui/material/Box'
 import { Container } from '@mui/material'
 import VerticalMenu from './verticalMenu'
+import HorizontalMenu from './HorizontalMenu'
 export interface menuprops{
     theme:string;
     toggle:()=>void;
@@ -35,11 +36,7 @@ const NavigationBar=({theme,toggle}:menuprops)=>{
                     <Typography variant="h6" color="text.primary" sx={{display:{md:"none",xs:"flex"}}}>Portfolio</Typography>
 
                 </NavLink>
-                <Box sx={{flexGrow:1, display:{xs:"none",md:"flex"}}}>
-                <NavLink className="topBarbuttons" to="/" style={{ textDecoration:"none"}}><Typography color="text.primary"> Home</Typography></NavLink>
-                <NavLink className="topBarbuttons" to="Contact" style={{ textDecoration:"none"}}><Typography color="text.primary">Contact</Typography></NavLink>
-               <NavLink className="topBarbuttons" to="Components" style={{textDecoration:"none"}}><Typography color="text.primary">Components</Typography></NavLink>
-               </Box>
+                <HorizontalMenu/>
                <Box sx={{minWidth:50,display:"flex",justifyContent:"end", flex:"auto"}}>
                <a style={{marginRight:5}} href="https://github.com/KasperBosteels"><img width="20" src="./github-mark-white.png" alt="./logo192.png"></img></a>
                <a style={{marginRight:5}} href="https://be.linkedin.com/in/kasper-bosteels"><img width="20" src="./In-Blue-26-Ôö¼┬½.png" alt="./logo192.png"></img></a>
