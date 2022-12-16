@@ -53,9 +53,9 @@ const Filtering = () => {
               <caption>A list of students filterable by name, and sortable by name, age & year</caption>
               <TableHead>
                 <TableRow>
-                  <TableCell><Button color={sortby == "name" ? "success" : "primary"} size="small" onClick={()=>{setSortby("name")}}>Name</Button></TableCell>
-                  <TableCell><Button color={sortby == "age" ? "success" : "primary"} size="small" onClick={()=>{setSortby("age")}}>Age</Button></TableCell>
-                  <TableCell><Button color={sortby == "year" ? "success" : "primary"} size="small" onClick={()=>{setSortby("year")}}>year</Button></TableCell>
+                  <TableCell><Button color={sortby === "name" ? "success" : "primary"} size="small" onClick={()=>{setSortby("name")}}>Name</Button></TableCell>
+                  <TableCell><Button color={sortby === "age" ? "success" : "primary"} size="small" onClick={()=>{setSortby("age")}}>Age</Button></TableCell>
+                  <TableCell><Button color={sortby === "year" ? "success" : "primary"} size="small" onClick={()=>{setSortby("year")}}>year</Button></TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>

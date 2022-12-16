@@ -19,7 +19,7 @@ const Slotmachine = (props: slotmachine) => {
   const [money, setMoney] = useState<number>(10);
   const loseOrWinMoney = () => {
     if (
-      Slots.filter((SlotsValue) => SlotsValue == Slots[0]).length ==
+      Slots.filter((SlotsValue) => SlotsValue === Slots[0]).length ===
       Slots.length
     ) {
       setMoney(money + 20);
@@ -51,7 +51,7 @@ const Slotmachine = (props: slotmachine) => {
       </Box>
       </Box>
       <Box sx={{display:"flex", justifyContent:"center"}}>
-      {Slots.filter((slotvalue) => slotvalue == Slots[0]).length ==
+      {Slots.filter((slotvalue) => slotvalue === Slots[0]).length ===
       Slots.length ? (
         <p>you won!!</p>
       ) : (
