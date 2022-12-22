@@ -9,6 +9,7 @@ import Button from "@mui/material/Button"
 import Link from "@mui/material/Link"
 import { Result } from "../interfaces"
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+import Box from "@mui/material/Box";
 
 interface articleProp {
     data:Result
@@ -37,15 +38,21 @@ return (
             alt="logo192.png"
             />
         <CardContent>
-            <Typography 
+            <Box sx={{overflow:"hidden" ,height:75}}>
+            <Typography
+                sx={{overflow:"hidden"}} 
                 variant="body2" 
                 color="text.secondary">
                     {data.abstract}
-                </Typography>
-        </CardContent>
+            </Typography>
+            </Box>
         <CardActions>
         <Link href={data.url}><Button size="small" color="primary" startIcon={<AutoStoriesIcon/>}>Read More</Button></Link>
         </CardActions>
+        
+        
+        </CardContent>
+        
     </Card>
 )
 }
