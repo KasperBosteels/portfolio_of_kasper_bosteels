@@ -25,8 +25,8 @@ const NavigationBar=({theme,toggle}:menuprops)=>{
     return(
         <div>
             <AppBar position="static" sx={{width:"100%"}} enableColorOnDark>
-                <Container>
-                <Toolbar variant="dense" color="" disableGutters>
+                <Container className="TopMenuContainer" sx={{margin:"auto", display:"flex", alignContent:"space-evenly", flexDirection:"column", width:"100%"}}>
+                <Toolbar variant="regular" color="" disableGutters>
                 <VerticalMenu open={open} anchor={anchor} setopen={openMenu} closeMenu={closeMenu}/>
                 <NavLink to="/" style={{textDecoration:"none"}}>
                     <Typography variant="h6" color="text.primary" sx={{display:{md:"flex",xs:"none"}}}>Portfolio van Kasper Bosteels</Typography>

@@ -25,7 +25,7 @@ const DadJoke = () => {
   return (
     <>
       <Box
-        sx={{display:"grid", justifyContent:"center"}}
+        sx={{display:"flex",flexDirection:"column",alignItems:"center",  justifyContent:"center", maxWidth:"70%", width:"fit-content", margin:"auto"}}
       >
         <Box>
         <h4>{joke}</h4>
@@ -44,8 +44,7 @@ const DadJoke = () => {
           onClick={() => setvafjoke(joke)}
         >Save joke</Button>
         <Box>
-
-          {favouritejoke ? (<><p>your favourite joke:</p><p>{favouritejoke}</p></>) : <></>}
+          {favouritejoke ? (<><p>your favourite joke:<br></br></p><p>{favouritejoke}</p></>) : <></>}
         </Box>
         </Box>
       </Box>

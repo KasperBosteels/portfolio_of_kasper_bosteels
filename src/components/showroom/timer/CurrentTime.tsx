@@ -15,7 +15,7 @@ const CurrentTime = ({ interval }: ICurrentTime) => {
     };
   }, [interval]);
   return (
-    <p>
+    <p style={{display:"flex"}}>
       Current time: {currentTime.getHours()}:{currentTime.getMinutes()}:{currentTime.getSeconds()}
     </p>
   );

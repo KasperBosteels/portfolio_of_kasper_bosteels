@@ -15,7 +15,12 @@ const onSubmit=()=>{
 }
 
 return (<>
-    <Form style={{margin:"auto", marginTop:"5%", width:"50%"}} id='contact_form'>
+    <Form 
+    style={{
+      margin:"auto", 
+      marginTop:"5%", 
+      width:"50%"}} 
+      id='contact_form'>
      <InputGroup className="mb-3">
         <Form.Control
           name="name"

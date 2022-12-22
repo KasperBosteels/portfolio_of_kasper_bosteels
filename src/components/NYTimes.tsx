@@ -9,14 +9,32 @@ const NYTimes = () =>{
 const [news,setNews] = useState<Result[]>([]);
     axios.get("https://api.nytimes.com/svc/topstories/v2/science.json?api-key=ZIdGxGbiWw9if9XwvGTQm26JA3jzYEXy").then((res)=>{
     let data:Result[] = JSON.parse(JSON.stringify(res)).data.results
-    setNews([data[4],data[8],data[6]])
+    setNews([data[4],data[5],data[6]])
     }).catch((err)=>console.log(err))
     return (
         <>
-        <Grid container direction={news.length > 0 ? "row" : "column"} style={{maxWidth:"90%", margin:"auto", maxHeight:345, verticalAlign:"center",justifyContent:"center",marginTop:"10%",flexDirection:"inherit", marginBottom:"8%"}}>
+        <Grid 
+            container 
+            direction={news.length > 0 ? "row" : "column"} 
+            style={{
+                maxWidth:"90%", 
+                margin:"auto",
+                padding:".1rem", 
+                maxHeight:500,
+                minHeight:375,
+                height:"fit-content",
+                verticalAlign:"center",
+                justifyContent:"center",
+                marginTop:"10%",
+                flexDirection:"column", 
+                marginBottom:"8%",
+                flexGrow:1,
+                }}
+            sx={{display:{lg:"flex",md:"none",xs:"none"}}}
+            >
             {news.length > 0 ? (
             news.map((n)=>(<Article data={n}/>))
-            ) : (<><Typography color="text.primary"> assembling the news for you...</Typography><CircularProgress/></>)}
+            ) : (<><Typography color="text.primary" sx={{marginRight:"1rem"}}> assembling the news for you...</Typography><CircularProgress/></>)}
         </Grid>
         </>
     )

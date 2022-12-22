@@ -44,7 +44,10 @@ const Componenten = ()=>{
     const [filteredComponents,setFilteredComponents] = useState<components[]>(componenten)
     return (
         <Grid container spacing={8} style={{margin:"auto", display:"flex", justifyContent:"center"}}>
-            <Box sx={{ width:"90%", display:"flex",justifyContent:"flex-end",}}>
+            <Box sx={{ 
+                width:"90%", 
+                display:"flex",
+                justifyContent:"flex-end",}}>
                 <TextField 
                     label="filter" 
                     sx={{

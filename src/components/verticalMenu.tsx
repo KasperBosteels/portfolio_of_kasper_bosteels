@@ -10,7 +10,7 @@ interface VerticalMenuProps {
 }
 const VerticalMenu = ({open,anchor,closeMenu,setopen}:VerticalMenuProps)=>{
     return (
-        <Box sx={{flexGrow:1,display:{xs:"flex",md:"none"}}}>
+        <Box sx={{flexGrow:1,display:{xs:"flex",md:"none"},}}>
                     <IconButton 
                         color="inherit"
                         aria-controls={open ? 'basic-menu' : undefined} 
@@ -24,7 +24,7 @@ const VerticalMenu = ({open,anchor,closeMenu,setopen}:VerticalMenuProps)=>{
                     open={open}
                     onClose={closeMenu}
                     onMouseLeave={()=>closeMenu()}
-                    MenuListProps={{'aria-labelledby':'menuBUtton'}}>
+                    MenuListProps={{'aria-labelledby':'menuButton'}}>
                         <NavLink to="/" style={{ textDecoration:"none"}}><MenuItem><Typography color="text.primary">Home</Typography></MenuItem></NavLink>
                         <NavLink to="Contact" style={{ textDecoration:"none"}}><MenuItem><Typography color="text.primary">Contact</Typography></MenuItem></NavLink>
                         <NavLink to="Components" style={{textDecoration:"none"}}><MenuItem><Typography color="text.primary">Components</Typography></MenuItem></NavLink>

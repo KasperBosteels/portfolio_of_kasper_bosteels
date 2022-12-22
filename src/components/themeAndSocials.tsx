@@ -1,8 +1,10 @@
+import Box from "@mui/material/Box"
+import Link from "@mui/material/Link"
+import Button from "@mui/material/Button"
+import IconButton from "@mui/material/IconButton"
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { DarkMode, LightMode } from "@mui/icons-material"
-import { Box } from "@mui/material"
-import { Button } from "react-bootstrap"
-
-
 
 interface themeAndSocialProps {
     theme:string,
@@ -12,8 +14,8 @@ const ThemeAndSocials = ({theme,toggle}:themeAndSocialProps)=>{
     return (
         <>
         <Box sx={{minWidth:50,display:"flex",justifyContent:"end", flex:"auto"}}>
-           <a style={{marginRight:5}} href="https://github.com/KasperBosteels"><img width="20" src="./github-mark-white.png" alt="./logo192.png"></img></a>
-           <a style={{marginRight:5}} href="https://be.linkedin.com/in/kasper-bosteels"><img width="20" src="./In-Blue-26-Ôö¼┬½.png" alt="./logo192.png"></img></a>
+           <Link style={{marginRight:5}} href="https://github.com/KasperBosteels"><IconButton aria-label="link to github"><GitHubIcon/></IconButton></Link>
+           <Link style={{marginRight:5}} href="https://be.linkedin.com/in/kasper-bosteels"><IconButton aria-label="link to linkedIn"><LinkedInIcon/></IconButton></Link>
         </Box>
         <Button style={{
                 transition:"all",

@@ -4,15 +4,16 @@ import NYTimes from '../components/NYTimes';
 import Box from '@mui/material/Box';
 import SkillsPanel from '../components/SkillsPanel';
 
-
 const HomePage = ()=>{
     return (
-        <Box className="ContainerBox" style={{ width:"100%", 
+        <Box 
+        sx={{ 
+        width:"100%", 
         display:"flex",
         justifyContent:"center",}}>
-        <Grid container className="homeGrid" sx={{
+        <Grid container className="homeGrid" 
+        sx={{
         color:"text.primary", 
-        bgcolor:"background.default", 
         marginTop:"2rem",
         display:"flex",
         width:"90%"
