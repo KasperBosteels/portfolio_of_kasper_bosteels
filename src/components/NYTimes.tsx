@@ -18,18 +18,18 @@ const [news,setNews] = useState<Result[]>([]);
             direction={news.length > 0 ? "row" : "column"} 
             style={{
                 maxWidth:"90%", 
-                margin:"auto",
-                padding:".1rem", 
                 maxHeight:500,
                 minHeight:375,
                 height:"fit-content",
+                padding:".1rem", 
+                margin:"auto",
+                marginTop:"10%",
+                marginBottom:"8%",
                 verticalAlign:"center",
                 justifyContent:"center",
-                marginTop:"10%",
                 flexDirection:"column", 
-                marginBottom:"8%",
                 flexGrow:1,
-                }}
+            }}
             sx={{display:{lg:"flex",md:"none",xs:"none"}}}
             >
             {news.length > 0 ? (
