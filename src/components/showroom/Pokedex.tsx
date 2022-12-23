@@ -27,7 +27,7 @@ const Pokedex = ({ limit = 10 }: IPokedex) => {
   };
   useEffect(() => {
     getPokemon();
-  });
+  },[]);
   return (
     <>
 
