@@ -7,6 +7,9 @@ interface Iinputprops {
     inputfield:(input:string)=>void
 }
 export const TodoInput = ({todo,button,inputfield}:Iinputprops)=>{
+    const handleSubmit=(value:string)=>{
+    if(value.length>0)button(value)
+    }
     return (
     <Box>
     <TextField 
@@ -15,8 +18,9 @@ export const TodoInput = ({todo,button,inputfield}:Iinputprops)=>{
         size="small"
         value={todo}
         sx={{borderRadius:0}}
-        onChange={(e)=>inputfield(e.target.value)}/>
-        <Button size="medium" variant="contained" sx={{borderRadius:0}}onClick={()=>button(todo)}>Add</Button>
+        onChange={e=>inputfield(e.target.value)}
+        onKeyDown={(k)=>{if(k.code==="Enter"){handleSubmit(todo)}}}/>
+        <Button size="medium" variant="contained" sx={{borderRadius:0}}onClick={()=>handleSubmit(todo)}>Add</Button>
     </Box>
     )
 }

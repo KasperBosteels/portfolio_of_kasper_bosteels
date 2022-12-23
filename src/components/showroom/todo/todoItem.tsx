@@ -17,6 +17,7 @@ return (
 <TableCell>
     <Button 
         onClick={()=>{markCompleted(!todo.completed)}}
+        
         variant={todo.completed? "outlined" : "contained"} 
         color={todo.completed? "success" : "warning"}>{todo.completed ? "Completed": "Not completed"}</Button>
 </TableCell>
