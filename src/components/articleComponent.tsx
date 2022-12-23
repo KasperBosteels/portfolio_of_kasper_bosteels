@@ -38,7 +38,12 @@ return (
             alt="logo192.png"
             />
         <CardContent>
-            <Box sx={{overflow:"hidden" ,height:75}}>
+            <Box sx={{
+                overflow: "hidden",
+                textOverflow:"clip",
+                whiteSpace:"break-spaces",
+                height:"4.5rem",
+            }}>
             <Typography
                 sx={{overflow:"hidden"}} 
                 variant="body2" 
