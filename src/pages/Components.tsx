@@ -10,32 +10,32 @@ interface components {
 const componenten:components[] = [
     {
         name:"Shopping list",
-        description:"An empty shopping list with an input field that allows you to add to it.",
+        description:"A Table that simulates a shoppinglist with with names and the amount of each item to get.\nYou are able to add an item to the list with a specific amout, and you are able to delete individual items from the table.",
     },
     {
         name:"Filtering and sorting",
-        description:"A component with a list that you can filter & sort, wich will update live.",
+        description:"This component simulates a table of students with their age and the current year they are attending.\nThe table is filterable by name,\nAnd sortable by name,age and year.",
     },
     {
         name:"Slots",
-        description:"A slot machine that simulates one from a casino with money.",
+        description:"This component acts as a slot machine from a casino with a set amount of money.\nEvery time you play you lose a bit of money,\nuntil either you win or lose all your money and you are no longer allowed to play.",
     },
     {
         name:"Counter",
-        description:"This is a list with multiple counters triggered by buttons.",
+        description:"This contains a single state wich contains an array of numbers that can individually be increased with the increment or decrement button on the sides of it.",
     },{
         name:"Interval",
-        description:"This component contains various time triggered displays",
+        description:"This component contains various time triggered displays using the useEffect hook from react.",
     },{
         name:"Pokedex",
-        description:"This component will call the pokeApi and simulate a pokedex.",
+        description:"This component contains a call to the pokeApi.\nThe output of wich will be displayed as a list, wich can be filtered by name, and a max amount of pokemon can be set.",
     },
     {
         name:"DadJoke-local storage",
-        description:"A component that calls an api, and displays its answer.",
+        description:"A component that calls the icanhazdadjoke api and displays a joke, every joke can be saved in the localstorage,\nif one is set it will be displayed below the joke.",
     },{
         name:"Todo list",
-        description:"A component that simulates a todo list with communication between parent and child",
+        description:"This item will simulate a todo list.\nEvery item in the list will be set as 'not completed', after the button is pressed the item will be crossed out and set as done.",
     }
 ];
 
