@@ -1,73 +1,29 @@
-import { useState } from "react"
-import {Button} from "@mui/material"
-import sendEmail,{ sendEmailProps } from "../services/sendEmail"
-import InputGroup from "react-bootstrap/esm/InputGroup"
-import { Form } from "react-bootstrap"
+import closeBar from "../components/SnackBarAction";
+import EmailForm from "../components/EmailForm"
+import Snackbar from "@mui/material/Snackbar"
+import sendEmail from "../services/sendEmail"
+import { useState } from "react";
+
 const Contact = ()=>{
-const [name,setName] = useState("")
-const [topic,setTopic] = useState("")
-const [message,setMessage] = useState("")
-const [email, setEmail] = useState("")
-const onSubmit=()=>{
-  const tosend:sendEmailProps = {name:name,email:email,topic:topic,message:message}
- sendEmail(tosend)
-
+const [open,setOpen]=useState(false);
+const onSubmit=(name:string,email:string,topic:string,message:string)=>{
+  let response = sendEmail({name:name,email:email,topic:topic,message:message})
+  console.log(response)
+  setOpen(true)
 }
-
+const handleClose=()=>{
+  setOpen(false)
+}
 return (<>
-    <Form 
-    style={{
-      margin:"auto", 
-      marginTop:"5%", 
-      width:"50%"}} 
-      id='contact_form'>
-     <InputGroup className="mb-3">
-        <Form.Control
-          name="name"
-          placeholder="Your Name"
-          aria-label="name"
-          aria-describedby="basic-addon1"
-          onChange={(event)=>{setName(event.target.value)}}
-        />
-      </InputGroup>
-
-      <InputGroup className="mb-3">
-        <Form.Control
-        name="email"
-          placeholder="Your email"
-          aria-label="email"
-          aria-describedby="basic-addon2"
-          onChange={(event)=>setEmail(event.target.value)}
-          />
-      </InputGroup>
-
-      <InputGroup className="mb-3">
-        <Form.Control
-        name="topic"
-          placeholder="Topic"
-          aria-label="topic"
-          aria-describedby="basic-addon3"
-          onChange={(event)=>{setTopic(event.target.value)}}
-        />
-      </InputGroup>
-
-      <InputGroup>
-        <Form.Control 
-        name="message"
-        placeholder="Message" 
-        as="textarea" 
-        aria-label="With textarea" 
-        onChange={(event)=>{setMessage(event.target.value)}}
-        />
-      </InputGroup>
-      {name.length > 0 && topic.length > 0 && message.length && email.length > 0 ? (
-         <Button sx={{marginTop:5}}variant="outlined" color="success" onClick={()=>{onSubmit()}}>Submit</Button>
-      ) : (
-        <Button sx={{marginTop:5}}variant="outlined" color="error" disabled>Fill in all fields</Button> 
-      )}
-     
-
-      </Form>
-    </>)
+  <EmailForm sendEmail={onSubmit}/>
+    <Snackbar
+      open={open}
+      autoHideDuration={4000}
+      onClose={handleClose}
+      message="email send"
+      action={closeBar({handleClose})}
+      />
+    </>
+    )
 }
 export default Contact;
