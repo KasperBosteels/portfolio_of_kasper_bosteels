@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import Typography from "@mui/material/Typography";
 interface IRandomValue {
   interval: number;
 }
@@ -13,7 +13,7 @@ const RandomValue = ({ interval }: IRandomValue) => {
       clearInterval(handle);
     };
   }, [interval]);
-  return <p>Random value between 100 & 200: {randomValue}</p>;
+  return <Typography>Random value between 100 & 200: {randomValue}</Typography>;
 };
 export default RandomValue;
 const CreateRandomValue = () => {

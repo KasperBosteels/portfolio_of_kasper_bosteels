@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Typography from "@mui/material/Typography";
 interface ITimerProps {
   interval: number;
 }
@@ -12,6 +13,6 @@ const Timer = ({ interval }: ITimerProps) => {
       clearInterval(handle);
     };
   }, [interval]);
-  return <p>Elapsed seconds since you opened this: {Seconds}</p>;
+  return <Typography>Elapsed seconds since you opened this: {Seconds}</Typography>;
 };
 export default Timer;

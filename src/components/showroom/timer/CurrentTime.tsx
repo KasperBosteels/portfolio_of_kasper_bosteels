@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import Typography  from "@mui/material/Typography";
 interface ICurrentTime {
   interval: number;
 }
@@ -15,9 +15,9 @@ const CurrentTime = ({ interval }: ICurrentTime) => {
     };
   }, [interval]);
   return (
-    <p style={{display:"flex"}}>
+    <Typography>
       Current time: {currentTime.getHours()}:{currentTime.getMinutes()}:{currentTime.getSeconds()}
-    </p>
+    </Typography>
   );
 };
 
