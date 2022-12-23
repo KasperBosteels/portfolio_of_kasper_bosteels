@@ -16,7 +16,7 @@ const Pokedex = ({ limit = 10 }: IPokedex) => {
   const [inputFilter,setFilter] = useState<string>("")
   const [limitValue,setLimitValue] = useState<number>(limit)
   const [isloading, setIsloading] = useState<boolean>(true);
-  const fetchFunction = async () => {
+  const getPokemon = async () => {
     setIsloading(true)
     axios.get(`https://pokeapi.co/api/v2/pokemon?limit=${limitValue < 0 ? 0 : limitValue}`).then((res)=>{
     const resStringified = JSON.stringify(res.data.results)
@@ -26,8 +26,8 @@ const Pokedex = ({ limit = 10 }: IPokedex) => {
     
   };
   useEffect(() => {
-    fetchFunction();
-  }, []);
+    getPokemon();
+  });
   return (
     <>
 
@@ -54,7 +54,7 @@ const Pokedex = ({ limit = 10 }: IPokedex) => {
       sx={{borderRadius:0}}
       onChange={(e)=>setLimitValue(parseInt(e.target.value ))}
       />
-      <Button variant="contained" sx={{borderRadius:0}} onClick={()=>fetchFunction()}>Set Limit</Button>
+      <Button variant="contained" sx={{borderRadius:0}} onClick={()=>getPokemon()}>Set Limit</Button>
       </Box>
       </Box>
     </>
