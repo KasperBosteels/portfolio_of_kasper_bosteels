@@ -30,7 +30,6 @@ const Pokedex = ({ limit = 10 }: IPokedex) => {
   },[]);
   return (
     <>
-
       <Box>
         <Box sx={{display:"flex", justifyContent:"center"}}>
           <TextField
@@ -41,9 +40,11 @@ const Pokedex = ({ limit = 10 }: IPokedex) => {
           <Box sx={{justifyContent:"center", display:"grid"}}>  
         {isloading ? (
           <CircularProgress sx={{margin:"2rem"}}/>
-        ) : (<>{pokemon.length > 0 ? (pokemon.filter((p)=>p.name.startsWith(inputFilter.toLowerCase())).map((p,i)=>(<p key={i}>{p.name.normalize()}</p>))) :(<></>)}</>)}
-      
-     
+        ) : 
+        (<>{pokemon.length > 0 ? (
+          pokemon.filter((p)=>p.name.startsWith(inputFilter.toLowerCase())).map((p,i)=>
+          (<p key={i}>{p.name.normalize()}</p>))
+          ):(<></>)}</>)}
       </Box>
       <Box sx={{display:"flex", justifyContent:"center", marginTop:"1rem"}}>
       <TextField
