@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import Box from "@mui/material/Box"
 import Button from "@mui/material/Button"
 import CircularProgress from "@mui/material/CircularProgress";
@@ -23,43 +24,88 @@ const Pokedex = ({ limit = 10 }: IPokedex) => {
     setPokmen(JSON.parse(resStringified))
     setIsloading(false)
     })
-    
   };
   useEffect(() => {
     getPokemon();
   },[]);
+  const setLimit = (value:string)=>{
+    const v = parseInt(value)
+    if(!isNaN(v)&& v > 0){
+      setLimitValue(v)
+    }else{
+      setLimitValue(1);
+    }
+  }
   return (
     <>
       <Box>
-        <Box sx={{display:"flex", justifyContent:"center"}}>
+        <Box 
+        sx={{
+          display:"flex",
+          alignItems:"center", 
+          flexDirection:"column"}}>
+        <Box 
+          sx={{
+            display:"flex", 
+            justifyContent:"center", 
+            width:"13rem"}}>
           <TextField
             label="Filter by Name"
             size="small"
-            onChange={(e)=>setFilter(e.target.value)}/>
-          </Box>
-          <Box sx={{justifyContent:"center", display:"grid"}}>  
-        {isloading ? (
+            onChange={(e)=>setFilter(e.target.value.toLowerCase())}/>
+        </Box>
+        <Box 
+          sx={{display:"flex", 
+          justifyContent:"center", 
+          marginTop:"1rem", 
+          width:"13rem"}}>
+          <TextField
+            type="number"
+            label="Limit pokemon"
+            size="small"
+            InputLabelProps={{shrink:true}}
+            sx={{borderRadius:0}}
+            onChange={(e)=>setLimit(e.target.value)}
+            onKeyDown={(k)=>{if(k.key ==="Enter")getPokemon()  }}
+            />
+          <Button 
+            variant="contained" 
+            sx={{borderRadius:0, height:"2.5rem"}} 
+            onClick={()=>getPokemon()}>
+              Set Limit
+          </Button>
+        </Box>
+        </Box>
+        <Box 
+            sx={{
+              display:"flex", 
+              marginTop:"2rem",
+              minWidth:500,
+              maxWidth:800,
+              maxHeight:200,
+
+              }}>  
+            {isloading ? (
           <CircularProgress sx={{margin:"2rem"}}/>
         ) : 
-        (<>{pokemon.length > 0 ? (
-          pokemon.filter((p)=>p.name.startsWith(inputFilter.toLowerCase())).map((p,i)=>
-          (<p key={i}>{p.name.normalize()}</p>))
-          ):(<></>)}</>)}
-      </Box>
-      <Box sx={{display:"flex", justifyContent:"center", marginTop:"1rem"}}>
-      <TextField
-      type="number"
-      label="Limit pokemon"
-      size="small"
-      InputLabelProps={{shrink:true}}
-      sx={{borderRadius:0}}
-      onChange={(e)=>setLimitValue(parseInt(e.target.value ))}
-      />
-      <Button variant="contained" sx={{borderRadius:0}} onClick={()=>getPokemon()}>Set Limit</Button>
-      </Box>
+        (<Box style={{
+          columnCount: pokemon.length > 0 ?Math.ceil(pokemon.filter((p)=>p.name.startsWith(inputFilter)).length / 30):0,
+          minWidth:"fit-content",
+          textAlign:"start",
+          margin:"auto",
+          }}>
+          {pokemon.length > 0 ? (
+          pokemon.filter((p)=>p.name.startsWith(inputFilter)).map((p,i)=>
+          (<Typography 
+            sx={{
+              minWidth:"fit-content",
+              paddingBottom:".3rem"}} 
+              key={i}>{p.name.normalize()}
+          </Typography>))
+          ):(<></>)}</Box>)}
+        </Box>
       </Box>
     </>
   );
 };
-
 export default Pokedex;
