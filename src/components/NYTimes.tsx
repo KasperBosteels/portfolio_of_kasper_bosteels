@@ -34,7 +34,7 @@ const [news,setNews] = useState<Result[]>([]);
             >
             {news.length > 0 ? (
             news.map((n)=>(<Article data={n}/>))
-            ) : (<><Typography color="text.primary" sx={{marginRight:"1rem"}}> assembling the news for you...</Typography><CircularProgress/></>)}
+            ) : (<><Typography color="text.primary" sx={{marginRight:"1rem"}}>assembling the news for you...</Typography><CircularProgress/></>)}
         </Grid>
         </>
     )

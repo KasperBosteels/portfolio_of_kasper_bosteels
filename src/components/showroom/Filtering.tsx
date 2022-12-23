@@ -1,14 +1,15 @@
+import { useState } from "react";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
 import Table from "@mui/material/Table";
+import Button from "@mui/material/Button";
+import TableRow from "@mui/material/TableRow";
+import TableHead from "@mui/material/TableHead";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
 import TextField from "@mui/material/TextField";
-import { useState } from "react";
+import Typography from "@mui/material/Typography";
+import TableContainer from "@mui/material/TableContainer";
 const studentNames:string[] = ["Jan","Jaap","Jonas","Jannick","Sarah","Steven","Karel","Kasper","Koen","Marie","Zhara","Albert","Brigitte"]
 const randomGen =(max:number= 100,min:number= 0)=>Math.floor(Math.random()*max-min)+min;
 interface IStudent {
@@ -18,8 +19,6 @@ interface IStudent {
 }
 const students: IStudent[] =[]
 studentNames.map((n)=>students.push({name:n,age:randomGen(30,18),year:randomGen(7,1)}))
-
-
 const Filtering = () => {
   const [filteredStudents, setFilteredStudents] = useState<IStudent[]>(students);
   const [sortby,setSortby] = useState<string>("name")
@@ -34,10 +33,16 @@ const Filtering = () => {
     }
   })
   return (
-    <>
-    <Paper>
+    
+    <Paper 
+      sx={{
+        display:"flex", 
+        flexDirection:"column", 
+        alignContent:"center",
+        alignItems:"center",}}>
       <Box>
         <TextField
+        sx={{margin:"1rem"}}
         label="Filter by Name"
         size="small"
         onChange={(e)=>{
@@ -47,15 +52,15 @@ const Filtering = () => {
             )
           );
           }}/>
+          <Typography padding="1rem">A list of students filterable by name, and sortable by name, age & year</Typography>
           <Box>
           <TableContainer>
             <Table>
-              <caption>A list of students filterable by name, and sortable by name, age & year</caption>
               <TableHead>
                 <TableRow>
-                  <TableCell><Button color={sortby === "name" ? "success" : "primary"} size="small" onClick={()=>{setSortby("name")}}>Name</Button></TableCell>
-                  <TableCell><Button color={sortby === "age" ? "success" : "primary"} size="small" onClick={()=>{setSortby("age")}}>Age</Button></TableCell>
-                  <TableCell><Button color={sortby === "year" ? "success" : "primary"} size="small" onClick={()=>{setSortby("year")}}>year</Button></TableCell>
+                  <TableCell><Button color={sortby === "name" ? "error" : "secondary"} size={sortby === "name"? "large":"small"} onClick={()=>{setSortby("name")}}>Name</Button></TableCell>
+                  <TableCell><Button color={sortby === "age" ? "error" : "secondary"} size={sortby === "age"? "large":"small"} onClick={()=>{setSortby("age")}}>Age</Button></TableCell>
+                  <TableCell><Button color={sortby === "year" ? "error" : "secondary"} size={sortby === "year"? "large":"small"} onClick={()=>{setSortby("year")}}>year</Button></TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -72,7 +77,6 @@ const Filtering = () => {
           </Box>
       </Box>
     </Paper>
-  </>
   )
 };
 
