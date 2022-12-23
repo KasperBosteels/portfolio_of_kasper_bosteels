@@ -1,9 +1,5 @@
 import { Box, Button } from "@mui/material";
 import { NavLink } from "react-router-dom";
-
-
-
-
 const HorizontalMenu = ()=>{
     return (
     <>

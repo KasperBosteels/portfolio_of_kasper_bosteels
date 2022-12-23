@@ -13,7 +13,11 @@ interface themeAndSocialProps {
 const ThemeAndSocials = ({theme,toggle}:themeAndSocialProps)=>{
     return (
         <>
-        <Box sx={{minWidth:50,display:"flex",justifyContent:"end", flex:"auto"}}>
+        <Box sx={{
+            minWidth:50,
+            display:"flex",
+            justifyContent:"end",
+            flex:"auto"}}>
            <Link style={{marginRight:5}} href="https://github.com/KasperBosteels"><IconButton aria-label="link to github"><GitHubIcon/></IconButton></Link>
            <Link style={{marginRight:5}} href="https://be.linkedin.com/in/kasper-bosteels"><IconButton aria-label="link to linkedIn"><LinkedInIcon/></IconButton></Link>
         </Box>
