@@ -3,7 +3,6 @@ import Typography from '@mui/material/Typography';
 import NYTimes from '../components/NYTimes';
 import Box from '@mui/material/Box';
 import SkillsPanel from '../components/SkillsPanel';
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 const HomePage = ()=>{
     return (
         <Box 
@@ -11,16 +10,17 @@ const HomePage = ()=>{
         width:"100%", 
         display:"flex",
         justifyContent:"center",}}>
-        <Grid container className="homeGrid" 
-        sx={{
-        color:"text.primary", 
-        margin:"auto",
-        marginTop:"2rem",
-        display:"flex",
-        width:"90%"
+        <Grid 
+            container
+            sx={{
+            color:"text.primary", 
+            margin:"auto",
+            marginTop:"2rem",
+            display:"flex",
+            width:"90%"
         }}>
         <Grid xs={6} >
-            <Typography className="homeText">
+            <Typography>
             <h4>Beste bezoeker,</h4>
             Welkom op mijn portfolio site! Mijn naam is Kasper Bosteels en ik ben een student aan Artesis Plantijn<br></br>
             waar ik mijn opleiding tot programmeur volg. Mijn programmeervaardigheden omvatten<br></br> 
@@ -42,34 +42,9 @@ const HomePage = ()=>{
            <Grid xs={4}>
             <SkillsPanel/>
            </Grid>
-           
-            <NYTimes/>
-                      
+            <NYTimes/>    
         </Grid>
         </Box>
     )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 export default HomePage;
