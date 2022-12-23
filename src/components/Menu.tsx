@@ -3,7 +3,7 @@ import AppBar from "@mui/material/AppBar/AppBar"
 import Toolbar from "@mui/material/Toolbar/Toolbar"
 import Typography from "@mui/material/Typography/Typography"
 import { NavLink } from 'react-router-dom'
-import { Container } from '@mui/material'
+import Container from '@mui/material/Container'
 import VerticalMenu from './verticalMenu'
 import HorizontalMenu from './HorizontalMenu'
 import ThemeAndSocials from './themeAndSocials'

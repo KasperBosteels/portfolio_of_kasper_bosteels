@@ -1,4 +1,5 @@
-import { Typography, LinearProgress } from "@mui/material"
+import Typography from "@mui/material/Typography";
+import LinearProgress from "@mui/material/LinearProgress";
 const SkillsPanel=()=>{
     return (
             <>

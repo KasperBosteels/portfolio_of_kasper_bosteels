@@ -1,4 +1,9 @@
-import { CardActionArea, CardContent, Typography, CardActions,Button,Card } from "@mui/material"
+import CardActionArea from "@mui/material/CardActionArea";
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
+import CardActions from "@mui/material/CardActions";
+import Button from "@mui/material/Button"
+import Card from "@mui/material/Card"
 import { Link } from "react-router-dom";
 export interface ComponentCardProps {
     Title:string,

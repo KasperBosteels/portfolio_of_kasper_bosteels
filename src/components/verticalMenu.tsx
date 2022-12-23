@@ -1,4 +1,8 @@
-import { Box, IconButton, Menu, MenuItem, Typography } from "@mui/material"
+import Box from "@mui/material/Box"
+import IconButton from "@mui/material/IconButton"
+import Menu from "@mui/material/Menu"
+import MenuItem from "@mui/material/MenuItem"
+import Typography from "@mui/material/Typography"
 import { NavLink } from "react-router-dom"
 import MenuIcon from "@mui/icons-material/Menu"
 import {MouseEvent} from "react"
@@ -10,7 +14,9 @@ interface VerticalMenuProps {
 }
 const VerticalMenu = ({open,anchor,closeMenu,setopen}:VerticalMenuProps)=>{
     return (
-        <Box sx={{flexGrow:1,display:{xs:"flex",md:"none"},}}>
+        <Box sx={{
+                flexGrow:1,
+                display:{xs:"flex",md:"none"},}}>
                     <IconButton 
                         color="inherit"
                         aria-controls={open ? 'basic-menu' : undefined} 

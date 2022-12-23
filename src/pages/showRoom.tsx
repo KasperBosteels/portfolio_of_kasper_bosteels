@@ -1,13 +1,13 @@
-import Filtering from "../components/showroom/Filtering";
-import ShoppingList from "../components/showroom/Shoppinglist";
-import Slotmachine from "../components/showroom/slots/Slotmachine";
-import TimeContainer from "../components/showroom/timer/TimeContainer";
+import Box from "@mui/material/Box"
+import { useParams } from "react-router-dom";
 import DadJoke from "../components/showroom/DadJoke";
 import Pokedex from "../components/showroom/Pokedex";
 import Counter from "../components/showroom/counter";
+import Filtering from "../components/showroom/Filtering";
 import TodoComponent from "../components/showroom/todo/Todo";
-import { Paper } from "@mui/material";
-import { useParams } from "react-router-dom";
+import ShoppingList from "../components/showroom/Shoppinglist";
+import Slotmachine from "../components/showroom/slots/Slotmachine";
+import TimeContainer from "../components/showroom/timer/TimeContainer";
 import ComponentDoesNotExist from "../components/ComponentDoesNotExist";
 interface components {
     name:string,
@@ -50,14 +50,15 @@ const ShowRoom =()=>{
     let {id} = useParams();
 return (
 <>
-<Paper sx={{
+<Box sx={{
     maxWidth:"80%",
+    width:"fit-content",
     padding:"1%" ,
     alignContent:"center", 
     margin:"auto", 
     marginTop:"5%"}}>
     {id &&  parseInt(id) >= 0 && parseInt(id) < componenten.length ? componenten[parseInt(id)].component:<ComponentDoesNotExist/>}
-</Paper>
+</Box>
 </>)
 }
 

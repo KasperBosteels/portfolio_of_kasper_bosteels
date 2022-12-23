@@ -1,7 +1,7 @@
 import CurrentTime from "./CurrentTime";
 import RandomValue from "./RandomValue";
 import Timer from "./Timer";
-import {Box} from "@mui/material"
+import Box from "@mui/material/Box"
 const TimeContainer = ()=>{
     return (
         <>
