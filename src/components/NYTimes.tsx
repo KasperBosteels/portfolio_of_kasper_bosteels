@@ -40,7 +40,7 @@ const [news,setNews] = useState<Result[]>([]);
             sx={{display:{lg:"flex",md:"none",xs:"none"}}}
             >
             {news.length > 0 ? (
-            news.map((n)=>(<Article data={n}/>))
+            news.map((n,i)=>(<Article key={"card-"+i} data={n}/>))
             ) : (<><Typography color="text.primary" sx={{marginRight:"1rem"}}>assembling the news for you...</Typography><CircularProgress/></>)}
         </Grid>
         </>
