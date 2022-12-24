@@ -19,7 +19,7 @@ const HomePage = ()=>{
             display:"flex",
             width:"90%"
         }}>
-        <Grid xs={6} >
+        <Box sx={{display:"flex", maxWidth:"80%", flexDirection:"column",margin:"auto"}} >
             <Typography>
             <h4>Beste bezoeker,</h4>
             Welkom op mijn portfolio site! Mijn naam is Kasper Bosteels en ik ben een student aan Artesis Plantijn<br></br>
@@ -38,11 +38,11 @@ const HomePage = ()=>{
             Met vriendelijke groet,<br></br>
             Kasper Bosteels
             </Typography>
-            </Grid>
-           <Grid xs={4}>
+            </Box>
+           <Box>
             <SkillsPanel/>
-           </Grid>
-            <NYTimes/>    
+           </Box>
+            <NYTimes timeout={30*60*1000}/>    
         </Grid>
         </Box>
     )
