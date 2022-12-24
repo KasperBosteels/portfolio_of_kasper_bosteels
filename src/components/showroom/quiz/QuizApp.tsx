@@ -10,26 +10,23 @@ const [quiz,setQuiz]=useState<Result[]>([])
 const [isloading,setIsloading]=useState<boolean>(true)
     
 const fetchQuiz=async ()=>{
+    setIsloading(true)
     let rawresponse = await fetch("https://opentdb.com/api.php?amount=10");
     let response:Welcome =await  rawresponse.json();
-    setQuiz(response.results)
-}
+    setQuiz([...quiz,...response.results])
+    setIsloading(false)
 
+}
 useEffect(()=>{
     fetchQuiz()
-    setIsloading(false)
-    },[])
+},[])
 
-    
 const Answer=(answer:string,i:number)=>{
-let questions = [...quiz];
-questions[i].user_answer=answer
-setQuiz(questions)
+    setQuiz(quiz.map((q,id)=>(id===i)?{...q,user_answer:answer}:q))
 }
     return (
     <Box>
-        {isloading && <CircularProgress/>}
-        {!isloading && quiz.map((q,i)=>(<QuizQuestion question={q} answer={(a)=>Answer(a,i)}/>))}
+        {isloading?<CircularProgress/>:quiz.map((q,i)=>(<QuizQuestion question={q} answer={(a)=>Answer(a,i)}/>))}
     </Box>
     )
 }

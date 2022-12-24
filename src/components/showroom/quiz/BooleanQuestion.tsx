@@ -27,7 +27,7 @@ const BooleanQuestion = ({question,answer}:Questionprops)=>{
         onChange={e=>handleChange(e.target.value)}
         >
    <FormControlLabel label="True" value="True" control={<Radio/>}/>
-   <FormControlLabel label="True" value="False" control={<Radio/>}/>
+   <FormControlLabel label="False" value="False" control={<Radio/>}/>
     </RadioGroup>
     </FormControl>
     </Box>
