@@ -26,7 +26,7 @@ const Answer=(answer:string,i:number)=>{
 }
     return (
     <Box>
-        {isloading?<CircularProgress/>:quiz.map((q,i)=>(<QuizQuestion question={q} answer={(a)=>Answer(a,i)}/>))}
+        {isloading?<CircularProgress/>:quiz.map((q,i)=>(<QuizQuestion key={"q-"+i} question={q} answer={(a)=>Answer(a,i)}/>))}
     </Box>
     )
 }

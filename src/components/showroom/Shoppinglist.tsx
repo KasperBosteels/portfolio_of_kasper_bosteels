@@ -10,6 +10,7 @@ import TableHead from "@mui/material/TableHead"
 import TableRow from "@mui/material/TableRow"
 import TextField from "@mui/material/TextField"
 import DeleteIcon from "@mui/icons-material/Delete"
+import { isNumberTypeAnnotation } from "@babel/types"
 interface shoppingListItem {
   name:string,
   amount:number
@@ -18,7 +19,7 @@ const DefaultList = [{name:"butter",amount:2},{name:"olive oil",amount:500},{nam
 const ShoppingList = () => {
   const [shoppinglist, setShoppingList] = useState<shoppingListItem[]>(DefaultList);
   const [nameinput, setNameInput] = useState<string>("");
-  const [numberinput, setNumberInput] = useState<number>();
+  const [numberinput, setNumberInput] = useState<number>(1);
   const removeItem = (itemIndex: number) => {
     const filteredList = shoppinglist.filter((o,i)=>i!==itemIndex)
     setShoppingList(filteredList)

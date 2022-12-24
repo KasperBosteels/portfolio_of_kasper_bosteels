@@ -59,7 +59,7 @@ const Componenten = ()=>{
                     onChange={(e)=>{setFilteredComponents(componenten.filter((c)=>c.name.toLowerCase().startsWith(e.target.value.toLowerCase())))}}/>
             </Box>
             {filteredComponents?.map((comp,i)=>(
-               <ComponentCard Title={comp.name} Description={comp.description} Path={i}/>
+               <ComponentCard key={"card-"+i} Title={comp.name} Description={comp.description} Path={i}/>
               
             ))}
         </Grid>

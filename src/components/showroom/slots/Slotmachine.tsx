@@ -45,8 +45,8 @@ const Slotmachine = (props: slotmachine) => {
       </Box>
 
       <Box sx={{height:"fit-content",display:"flex",flexDirection:"row",margin:"auto",justifyContent:"center"}}>
-      {Slots.map((currentslot) => (
-        <Slot value={currentslot} />
+      {Slots.map((currentslot,i) => (
+        <Slot key={"k-"+i} value={currentslot} />
       ))}
       </Box>
       </Box>

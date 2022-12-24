@@ -12,7 +12,6 @@ const DadJoke = () => {
         Accept: "application/json",
       },
     });
-    console.log(result);
     let json = await result.json();
     setJoke(json.joke);
   };
