@@ -19,9 +19,19 @@ const HomePage = ()=>{
             display:"flex",
             width:"90%"
         }}>
-        <Box sx={{display:"flex", maxWidth:"80%", flexDirection:"column",margin:"auto"}} >
-            <Typography>
-            <h4>Beste bezoeker,</h4>
+        <Box sx={{
+            display: "flex",
+            alignItems: "center",
+            margin: "auto",
+            width: "90%",
+            flexDirection:"row",
+            height:"fit-content",
+            columnGap:"21%",
+            padding:"1rem",
+            }}>
+            <Box>
+            <Typography variant='h5'>Beste bezoeker,</Typography>
+            <Typography> 
             Welkom op mijn portfolio site! Mijn naam is Kasper Bosteels en ik ben een student aan Artesis Plantijn<br></br>
             waar ik mijn opleiding tot programmeur volg. Mijn programmeervaardigheden omvatten<br></br> 
             C#, JavaScript, TypeScript<br></br>
@@ -39,9 +49,10 @@ const HomePage = ()=>{
             Kasper Bosteels
             </Typography>
             </Box>
-           <Box>
+           <Box sx={{minWidth:"30%"}}>
             <SkillsPanel/>
            </Box>
+        </Box>
             <NYTimes timeout={30*60*1000}/>    
         </Grid>
         </Box>
