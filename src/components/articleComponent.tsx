@@ -7,7 +7,7 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions"
 import Button from "@mui/material/Button"
 import Link from "@mui/material/Link"
-import { Result } from "../interfaces"
+import { Result } from "../news-interfaces"
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import Box from "@mui/material/Box";
 

@@ -9,6 +9,7 @@ import ShoppingList from "../components/showroom/Shoppinglist";
 import Slotmachine from "../components/showroom/slots/Slotmachine";
 import TimeContainer from "../components/showroom/timer/TimeContainer";
 import ComponentDoesNotExist from "../components/ComponentDoesNotExist";
+import Quizapp from "../components/showroom/quiz/QuizApp";
 interface components {
     name:string,
     component:JSX.Element
@@ -43,6 +44,9 @@ const componenten:components[] = [
     },{
         name:"Todo list",
         component:<TodoComponent/>
+    },{
+        name:"Quizapp",
+        component:<Quizapp/>
     }
 ];
 

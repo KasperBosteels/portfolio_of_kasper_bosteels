@@ -1,7 +1,7 @@
 import Grid from "@mui/material/Grid"
 import CircularProgress from "@mui/material/CircularProgress/CircularProgress"
 import axios from 'axios';
-import {Result} from "../interfaces"
+import {Result} from "../news-interfaces"
 import Article from './articleComponent';
 import Typography from '@mui/material/Typography';
 import { useState } from 'react';

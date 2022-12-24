@@ -36,6 +36,9 @@ const componenten:components[] = [
     },{
         name:"Todo list",
         description:"This item will simulate a todo list.\nEvery item in the list will be set as 'not completed', after the button is pressed the item will be crossed out and set as done.",
+    },{
+        name:"Quizapp",
+        description:"nothing yet"
     }
 ];
 
