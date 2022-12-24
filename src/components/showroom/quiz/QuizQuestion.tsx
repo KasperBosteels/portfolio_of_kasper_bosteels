@@ -1,3 +1,4 @@
+import Paper from "@mui/material/Paper"
 import Typography  from "@mui/material/Typography"
 import Box from "@mui/system/Box"
 import {Result,Type } from "../../../quiz-interfaces"
@@ -8,14 +9,10 @@ export interface QuizQuestiopProps{
     answer:(answer:string)=>void
 }
 const QuizQuestion=({question,answer}:QuizQuestiopProps)=>{
-  /*
-    if(question.user_answer !== undefined){
-  
-        color = question.user_answer === question.correct_answer?
-*/
 
 return (
-    <Box sx={{margin:"2rem"}}>
+    <Paper sx={{margin:"1rem", backgroundColor:question.correct_answer===question.user_answer?"rgba(0,255,0,0.1)":"rgba(255,0,0,0.2)", borderRadius:"1rem",padding:".3rem"}}>
+    <Box sx={{margin:"1rem"}}>
     <Box>
         <Typography>{question.question}</Typography>
     </Box>
@@ -24,6 +21,7 @@ return (
         {question.type === Type.Multiple && <MultipleChoiseQuestion question={question} answer={answer}/>}
     </Box>
     </Box>
+    </Paper>
 )
 }
 export default QuizQuestion;
