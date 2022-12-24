@@ -1,5 +1,6 @@
 import Grid from "@mui/material/Unstable_Grid2";
-import {Box, TextField } from "@mui/material";
+import Box from "@mui/material/Box"
+import TextField from "@mui/material/TextField"
 import ComponentCard from "../components/ComponentCard";
 import { useState } from "react";
 interface components {
