@@ -13,6 +13,7 @@ const fetchQuiz=async ()=>{
     setIsloading(true)
     let rawresponse = await fetch("https://opentdb.com/api.php?amount=10");
     let response:Welcome =await  rawresponse.json();
+    response.results.map((r)=>console.log(r))
     setQuiz([...quiz,...response.results])
     setIsloading(false)
 

@@ -24,7 +24,7 @@ return (
                 <InputLabel>Answer</InputLabel>
                 <Select
                     sx={{minWidth:"10rem"}}
-                    value={Answer}
+                    value={Answer!==undefined? Answer: ''}
                     onChange={(e)=>handleChange(e.target.value)}
                     label="Answer">
                     {allAnswers.map((a,i)=>(
