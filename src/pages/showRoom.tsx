@@ -10,6 +10,7 @@ import Slotmachine from "../components/showroom/slots/Slotmachine";
 import TimeContainer from "../components/showroom/timer/TimeContainer";
 import ComponentDoesNotExist from "../components/ComponentDoesNotExist";
 import Quizapp from "../components/showroom/quiz/QuizApp";
+import MandelbrotCanvas from "../components/showroom/Mandelbrot";
 interface components {
     name:string,
     component:JSX.Element
@@ -47,6 +48,10 @@ const componenten:components[] = [
     },{
         name:"Quizapp",
         component:<Quizapp/>
+    },
+    {
+        name:"Mandelbrot",
+        component:<MandelbrotCanvas width={1000} height={600}/>
     }
 ];
 
