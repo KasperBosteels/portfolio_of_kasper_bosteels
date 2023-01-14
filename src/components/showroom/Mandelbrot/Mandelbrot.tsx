@@ -3,19 +3,19 @@ import React ,{useEffect}from "react";
 
 interface mandelProps {
     width:number,
-    height:number
+    height:number,
+    iterations:number
 }
-const MandelbrotCanvas=({width=300,height=120}:mandelProps)=>{
+const MandelbrotCanvas=({width=300,height=120,iterations=1000}:mandelProps)=>{
     const canvasRef : React.RefObject<HTMLCanvasElement> = React.createRef();    
 useEffect(() => {
-  drawmandelBrot(canvasRef,width,height) 
+  drawmandelBrot(canvasRef,width,height,iterations) 
 },)
     return (
         <canvas ref={canvasRef} width={width} height={height} />
     )
 }
-function drawmandelBrot(canvasRef:React.RefObject<HTMLCanvasElement> ,width:number,height:number){
-const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet',"purple","pink"];
+function drawmandelBrot(canvasRef:React.RefObject<HTMLCanvasElement> ,width:number,height:number,iterations:number=1000){
 const canvas = canvasRef.current;
 const ctx = canvas!.getContext("2d");
 for (let x = 0; x < width; x++) {
@@ -27,15 +27,15 @@ for (let x = 0; x < width; x++) {
       let zRe = 0;
       let zIm = 0;
       let isInside = true;
-    let iterations = 0;
+      let iterationcounter = 0;
       // Iterate the equation until z escapes or we reach the maximum number of iterations
-      for (let i = 0; i < 10000; i++) {
+      for (let i = 0; i < iterations; i++) {
         const zReSquared = zRe * zRe;
         const zImSquared = zIm * zIm;
 
         if (zReSquared + zImSquared > 4) {
           isInside = false;
-          iterations=i;
+          iterationcounter=i;
           break;
         }
 
@@ -47,7 +47,8 @@ for (let x = 0; x < width; x++) {
       if (isInside) {
         ctx!.fillStyle="black"
       } else {
-        const color = colors[iterations % colors.length]
+        console.log("zIm:",zIm," zRe:",zRe)
+        const color = `rgb(${zIm+50*zRe},${zIm+100*Math.random()*zIm*zRe},${zIm*zRe+100})`
         ctx!.fillStyle = color;
       }
       ctx!.fillRect(x, y, 1, 1);
