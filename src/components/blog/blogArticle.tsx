@@ -17,6 +17,7 @@ const BlogArticle = ({post,maxWidth="25%",maxHeight="fit-content",title="Stage @
     return (
         <Card 
         style={{
+            minWidth:300,
             maxWidth:maxWidth,
             margin:"auto",
             backgroundColor:"palette.secondary.dark"}}
@@ -38,7 +39,7 @@ const BlogArticle = ({post,maxWidth="25%",maxHeight="fit-content",title="Stage @
                      color="text.secondary">
                     {post.text}
                     </Typography>
-                    {button ?<NavLink to="Blog"><Button variant="text">Read More</Button></NavLink>:<></>}
+                    {button ?<NavLink to="Blog"><Button variant="text">Read More...</Button></NavLink>:<></>}
                 </Box>
             </CardContent>
         </Card>

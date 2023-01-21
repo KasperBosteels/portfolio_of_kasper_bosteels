@@ -5,6 +5,7 @@ import {Result} from "../news-interfaces"
 import Article from './articleComponent';
 import Typography from '@mui/material/Typography';
 import { useEffect, useState } from 'react';
+import Box from "@mui/material/Box";
 
 interface NYTimesprops{
 timeout:number
@@ -20,6 +21,10 @@ const [news,setNews] = useState<Result[]>([]);
     },[timeout])
     return (
         <>
+        
+         <Box sx={{display:{lg:"flex",md:"none",xs:"none"},margin:"auto",width:"90%",borderBottomWidth:2,borderTopWidth:0,borderLeftWidth:0,borderRightWidth:0,borderStyle:"solid", borderColor:"primary.text"}}>
+                    <Typography variant="h5" sx={{paddingBottom:".5rem"}}>Latest NY times tech news</Typography>
+         </Box>
         <Grid 
             container 
             direction={news.length > 0 ? "row" : "column"} 
@@ -39,6 +44,7 @@ const [news,setNews] = useState<Result[]>([]);
             }}
             sx={{display:{lg:"flex",md:"none",xs:"none"}}}
             >
+               
             {news.length > 0 ? (
             news.map((n,i)=>(<Article key={"card-"+i} data={n}/>))
             ) : (<><Typography color="text.primary" sx={{marginRight:"1rem"}}>assembling the news for you...</Typography><CircularProgress/></>)}
