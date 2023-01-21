@@ -9,6 +9,7 @@ import { createTheme, ThemeProvider } from "@mui/material";
 import ShowRoom from "./pages/showRoom";
 import "./App.css";
 import ErrorPage from "./pages/404";
+import Blog from "./pages/Blog";
 
 const customtheme = createTheme({
   palette: {
@@ -71,6 +72,9 @@ function App() {
         },{
           path:"Components/:id",
           element:<ShowRoom/>
+        },{
+          path:"Blog",
+          element:<Blog/>
         },{
           path:"*",
           element:<ErrorPage/>

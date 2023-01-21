@@ -40,6 +40,10 @@ const componenten:components[] = [
     },{
         name:"Quizapp",
         description:"A Quiz component made with an Api.\nThe components here communicate between eachother to save the answers"
+    },
+    {
+        name:"Mandelbrot set",
+        description:"This component draws a Mandelbrot set on a canvas.\nThis component may take a while to load!"
     }
 ];
 
