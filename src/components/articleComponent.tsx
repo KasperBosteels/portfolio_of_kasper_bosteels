@@ -22,7 +22,6 @@ return (
         margin:"auto",
         backgroundColor:"palette.secondary.dark"}} 
         elevation={10}>
-        
         <CardHeader 
         avatar={
             <a href="https://developer.nytimes.com.">
@@ -54,10 +53,7 @@ return (
         <CardActions>
         <Link href={data.url}><Button size="small" color="primary" startIcon={<AutoStoriesIcon/>}>Read More</Button></Link>
         </CardActions>
-        
-        
         </CardContent>
-        
     </Card>
 )
 }

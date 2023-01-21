@@ -43,7 +43,7 @@ const componenten:components[] = [
     },
     {
         name:"Mandelbrot set",
-        description:"This component draws a Mandelbrot set on a canvas."
+        description:"This component draws a Mandelbrot set on a canvas.\nThis component may take a while to load!"
     }
 ];
 

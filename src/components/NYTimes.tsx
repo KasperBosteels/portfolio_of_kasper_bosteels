@@ -36,7 +36,7 @@ const [news,setNews] = useState<Result[]>([]);
                 padding:".1rem", 
                 margin:"auto",
                 marginTop:"10%",
-                marginBottom:"8%",
+                marginBottom:"1%",
                 verticalAlign:"center",
                 justifyContent:"center",
                 flexDirection:"column", 

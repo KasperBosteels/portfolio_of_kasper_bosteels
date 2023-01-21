@@ -1,7 +1,7 @@
 import BlogArticle from "./blogArticle";
 import { useState } from "react";
 import Box from "@mui/material/Box";
-import { CircularProgress } from "@mui/material";
+import  CircularProgress  from "@mui/material/CircularProgress";
 export interface post {
     date:string,
     text:string,

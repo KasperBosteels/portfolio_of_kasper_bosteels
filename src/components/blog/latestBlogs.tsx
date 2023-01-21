@@ -11,7 +11,7 @@ const [posts,setPosts] = useState<post[]>(require("./blogs/blogs.json").Posts.so
     return (
 <>
     {posts.length>0?(
-    <Box width="90%" margin="auto">
+    <Box width="90%" margin="auto" marginTop="5rem">
         <Box sx={{display:"flex", width:"100%", justifyContent:"space-between"}}>
             <Typography variant="h5">Latest Blog posts</Typography>
             <NavLink to="Blog" style={{textDecoration:"none"}}><Button startIcon={<ChromeReaderModeTwoToneIcon/>} variant="text">Read all blog posts...</Button></NavLink>
