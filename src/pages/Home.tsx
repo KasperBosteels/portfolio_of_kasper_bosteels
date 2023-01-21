@@ -3,6 +3,7 @@ import Typography from '@mui/material/Typography';
 import NYTimes from '../components/NYTimes';
 import Box from '@mui/material/Box';
 import SkillsPanel from '../components/SkillsPanel';
+import LatestBlogs from '../components/blog/latestBlogs';
 const HomePage = ()=>{
     return (
         <Box 
@@ -53,6 +54,7 @@ const HomePage = ()=>{
             <SkillsPanel/>
            </Box>
         </Box>
+            <LatestBlogs/>
             <NYTimes timeout={30*60*1000}/>    
         </Grid>
         </Box>
