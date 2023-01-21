@@ -1,36 +1,8 @@
 {
 "Posts":[
-    {
-        "text":"this is a very cool article",
-        "date":"1998/12/10"
-
-    },
-    
-    {
-        "text":"this is a second article",
-        "date":"2023/5/1"
-
-    },
-    {
-        "text":"this is another test post",
-        "date":"2023/01/20"
-    },
-    {
-        "text":"And a fouth Test blog post",
-        "date":"1998/12/21"
-    },
-    {
-        "text":"this post should not be shown in home",
-        "date":"1998/11/11"
-
-    },{
-        "text":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-        "date":"2023/01/21"
-    },{
-        "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At imperdiet dui accumsan sit amet. Amet risus nullam eget felis eget nunc. Dolor magna eget est lorem ipsum dolor. Fusce id velit ut tortor pretium. Amet consectetur adipiscing elit pellentesque. Maecenas ultricies mi eget mauris pharetra et. Duis ut diam quam nulla. Dui id ornare arcu odio ut sem nulla. Lobortis mattis aliquam faucibus purus in massa tempor. Pharetra pharetra massa massa ultricies mi quis hendrerit. Eleifend quam adipiscing vitae proin sagittis nisl. Cum sociis natoque penatibus et magnis dis parturient montes nascetur. Habitant morbi tristique senectus et netus. Euismod elementum nisi quis eleifend quam adipiscing vitae. Porttitor leo a diam sollicitudin tempor id eu. Donec adipiscing tristique risus nec feugiat in fermentum posuere. Purus sit amet luctus venenatis lectus. Sit amet nisl suscipit adipiscing. Leo vel fringilla est ullamcorper eget nulla. Vel pharetra vel turpis nunc eget lorem dolor. At consectetur lorem donec massa sapien faucibus et. Felis eget nunc lobortis mattis aliquam faucibus purus in. Blandit turpis cursus in hac habitasse platea. Nec feugiat nisl pretium fusce. Ut venenatis tellus in metus vulputate eu. Fusce id velit ut tortor pretium viverra suspendisse. Erat nam at lectus urna duis convallis convallis tellus id. Viverra orci sagittis eu volutpat odio. Varius quam quisque id diam vel quam elementum pulvinar etiam. Facilisi morbi tempus iaculis urna id volutpat lacus laoreet non. Ante metus dictum at tempor commodo ullamcorper a lacus vestibulum. Ridiculus mus mauris vitae ultricies leo. In vitae turpis massa sed elementum tempus egestas sed. Erat velit scelerisque in dictum non consectetur a. Odio morbi quis commodo odio aenean sed adipiscing diam.",
-        "date":"2023/01/22"
-    }   
-
-
+        {
+            "text":"Het Contract voor mijn stage is ondertekend.\nIk ben bijna klaar met de UiPath cursus die mij werd doorgestuurd.\nIk Ben klaar voor een leerijke en interesante stage.",
+            "date":"2023/01/21"
+        }
     ]
 }

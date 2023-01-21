@@ -4,13 +4,16 @@ import Typography from "@mui/material/Typography";
 import Card  from "@mui/material/Card";
 import Box from "@mui/system/Box";
 import { post } from "./allBlogs";
+import Button from "@mui/material/Button";
+import { NavLink } from "react-router-dom";
 interface blogArticleProps{
 post:post,
 maxWidth?:string,
 maxHeight?:string,
-title?:string
+title?:string,
+button?:boolean
 }
-const BlogArticle = ({post,maxWidth="25%",maxHeight="fit-content",title="Stage @ Robonext"}:blogArticleProps)=>{
+const BlogArticle = ({post,maxWidth="25%",maxHeight="fit-content",title="Stage @ Robonext",button=false}:blogArticleProps)=>{
     return (
         <Card 
         style={{
@@ -25,17 +28,17 @@ const BlogArticle = ({post,maxWidth="25%",maxHeight="fit-content",title="Stage @
             color="palette.text.primary"
             />
             <CardContent>
-                <Box sx={{
-                        whiteSpace:"break-spaces",
-                        overflow:"hidden", 
-                        textOverflow:"ellipsis", 
-                        maxHeight:maxHeight,
-                        paddingBottom:5}}>
+                <Box>
                     <Typography
-                        variant="body2"
-                        color="text.secondary">
+                    height={maxHeight}
+                    typography="nowrap"
+                    overflow="hidden"
+                    whiteSpace="break-spaces"
+                     variant="body2"
+                     color="text.secondary">
                     {post.text}
                     </Typography>
+                    {button ?<NavLink to="Blog"><Button variant="text">Read More</Button></NavLink>:<></>}
                 </Box>
             </CardContent>
         </Card>
