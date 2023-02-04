@@ -35,6 +35,7 @@ const VerticalMenu = ({open,anchor,closeMenu,setopen}:VerticalMenuProps)=>{
                         <NavLink to="Contact" style={{ textDecoration:"none"}}><MenuItem><Typography color="text.primary">Contact</Typography></MenuItem></NavLink>
                         <NavLink to="Components" style={{textDecoration:"none"}}><MenuItem><Typography color="text.primary">Components</Typography></MenuItem></NavLink>
                         <NavLink to="Blog" style={{textDecoration:"none"}}><MenuItem><Typography color="text.primary">Blog</Typography></MenuItem></NavLink>
+                        <NavLink to="About" style={{textDecoration:"none"}}><MenuItem><Typography color="text.primary">About Robonext</Typography></MenuItem> </NavLink>
                     </Menu>
                 </Box>
     )

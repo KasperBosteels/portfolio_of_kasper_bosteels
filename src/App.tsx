@@ -10,6 +10,7 @@ import ShowRoom from "./pages/showRoom";
 import "./App.css";
 import ErrorPage from "./pages/404";
 import Blog from "./pages/Blog";
+import About from "./pages/About_Stage_Robonext";
 
 const customtheme = createTheme({
   palette: {
@@ -75,6 +76,9 @@ function App() {
         },{
           path:"Blog",
           element:<Blog/>
+        },{
+          path:"About",
+          element:<About/>
         },{
           path:"*",
           element:<ErrorPage/>
