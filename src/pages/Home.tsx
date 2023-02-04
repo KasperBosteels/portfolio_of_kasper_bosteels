@@ -4,6 +4,7 @@ import NYTimes from '../components/NYTimes';
 import Box from '@mui/material/Box';
 import SkillsPanel from '../components/SkillsPanel';
 import LatestBlogs from '../components/blog/latestBlogs';
+import FrontEnd from '../components/Technologies';
 const HomePage = ()=>{
     return (
         <Box 
@@ -34,16 +35,13 @@ const HomePage = ()=>{
             <Typography variant='h5'>Beste bezoeker,</Typography>
             <Typography> 
             Welkom op mijn portfolio site! Mijn naam is Kasper Bosteels en ik ben een student aan Artesis Plantijn<br></br>
-            waar ik mijn opleiding tot programmeur volg. Mijn programmeervaardigheden omvatten<br></br> 
-            C#, JavaScript, TypeScript<br></br>
-            en ik werk met frameworks en platformen zoals React, Material UI, Express,<br></br>Gatsby ,DotNet Web API, Node en Git.<br></br>
-            Verder heb ik ook kennis van databases zoals MySQL, MongoDB en TypeORM en ben ik ook<br></br>
-            bekend met tools zoals HeidiSQL, Oracle virtual Box, Windows Server 2019.<br></br>
-            Daarnaast beheers ik ook HTML, CSS en heb ik kennis van UiPath.
+            waar ik mijn opleiding tot full stack prorammeur volg. Programmeer talen die ik reeds goed beheer zijn: C#, Javascript, Typescript,SQL, html & css.<br></br>
+            Ik werk persoonlijk liefst in backend of frontend web development, maar ik sta open voor totale nieuwe uitdaginen.<br></br>
+            Ik heb ook al ervaring met een reeks van frameworks, zoals react, Angular, Material Ui en gatsby.
+            en werk graag met Typeorm, mysql en mongodb.
             <br></br>
             <br></br>
-            Ik hoop dat u interessante projecten en informatie op mijn site zult vinden en aarzel niet om<br></br>
-            contact met mij op te nemen als u vragen of opmerkingen heeft.
+            Mocht u interesse hebben of nog enkele vragen, kan je zeker een emailtje sturen
             <br></br>
             <br></br>
             Met vriendelijke groet,<br></br>
@@ -54,6 +52,7 @@ const HomePage = ()=>{
             <SkillsPanel/>
            </Box>
         </Box>
+            <FrontEnd/>
             <LatestBlogs/>
             <NYTimes timeout={30*60*1000}/>    
         </Grid>
