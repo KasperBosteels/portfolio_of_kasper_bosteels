@@ -9,6 +9,9 @@
             "text":"Ik heb de UiPath cursus voledig doorgenomen,\nen de about pagina toegevoegd aan mijn portiolio site.\nIk ga dit weken nog enkele modules herhalen waar ik eerder wat moeite mee had,\nen op maandag 02/06 begint mijn eerste stage dag.",
             "date":"2023/02/04",
             "tags":["Pre-stage"]
+        },{
+            "text":"Mijn eerste dag van mijn Robonext stage is prima verlopen.\nIk heb als eerste kennis gemaakt met mijn collega stagairs, en mijn stage Mentor Dirk.\nOm 9:00 hebben we mogen meezitten met een stand up meeting, met het hele team,\nNa deze meeting hebben we verder uitleg gekregen over het bedrijf en wat van ons word verwacht.\nHierna Heeft Johan ons al een project toegewezen, maar we hebben nog geen analyze gekregen van \nde projecten zelf,Deze komt nog later.\nHierna heb ik vooral gezorgd dat ik in orde ben met software en agenda planning\nMaar het merendeel van de dag heb ik mij bezig gehouden met het voorbereiden voor het project door onder andere,\n al een Entity Framework programma te bouwen en een sql database hieraan te verbinden,\nen de documentatie te lezen voor de orchestrator API.",
+            "date":"2023/02/6"
         }
     ]
 }
