@@ -17,7 +17,7 @@ const FrontEnd = ()=>{
 
             </Box>
             </Paper>
-            <Paper elevation={5} sx={{padding:2}}>
+            <Paper elevation={5} sx={{padding:2,maxWidth:"32%",display:{lg:"flex",md:"flex",xs:"none",}}}>
                 <Typography>Backend Technologies waar ik ervaring mee heb</Typography>
                 <Box sx={{display:"flex", columnGap:".5rem", maxWidth:"30%", paddingTop:3,paddingBottom:3}}>
                     <Typography><a title="Jason Groce, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:.NET_Core_Logo.svg"><img style={{backgroundColor:"white", borderRadius:"2rem", }} width="64" alt=".NET Core Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/64px-.NET_Core_Logo.svg.png"/></a></Typography>
@@ -28,7 +28,7 @@ const FrontEnd = ()=>{
                     <Typography><a title="Alexander Sosluev, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Mongodb.png"><img style={{backgroundColor:"white", borderRadius:"2rem", }} width="64" alt="Mongodb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Mongodb.png/64px-Mongodb.png"/></a></Typography>
                 </Box>
             </Paper>
-            <Paper elevation={5} sx={{padding:2}}>
+            <Paper elevation={5} sx={{padding:2, display:{lg:"flex",md:"none",xs:"none"}}}>
                 <Typography>andere technologieën die ik gebruik of ervaring mee heb</Typography>
                 <Box sx={{display:"flex", columnGap:".5rem", maxWidth:"30%", paddingTop:3,paddingBottom:3}}>
                     <Typography><a title="UiPath.com, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:UiPath_Logo.png"><img style={{padding:".3rem", backgroundColor:"white", borderRadius:"2rem",borderWidth:0 }} width="64" alt="UiPath Logo" src="https://upload.wikimedia.org/wikipedia/commons/9/96/UiPath_Logo.png"/></a></Typography>
