@@ -35,7 +35,7 @@ const [news,setNews] = useState<Result[]>([]);
                 height:"fit-content",
                 padding:".1rem", 
                 margin:"auto",
-                marginTop:"10%",
+                marginTop:"2rem",
                 marginBottom:"1%",
                 verticalAlign:"center",
                 justifyContent:"center",
