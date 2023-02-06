@@ -42,7 +42,7 @@ const BlogArticle = ({post,maxWidth="25%",maxHeight="fit-content",title="Stage @
                     {post.text}
                     </Typography>
                     {button ?<NavLink to="Blog"><Button variant="text">Read More...</Button></NavLink>:<></>}
-                    {tags.map((t,i)=>(<Chip variant="outlined" label={t}/>))}
+                    {tags.map((t,i)=>(<Chip key={"tagid"+i} variant="outlined" label={t}/>))}
                 </Box>
             </CardContent>
         </Card>
