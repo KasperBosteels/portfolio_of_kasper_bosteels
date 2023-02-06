@@ -6,14 +6,16 @@ import Box from "@mui/system/Box";
 import { post } from "./allBlogs";
 import Button from "@mui/material/Button";
 import { NavLink } from "react-router-dom";
+import Chip from "@mui/material/Chip";
 interface blogArticleProps{
 post:post,
 maxWidth?:string,
 maxHeight?:string,
 title?:string,
 button?:boolean
+tags?:string[]
 }
-const BlogArticle = ({post,maxWidth="25%",maxHeight="fit-content",title="Stage @ Robonext",button=false}:blogArticleProps)=>{
+const BlogArticle = ({post,maxWidth="25%",maxHeight="fit-content",title="Stage @ Robonext",button=false,tags = []}:blogArticleProps)=>{
     return (
         <Card 
         style={{
@@ -40,6 +42,7 @@ const BlogArticle = ({post,maxWidth="25%",maxHeight="fit-content",title="Stage @
                     {post.text}
                     </Typography>
                     {button ?<NavLink to="Blog"><Button variant="text">Read More...</Button></NavLink>:<></>}
+                    {tags.map((t,i)=>(<Chip variant="outlined" label={t}/>))}
                 </Box>
             </CardContent>
         </Card>

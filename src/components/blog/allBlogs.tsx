@@ -6,6 +6,7 @@ export interface post {
     date:string,
     text:string,
     title?:string,
+    tags?:string[]
 }
 const AllBlogs = ()=>{
 const [posts,setPosts] = useState<post[]>(require("./blogs/blogs.json").Posts.sort((a:post,b:post)=> new Date(a.date) < new Date(b.date)?+1 :0) ?? []);
@@ -22,7 +23,7 @@ return (
         {posts.length>0 ?  
             (
                 <>
-                {posts.map((p,i)=><BlogArticle key={"post-"+i} post={p} maxWidth="70%" button={false}/>)}
+                {posts.map((p,i)=><BlogArticle key={"post-"+i} post={p} maxWidth="70%" button={false} tags={p.tags}/>)}
                 </>
                 ) : <CircularProgress  sx={{marginTop:"15%"}}/>}
     </Box>
