@@ -48,7 +48,7 @@ const HomePage = ()=>{
             Kasper Bosteels
             </Typography>
             </Box>
-           <Box sx={{minWidth:"30%"}}>
+           <Box sx={{minWidth:"30%", display:{lg:"flex",md:"none",xs:"none"}}}>
             <SkillsPanel/>
            </Box>
         </Box>
