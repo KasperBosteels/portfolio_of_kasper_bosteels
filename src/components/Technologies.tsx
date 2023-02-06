@@ -5,10 +5,10 @@ const FrontEnd = ()=>{
 
     return (
 
-        <Box display="flex" sx={{flexDirection:"row", alignContent:"space-between", justifyContent:"space-between", width:"80%", margin:"auto",display:{lg:"inline",md:"inline",xs:"none",}}}>
+        <Box sx={{flexDirection:{lg:"row",md:"column",xs:"column"}, alignContent:"space-between", justifyContent:"space-between", width:"80%", margin:"auto",display:{lg:"inline",md:"inline",xs:"none",}}}>
             <Paper elevation={5} sx={{padding:2}}>
-            <Typography>Frame works waar ik ervaring mee heb</Typography>
-            <Box sx={{display:"flex", columnGap:".5rem", maxWidth:"30%", paddingTop:3,paddingBottom:3}}>
+            <Typography variant="h6">Frame works waar ik ervaring mee heb</Typography>
+            <Box sx={{display:"flex", columnGap:".5rem",minWidth:"30%", maxWidth:"30%", paddingTop:3,paddingBottom:3}}>
                 <Typography><a title="Facebook, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:React-icon.svg"><img style={{backgroundColor:"white", borderRadius:"2rem", }} width="64" alt="React-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/64px-React-icon.svg.png"/></a></Typography>
                 <Typography><a title="Google, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Angular_full_color_logo.svg"><img  style={{backgroundColor:"white", borderRadius:"2rem", }} width="64" alt="Angular full color logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/64px-Angular_full_color_logo.svg.png"/></a></Typography>
                 <Typography><a title="Fehguy, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Swagger-logo.png"><img style={{backgroundColor:"white", borderRadius:"2rem", }} width="64" alt="Swagger-logo" src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Swagger-logo.png"/></a></Typography>
@@ -17,8 +17,8 @@ const FrontEnd = ()=>{
 
             </Box>
             </Paper>
-            <Paper elevation={5} sx={{padding:2,maxWidth:"32%",display:{lg:"inline",md:"inline",xs:"none",}}}>
-                <Typography>Backend Technologies waar ik ervaring mee heb</Typography>
+            <Paper elevation={5} sx={{padding:2,minWidth:"30%",maxWidth:"32%",display:{lg:"none",md:"none",xs:"none",}}}>
+                <Typography variant="h6">Backend Technologies waar ik ervaring mee heb</Typography>
                 <Box sx={{display:"flex", columnGap:".5rem", maxWidth:"30%", paddingTop:3,paddingBottom:3}}>
                     <Typography><a title="Jason Groce, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:.NET_Core_Logo.svg"><img style={{backgroundColor:"white", borderRadius:"2rem", }} width="64" alt=".NET Core Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/64px-.NET_Core_Logo.svg.png"/></a></Typography>
                     <Typography><a title="expressjs developers, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Expressjs.png"><img style={{backgroundColor:"white", borderRadius:"2rem", }} width="64" alt="Expressjs" src="https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png"/></a></Typography>
@@ -28,9 +28,9 @@ const FrontEnd = ()=>{
                     <Typography><a title="Alexander Sosluev, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Mongodb.png"><img style={{backgroundColor:"white", borderRadius:"2rem", }} width="64" alt="Mongodb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Mongodb.png/64px-Mongodb.png"/></a></Typography>
                 </Box>
             </Paper>
-            <Paper elevation={5} sx={{padding:2, display:{lg:"inline",md:"none",xs:"none"}}}>
-                <Typography>andere technologieën die ik gebruik of ervaring mee heb</Typography>
-                <Box sx={{display:"flex", columnGap:".5rem", maxWidth:"30%", paddingTop:3,paddingBottom:3}}>
+            <Paper elevation={5} sx={{padding:2,minWidth:"30%",maxWidth:"32%" ,display:{lg:"none",md:"none",xs:"none"}}}>
+                <Typography variant="h6">andere technologieën die ik gebruik of ervaring mee heb</Typography>
+                <Box sx={{display:"flex", columnGap:".5rem", paddingTop:3,paddingBottom:3}}>
                     <Typography><a title="UiPath.com, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:UiPath_Logo.png"><img style={{padding:".3rem", backgroundColor:"white", borderRadius:"2rem",borderWidth:0 }} width="64" alt="UiPath Logo" src="https://upload.wikimedia.org/wikipedia/commons/9/96/UiPath_Logo.png"/></a></Typography>
                 </Box>
 
