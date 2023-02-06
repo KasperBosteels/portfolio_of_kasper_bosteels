@@ -17,7 +17,7 @@ const [posts,setPosts] = useState<post[]>(require("./blogs/blogs.json").Posts.so
             <NavLink to="Blog" style={{textDecoration:"none"}}><Button startIcon={<ChromeReaderModeTwoToneIcon/>} variant="text">Read all blog posts...</Button></NavLink>
         </Box>
         <Box sx={{paddingTop:"1rem", borderStyle:"solid", borderTopWidth:2, borderBottomWidth:0,borderLeftWidth:0,borderRightWidth:0, borderColor:"text.primary",}}>
-            <Box sx={{display:"flex", flexDirection:"row", justifyContent:"space-between", alignContent:"space-between", width:"100%", marginBottom:"1%", marginTop:0.5}}>
+            <Box sx={{ flexDirection:{lg:"row",md:"row",xs:"column"},justifyContent:"space-between", alignContent:"space-between", width:"100%", marginBottom:"1%", marginTop:5}}>
                 {posts.map((p,i)=><BlogArticle key={"post-"+i} post={p} maxHeight="10rem" button={true}/>)}           
             </Box>
         </Box>
