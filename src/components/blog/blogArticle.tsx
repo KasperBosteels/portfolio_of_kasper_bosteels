@@ -13,15 +13,18 @@ maxWidth?:string,
 maxHeight?:string,
 title?:string,
 button?:boolean
-tags?:string[]
+tags?:string[],
+gap?:string
+
 }
-const BlogArticle = ({post,maxWidth="25%",maxHeight="fit-content",title="Stage @ Robonext",button=false,tags = []}:blogArticleProps)=>{
+const BlogArticle = ({post,maxWidth="25%",maxHeight="fit-content",title="Stage @ Robonext",button=false,tags = [],gap="auto"}:blogArticleProps)=>{
     return (
         <Card 
         style={{
             minWidth:300,
             maxWidth:maxWidth,
             margin:"auto",
+            marginBottom:gap,
             backgroundColor:"palette.secondary.dark"}}
         elevation={8}>
             <CardHeader
