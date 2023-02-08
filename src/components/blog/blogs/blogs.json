@@ -1,25 +1,30 @@
 {
 "Posts":[
         {
-            "titel":"Voorbereiden voor de stage aan Robonext",
+            "title":"Voorbereiden voor de stage aan Robonext",
             "text":"Het Contract voor mijn stage is ondertekend.\nIk ben bijna klaar met de UiPath cursus die mij werd doorgestuurd.\nIk Ben klaar voor een leerijke en interesante stage.",
             "date":"2023/01/21",
             "tags":["Pre-stage"]
         },
         {
-            "titel":"Voorbereiden voor de stage aan Robonext",
+            "title":"Voorbereiden voor de stage aan Robonext",
             "text":"Ik heb de UiPath cursus voledig doorgenomen,\nen de about pagina toegevoegd aan mijn portiolio site.\nIk ga dit weken nog enkele modules herhalen waar ik eerder wat moeite mee had,\nen op maandag 02/06 begint mijn eerste stage dag.",
             "date":"2023/02/04",
             "tags":["Pre-stage"]
         },{
-            "titel":"Eerste stage dag is voorbij.",
-            "text":"Mijn eerste dag van mijn Robonext stage is prima verlopen.\nIk heb als eerste kennis gemaakt met mijn collega stagairs, en mijn stage Mentor Dirk.\nOm 9:00 hebben we mogen meezitten met een stand up meeting, met het hele team,\nNa deze meeting hebben we verder uitleg gekregen over het bedrijf en wat van ons word verwacht.\nHierna Heeft Johan ons al een project toegewezen, maar we hebben nog geen analyze gekregen van \nde projecten zelf,Deze komt nog later.\nHierna heb ik vooral gezorgd dat ik in orde ben met software en agenda planning\nMaar het merendeel van de dag heb ik mij bezig gehouden met het voorbereiden voor het project door onder andere,\n al een Entity Framework programma te bouwen en een sql database hieraan te verbinden,\nen de documentatie te lezen voor de orchestrator API.",
+            "title":"Eerste stage dag is voorbij.",
+            "text":"Mijn eerste dag van mijn Robonext stage is prima verlopen.\nIk heb als eerste kennis gemaakt met mijn collega stagairs, en mijn stage Mentor Dirk.\nOm 9:00 hebben we mogen meezitten met een stand up meeting, met het hele team,\nNa deze meeting hebben we verder uitleg gekregen over het bedrijf en wat van ons word verwacht.\nHierna Heeft Johan ons al een project toegewezen, maar we hebben nog geen analyze gekregen van \nde projecten zelf,Deze komt nog later.\nHierna heb ik vooral gezorgd dat ik in orde ben met software en agenda planning\nMaar het merendeel van de dag heb ik mij bezig gehouden met het voorbereiden voor het project door onder andere,\nal een Entity Framework programma te bouwen en een sql database hieraan te verbinden,\nen de documentatie te lezen voor de orchestrator API.",
             "date":"2023/02/06",
             "tags":["eerste week"]
         },{
-            "text":"De tweede dag van de stage begon met de dagelijke stand up meeting om 9:30,\n deze heeft niet zo lang geduurd doordat er enkele ziek waren en de meeste collega's vandaag\n remote werkten. In voormiddag heb ik mezelf bezig gehouden met het opfrissen van enkele UiPath modules,\nomtrend selectors, dit ging vrij vlot. De rest van de dag heb ik geprobeerd om \nmeer te weten te komen welke endpoints ik zou moeten opvragen en welke data ik zou moeten opslagen\nin de database, dit ging vrij traag, de Orchestrator api is vrij groot\nmet vrij veel endpoints en verschillende scopes en authenticatie mogelijkheden.\n",
+            "text":"De tweede dag van de stage begon met de dagelijke stand up meeting om 9:30,\ndeze heeft niet zo lang geduurd doordat er enkele ziek waren en de meeste collega's vandaag\nremote werkten. In voormiddag heb ik mezelf bezig gehouden met het opfrissen van enkele UiPath modules,\nomtrend selectors, dit ging vrij vlot. De rest van de dag heb ik geprobeerd om \nmeer te weten te komen welke endpoints ik zou moeten opvragen en welke data ik zou moeten opslagen\nin de database, dit ging vrij traag, de Orchestrator api is vrij groot\nmet vrij veel endpoints en verschillende scopes en authenticatie mogelijkheden.\n",
             "date":"2023/02/07",
             "tags":["eerste week","voorbereiding project"]
+        },{
+            "title":"Een rustige maar productieve dag.",
+            "text":"Op de derde dag van de stage was ik alleen op het kantoor,\nNa de gebruikelijke Standup meeting in teams om 9:00 ben ik begonnen met nog 2 UiPath modules te herhalen.\nRond 11:00 bheb ik verder gewerkt aan de backend api voor mijn project.\nIk heb eindelijk de authenticatie kunnen voltooien voor de user via de http client.\nDe rest van de dag ben ik bezig geweest met de models te maken voor de EF en dit te testen, \ndoor een user te maken en een acces token op te vragen en deze in de database op te slagen.",
+            "date":"2023/02/08",
+            "tags":["eerste week"]
         }
     ]
 }

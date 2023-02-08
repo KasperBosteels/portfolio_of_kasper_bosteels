@@ -11,13 +11,12 @@ interface blogArticleProps{
 post:post,
 maxWidth?:string,
 maxHeight?:string,
-title?:string,
 button?:boolean
 tags?:string[],
 gap?:string
 
 }
-const BlogArticle = ({post,maxWidth="25%",maxHeight="fit-content",title="Stage @ Robonext",button=false,tags = [],gap="auto"}:blogArticleProps)=>{
+const BlogArticle = ({post,maxWidth="25%",maxHeight="fit-content",button=false,tags = [],gap="auto"}:blogArticleProps)=>{
     return (
         <Card 
         style={{
@@ -29,7 +28,7 @@ const BlogArticle = ({post,maxWidth="25%",maxHeight="fit-content",title="Stage @
         elevation={8}>
             <CardHeader
             sx={{backgroundColor:"primary.main"}}
-            title={title}
+            title={post.title ?? "Stage Robonext"}
             subheader={new Date(post.date).toDateString()}
             color="palette.text.primary"
             />
