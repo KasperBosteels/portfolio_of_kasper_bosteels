@@ -24,7 +24,12 @@
             "title":"Een rustige maar productieve dag.",
             "text":"Op de derde dag van de stage was ik alleen op het kantoor,\nNa de gebruikelijke Standup meeting in teams om 9:00 ben ik begonnen met nog 2 UiPath modules te herhalen.\nRond 11:00 bheb ik verder gewerkt aan de backend api voor mijn project.\nIk heb eindelijk de authenticatie kunnen voltooien voor de user via de http client.\nDe rest van de dag ben ik bezig geweest met de models te maken voor de EF en dit te testen, \ndoor een user te maken en een acces token op te vragen en deze in de database op te slagen.",
             "date":"2023/02/08",
-            "tags":["eerste week"]
+            "tags":["eerste week","backend"]
+        },{
+            "title":"Meeting met dirk en johan",
+            "text":"Na de gewoonlijke standup meeting, heb ik een gesprek gehad met Johan en Dirk\nover mijn project waarover ik enkele vragen had over requirements, database, front-end en of dat ik een repository moet maken voor het project.\nBij het gesprek heb ik ook geleerd dat we geen requirements krijgen van de het bedrijf, en dat we best zelf een soort van analyze maken van het project.\nHierna heb ik de rest van de dag verder gewerkt aan de backend van het project.\nIk maak vrij goede vooruitgand met de backend, ik heb verder gewerkt aan de models, en met het ophalen van de data in de api.\nIk denk dat ik eind volgende week het merendeel van de api af heb.",
+            "date":"2023/02/09",
+            "tags":["eerste week","backend"]
         }
     ]
 }
