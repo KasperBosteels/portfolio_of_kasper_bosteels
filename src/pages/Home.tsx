@@ -32,13 +32,13 @@ const HomePage = ()=>{
             padding:"1rem",
             }}>
             <Box>
-            <Typography variant='h5'>Beste bezoeker,</Typography>
             <Typography> 
-            Welkom op mijn portfolio site! Mijn naam is Kasper Bosteels en ik ben een student aan Artesis Plantijn<br></br>
-            waar ik mijn opleiding tot full stack prorammeur volg. Programmeer talen die ik reeds goed beheer zijn: C#, Javascript, Typescript,SQL, html & css.<br></br>
+            Welkom op mijn portfolio site! Ik ben Kasper Bosteels en ik ben een student aan Artesis Plantijn<br></br>
+            Ik volg de richting Programmeren om een full stack developer te worden.<br></br>
             Ik werk persoonlijk liefst in backend of frontend web development, maar ik sta open voor totale nieuwe uitdaginen.<br></br>
-            Ik heb ook al ervaring met een reeks van frameworks, zoals react, Angular, Material Ui en gatsby.
-            en werk graag met Typeorm, mysql en mongodb.
+            Ik heb ook al ervaring met een reeks van frameworks, zoals react, Angular, Material Ui, gatsby en Asp.net Core Entity Framework.<br></br>
+            Mijn persoonlijke favoriete technologiën zijn Typescript, node en Typeorm.<br></br>
+            Buiten IT doe ik ook nog Scuba duiken.
             <br></br>
             <br></br>
             Mocht u interesse hebben of nog enkele vragen, kan je zeker een emailtje sturen
