@@ -35,6 +35,11 @@
             "text":"De eerste week van de stage zit erop.\nIk ben tevreden met wat ik de eerste week heb gepresteerd.\nOmdat ik de UiPath academy all had bestudeerd in het eerste semester naar vraag van Dirk en johan,\nkon ik meer focusen op het project. Er zijn nog enkele onderdelen die ik moet uitschijrven in de backend .net core api,\nen dan is de backend klaar volgens mijn eerste analyze (de kans is groot dat ik deze later nog moet uitbreiden of work arounds moet voorzien).\n",
             "date":"2023/02/10",
             "tags":["backend","eerste week"]
+        },{
+            "title":"Odata en de Orchestrator api",
+            "text":"De Tweede week van de Stage zit er bijna op, Deze week heb ik Verder gewerkt aan de backend van mijn project.\nIk zat een tijdje vast aan hoe ik juist de Odata protocol moet gebruiken. Ik had specifiek moete met het schrijven van de filters voor mijn urls.\nDit heeft de meerderheid van de week opgenomen. Verder heb ik vooral de code opgeruimd en verbeterd.\nOp vrijdag en donderdag heb ik de laatste aantal bugs opgelost\nen gezocht naar een geschikte technologie voor de front-end.\nMogelijk ga ik Next.js gebruiken omdat dit framework een aantal nuttige functionaliteiten heeft,\nmaar ik zou hier wat meer moeten inkijken.",
+            "date":"2023/02/16",
+            "tags":["backend"]
         }
     ]
 }
