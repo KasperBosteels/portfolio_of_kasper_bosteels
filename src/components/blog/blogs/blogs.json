@@ -4,50 +4,52 @@
             "title":"Voorbereiden voor de stage aan Robonext",
             "text":"Het Contract voor mijn stage is ondertekend.\nIk ben bijna klaar met de UiPath cursus die mij werd doorgestuurd.\nIk Ben klaar voor een leerijke en interesante stage.",
             "date":"2023/01/21",
-            "tags":["Pre-stage"]
+            "tags":["Pre-stage","januari"]
         },
         {
             "title":"Voorbereiden voor de stage aan Robonext",
             "text":"Ik heb de UiPath cursus voledig doorgenomen,\nen de about pagina toegevoegd aan mijn portiolio site.\nIk ga dit weken nog enkele modules herhalen waar ik eerder wat moeite mee had,\nen op maandag 02/06 begint mijn eerste stage dag.",
             "date":"2023/02/04",
-            "tags":["Pre-stage"]
+            "tags":["Pre-stage","februari"]
         },{
             "title":"Eerste stage dag is voorbij.",
             "text":"Mijn eerste dag van mijn Robonext stage is prima verlopen.\nIk heb als eerste kennis gemaakt met mijn collega stagairs, en mijn stage Mentor Dirk.\nOm 9:00 hebben we mogen meezitten met een stand up meeting, met het hele team,\nNa deze meeting hebben we verder uitleg gekregen over het bedrijf en wat van ons word verwacht.\nHierna Heeft Johan ons al een project toegewezen, maar we hebben nog geen analyze gekregen van \nde projecten zelf,Deze komt nog later.\nHierna heb ik vooral gezorgd dat ik in orde ben met software en agenda planning\nMaar het merendeel van de dag heb ik mij bezig gehouden met het voorbereiden voor het project door onder andere,\nal een Entity Framework programma te bouwen en een sql database hieraan te verbinden,\nen de documentatie te lezen voor de orchestrator API.",
             "date":"2023/02/06",
-            "tags":["eerste week"]
+            "tags":["eerste week","februari"]
         },{
             "text":"De tweede dag van de stage begon met de dagelijke stand up meeting om 9:30,\ndeze heeft niet zo lang geduurd doordat er enkele ziek waren en de meeste collega's vandaag\nremote werkten. In voormiddag heb ik mezelf bezig gehouden met het opfrissen van enkele UiPath modules,\nomtrend selectors, dit ging vrij vlot. De rest van de dag heb ik geprobeerd om \nmeer te weten te komen welke endpoints ik zou moeten opvragen en welke data ik zou moeten opslagen\nin de database, dit ging vrij traag, de Orchestrator api is vrij groot\nmet vrij veel endpoints en verschillende scopes en authenticatie mogelijkheden.\n",
             "date":"2023/02/07",
-            "tags":["eerste week","voorbereiding project"]
+            "tags":["eerste week","voorbereiding project","februari"]
         },{
             "title":"Een rustige maar productieve dag.",
             "text":"Op de derde dag van de stage was ik alleen op het kantoor,\nNa de gebruikelijke Standup meeting in teams om 9:00 ben ik begonnen met nog 2 UiPath modules te herhalen.\nRond 11:00 bheb ik verder gewerkt aan de backend api voor mijn project.\nIk heb eindelijk de authenticatie kunnen voltooien voor de user via de http client.\nDe rest van de dag ben ik bezig geweest met de models te maken voor de EF en dit te testen, \ndoor een user te maken en een acces token op te vragen en deze in de database op te slagen.",
             "date":"2023/02/08",
-            "tags":["eerste week","backend"]
+            "tags":["eerste week","backend","februari"]
         },{
             "title":"Meeting met dirk en johan",
             "text":"Na de gewoonlijke standup meeting, heb ik een gesprek gehad met Johan en Dirk\nover mijn project waarover ik enkele vragen had over requirements, database, front-end en of dat ik een repository moet maken voor het project.\nBij het gesprek heb ik ook geleerd dat we geen requirements krijgen van de het bedrijf, en dat we best zelf een soort van analyze maken van het project.\nHierna heb ik de rest van de dag verder gewerkt aan de backend van het project.\nIk maak vrij goede vooruitgand met de backend, ik heb verder gewerkt aan de models, en met het ophalen van de data in de api.\nIk denk dat ik eind volgende week het merendeel van de api af heb.",
             "date":"2023/02/09",
-            "tags":["eerste week","backend"]
+            "tags":["eerste week","backend","februari"]
         },{
             "title":"Einde van de eerste week.",
             "text":"De eerste week van de stage zit erop.\nIk ben tevreden met wat ik de eerste week heb gepresteerd.\nOmdat ik de UiPath academy all had bestudeerd in het eerste semester naar vraag van Dirk en johan,\nkon ik meer focusen op het project. Er zijn nog enkele onderdelen die ik moet uitschijrven in de backend .net core api,\nen dan is de backend klaar volgens mijn eerste analyze (de kans is groot dat ik deze later nog moet uitbreiden of work arounds moet voorzien).\n",
             "date":"2023/02/10",
-            "tags":["backend","eerste week"]
+            "tags":["backend","eerste week","februari"]
         },{
             "title":"Odata en de Orchestrator api",
             "text":"De Tweede week van de Stage zit er bijna op, deze week heb ik Verder gewerkt aan de backend van mijn project.\nIk zat een tijdje vast aan hoe ik juist de Odata protocol moet gebruiken. Ik had specifiek moeite met het schrijven van de filters voor mijn urls.\nDit heeft de meerderheid van de week ingenomen. Verder heb ik vooral de code opgeruimd en verbeterd.\nOp vrijdag en donderdag heb ik de laatste paar gekende bugs opgelost\nen gezocht naar een geschikte technologie voor de front-end.\nMogelijk ga ik Next.js gebruiken omdat dit framework een aantal nuttige functionaliteiten heeft,\nmaar ik zou hier wat meer moeten inkijken.",
             "date":"2023/02/16",
-            "tags":["backend"]
+            "tags":["backend","februari"]
         },{
             "title":"Afwezigheid door ziekte",
             "text":"Deze week was ik jammer genoeg vanaf dinsdag namiddag afwezig wegens ziekte.\nIk was de week hiervoor op vrijdag ook al ziek maar dan had ik ervoor gekozen om van thuis\nuit te werken, in de hoop dat ik mij beter zou voelen na het weekend.\nJammer genoeg was dit niet het geval en moest ik thuis blijven tot eind deze week.\nOm niet achter te lopen heb ik wel gewerkt, namelijk de backend code verbeteren, extra\nendpoints gemaakt, en in de frontend heb ik extra pagina's gemaakt en de weergave van\nenkele data geïmplementeerd. Ik heb ook wat research gedaan naar hoe ik juist user login\nimplementeer maar ik ben nog niet zeker hoe ik dit moet implementeren in mijn project, met de user accounts die ik al heb.",
-            "date":"2023/02/24"
+            "date":"2023/02/24",
+            "tags":["februari"]
         },{
             "title":"Einde eerste maand",
             "text": "Wat ik deze week heb gedaan:\nOp maandag:\n- Het debuggen en corrigeren van de post requests naar de backend\n- Het creëren van een tenant specifieke pagina die dynamisch wordt geladen in React.ts\n- Het toevoegen van extra functionaliteit in de organisatie pagina\n\nDinsdag:\n- Het aanpassen van enkele pagina's en components voor een betere stijl.\n- Het ontwerpen en ontwikkelen van een login pagina\n- Het leren over user authenticatie en authorizatie met JWT-tokens\n\nWoensdag:\n- Het toevoegen van rollen aan de database voor de user authorizatie\n- Het herschrijven van de user models en enkele user gerelateerde endpoints\n\nDonderdag:\n- Het maken van een login endpoint dat een token kan genereren om in een cookie op te slaan\n- Het aanpassen van enkele requests zodat ze een token meegeven\n- Het implementeren van claims en roles in de tokens\n- Het opslaan van de token in de cookie\n- Het beveiligen van enkele user post endpoints\n\nVrijdag:\n- Het testen van de endpoints met Postman (een tool voor het maken en versturen van HTTP-requests)\n- Het oplossen van enkele backend bugs die met authenticatie hadden te maken\n- Proberen om de frontend pagina's te beveiligen met React-router-dom\n- Het toevoegen van extra functionaliteit en stijl op pagina's\n\nIntrospectie:\nDeze week was rustig, er is niets bijzonders gebeurd enkel wat vastgezeten met de user authenticatie en het maken van een nieuwe controller voor de endpoint dat wat tijd koste.\nIk denk dat ik langzamaan maar zeker het einde van mijn project benader.\n\nwat er minder goed ging:\n- iets te ambitieus geweest tijdens de daily-standups en gedacht dat ik meer op een dag zou hebben kunnen doen\n- iets te lang bezig geweest met de user authenticatie\n- er zijn nog enkele serieuze bugs in de backend waar ik niet echt zin in had om deze op te lossen, dus deze eventjes opzij gezet\n\nwat er goed ging:\n- persoonlijk denk ik dat ik goede vooruitgang heb geboekt met het project\n",
-            "date":"2023/03/03"
+            "date":"2023/03/03",
+            "tags":["februari","maart"]
         }
     ]
 }
