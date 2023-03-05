@@ -1,4 +1,3 @@
-import { Box } from "@mui/system";
 import React ,{useEffect}from "react";
 
 interface mandelProps {
@@ -47,9 +46,7 @@ for (let x = 0; x < width; x++) {
       if (isInside) {
         ctx!.fillStyle="black"
       } else {
-        console.log("zIm:",zIm," zRe:",zRe)
-        const color = `rgb(${zIm+50*zRe},${zIm+100*Math.random()*zIm*zRe},${zIm*zRe+100})`
-        ctx!.fillStyle = color;
+        ctx!.fillStyle = `rgb(${zIm+50*zRe},${zIm+100*Math.random()*zIm*zRe},${zIm*zRe+100})`
       }
       ctx!.fillRect(x, y, 1, 1);
     }

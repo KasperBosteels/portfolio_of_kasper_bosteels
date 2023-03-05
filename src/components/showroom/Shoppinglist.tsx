@@ -10,7 +10,6 @@ import TableHead from "@mui/material/TableHead"
 import TableRow from "@mui/material/TableRow"
 import TextField from "@mui/material/TextField"
 import DeleteIcon from "@mui/icons-material/Delete"
-import { isNumberTypeAnnotation } from "@babel/types"
 interface shoppingListItem {
   name:string,
   amount:number

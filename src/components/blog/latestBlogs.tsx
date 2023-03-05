@@ -6,7 +6,7 @@ import { Button, Typography } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import ChromeReaderModeTwoToneIcon from '@mui/icons-material/ChromeReaderModeTwoTone';
 const LatestBlogs =()=>{
-const [posts,setPosts] = useState<post[]>(require("./blogs/blogs.json").Posts.sort((a:post,b:post)=> new Date(a.date) < new Date(b.date) ? +1 : 0).filter((p:post,i:number)=>i <=2) ?? [])
+const [posts] = useState<post[]>(require("./blogs/blogs.json").Posts.sort((a:post,b:post)=> new Date(a.date) < new Date(b.date) ? +1 : 0).filter((p:post,i:number)=>i <=2) ?? [])
 
     return (
 <>

@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box";
 import CircularProgress from "@mui/material/CircularProgress";
 import { useEffect, useState } from "react";
-import { Welcome,Result,Difficulty,Type } from "../../../quiz-interfaces";
+import { Welcome,Result } from "../../../quiz-interfaces";
 import QuizQuestion from "./QuizQuestion";
 
 

@@ -1,6 +1,5 @@
 import Typography from "@mui/material/Typography";
 import LinearProgress from "@mui/material/LinearProgress";
-import { blue } from '@mui/material/colors';
 const SkillsPanel=()=>{
     return (
             <>

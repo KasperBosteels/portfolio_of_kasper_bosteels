@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import  CircularProgress  from "@mui/material/CircularProgress";
 import { TextField } from "@mui/material";
-import { Filter } from "@mui/icons-material";
 export interface post {
     date:string,
     text:string,
@@ -11,7 +10,7 @@ export interface post {
     tags?:string[]
 }
 const AllBlogs = ()=>{
-const [posts,setPosts] = useState<post[]>(require("./blogs/blogs.json").Posts.sort((a:post,b:post)=> new Date(a.date) < new Date(b.date)?+1 :0) ?? []);
+const [posts] = useState<post[]>(require("./blogs/blogs.json").Posts.sort((a:post,b:post)=> new Date(a.date) < new Date(b.date)?+1 :0) ?? []);
 const [FilteredPOsts, setFilteredPosts] = useState<post[]>(posts);
 const [FilterText,setFilterText] = useState<string>("");
 
@@ -22,7 +21,7 @@ useEffect(() => {
   
     setFilteredPosts(posts.filter(x=>x.title?.toLowerCase().includes(FilterText.toLowerCase())))
 
-}, [FilterText])
+}, [FilterText,posts])
 
 return (
 

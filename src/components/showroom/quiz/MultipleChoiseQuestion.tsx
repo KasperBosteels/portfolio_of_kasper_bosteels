@@ -5,12 +5,12 @@ import { QuizQuestiopProps } from "./QuizQuestion"
 
 const sortAnswers = (c:string,w:string[])=>{
     let allAnswers = [c,...w]
-    allAnswers.sort((a,b)=>Math.random()-0.5)
+    allAnswers.sort(()=>Math.random()-0.5)
 return allAnswers
 }
 
 const MultipleChoiseQuestion=({question,answer}:QuizQuestiopProps)=>{
-const [allAnswers,setAllAnswers]=useState<string[]>(sortAnswers(question.correct_answer,question.incorrect_answers))
+const [allAnswers]=useState<string[]>(sortAnswers(question.correct_answer,question.incorrect_answers))
 const [Answer,setAnswer]=useState<string>();
 const handleChange=(e:string)=>{
     setAnswer(e);
