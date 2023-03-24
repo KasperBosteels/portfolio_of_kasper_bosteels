@@ -25,8 +25,10 @@ useEffect(() => {
 
 return (
 
-    <Box sx={{marginBottom:"1rem"}}>
+    <Box marginBottom="1rem" >
     <Box
+        display="flex" 
+        flexDirection="column"
         sx={{
           display:"flex",
           alignContent:"center",
@@ -35,7 +37,7 @@ return (
           padding:"4rem",
         }}
         >
-        <TextField variant="outlined"label="Filter By title"
+        <TextField sx={{maxWidth:"10rem"}} variant="outlined"label="Filter By title"
             onChange={(e)=>EditText(e.target.value)}
             />
     <Box sx={{
