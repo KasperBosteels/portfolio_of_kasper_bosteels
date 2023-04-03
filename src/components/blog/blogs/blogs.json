@@ -69,6 +69,14 @@
             "title":"Extra Opdrachten",
             "date":"2023/03/28",
             "tags":["maart"],
-            "text":"Ik en Jellis hebben vandaag een extra opdracht gekregen, deze opdracht gaat over het updaten van een UiPath workflow en een Power automate flow.\nBijde workflows dienen als een demo voor klanten, maar deze waren meer dan een jaar geleden gemaakt, en één hiervan werkt zelfs nog met exporer.\nDeze workflows moeten dus worden geüpdatet naar de nieuwste versie van UiPath en Power automate.\n\nDeze opdracht is een goede oefening voor het werken met UiPath en Power automate, en het is ook een goede oefening voor het werken met een bestaand project."        }
+            "text":"Ik en Jellis hebben vandaag een extra opdracht gekregen, deze opdracht gaat over het updaten van een UiPath workflow en een Power automate flow.\nBijde workflows dienen als een demo voor klanten, maar deze waren meer dan een jaar geleden gemaakt, en één hiervan werkt zelfs nog met exporer.\nDeze workflows moeten dus worden geüpdatet naar de nieuwste versie van UiPath en Power automate.\n\nDeze opdracht is een goede oefening voor het werken met UiPath en Power automate, en het is ook een goede oefening voor het werken met een bestaand project."        
+        },{
+            "title":"",
+            "date":"2023/03/31",
+            "tags":["maart"],
+            "text":"Maandag:\n- Feedback van demo implementeren\n- Proces tijd per proces verdelen\n\nDinsdag:\n- Feedback implementeren\n- Proces tijd per proces verdelen\n- Nieuw project starten voor unit tests\n\nWoensdag:\n- Feedback implementeren\n- Styling aanpassen\n- Grafieken aanpassen\n- Database mocken voor unit testing\n\nDonderdag:\n- Unit tests schrijven\n- Probleem met grafieken oplossen\n- Inloggen op de VM om aan een PA-workflow te werken\n- Vergadering met Ann\n\nVrijdag:\n- Probleem met gemockte database oplossen\n- Doorgaan met het schrijven van tests\n- Styling aanpassen\n\nDeze week was vrij rustig, ik heb vooral de feedback van de demo verder geïmplementeerd.\nVerder ben ik begonnen met het mocken van de database en de context, maar dit ging iets moeilijker omdat er in aspNet EF web api vrij veel achter de schermen gebeurt.\nDeze week hebben Jellis en ik nog een extra opdracht gekregen. We moeten 2 demo workflows (1 van UiPath en 1 van Power Automate) updaten omdat deze verouderd zijn.\nJellis en ik hebben beslist om elk één taak te doen en omdat hij meer ervaring had met UiPath wilde hij die taak doen. Dus heb ik die van Power Automate. Dit gaat momenteel vrij vlotjes. Ik heb de gevraagde aanpassingen al aangebracht en wacht op feedback van Joris."
+        
+        
+        }
     ]
 }
