@@ -4,7 +4,7 @@ import Button from "@mui/material/Button"
 import CircularProgress from "@mui/material/CircularProgress";
 import TextField from "@mui/material/TextField";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import {useCallback, useEffect, useState } from "react";
 interface IPokedex {
   limit: number;
 }
@@ -17,17 +17,21 @@ const Pokedex = ({ limit = 10 }: IPokedex) => {
   const [inputFilter,setFilter] = useState<string>("")
   const [limitValue,setLimitValue] = useState<number>(limit)
   const [isloading, setIsloading] = useState<boolean>(true);
-  const getPokemon = async () => {
+
+  const getPokemon = useCallback( async () => {
     setIsloading(true)
     axios.get(`https://pokeapi.co/api/v2/pokemon?limit=${limitValue < 0 ? 0 : limitValue}`).then((res)=>{
     const resStringified = JSON.stringify(res.data.results)
     setPokmen(JSON.parse(resStringified))
     setIsloading(false)
     })
-  };
+  },[setIsloading,setPokmen, limitValue]);
+
+
   useEffect(() => {
     getPokemon();
-  },[]);
+  },[getPokemon]);
+
   const setLimit = (value:string)=>{
     const v = parseInt(value)
     if(!isNaN(v)&& v > 0){
