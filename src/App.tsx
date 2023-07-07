@@ -1,16 +1,13 @@
 import Homepage from "./pages/Home"
-import Componenten from "./pages/Components";
 import Contact from "./pages/Contact";
 import { createBrowserRouter, RouterProvider} from "react-router-dom"
 import Layout from "./pages/Layout";
 import useLocalStorage from "use-local-storage";
 import CssBaseline from "@mui/material/CssBaseline";
 import { createTheme, ThemeProvider } from "@mui/material";
-import ShowRoom from "./pages/showRoom";
 import "./App.css";
 import ErrorPage from "./pages/404";
 import Blog from "./pages/Blog";
-import About from "./pages/About_Stage_Robonext";
 
 const customtheme = createTheme({
   palette: {
@@ -68,18 +65,10 @@ function App() {
           element: <Contact/>
         },
         {
-          path:"Components",
-          element:<Componenten/>,
-        },{
-          path:"Components/:id",
-          element:<ShowRoom/>
-        },{
           path:"Blog",
           element:<Blog/>
-        },{
-          path:"About",
-          element:<About/>
-        },{
+        },
+        {
           path:"*",
           element:<ErrorPage/>
         }
