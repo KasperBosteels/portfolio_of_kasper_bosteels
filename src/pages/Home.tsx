@@ -33,15 +33,19 @@ const HomePage = ()=>{
             }}>
             <Box>
             <Typography> 
-            Welkom op mijn portfolio site! Ik ben Kasper Bosteels en ik ben een student aan Artesis Plantijn<br></br>
-            Ik volg de richting Programmeren om een full stack developer te worden.<br></br>
-            Ik werk persoonlijk liefst in backend of frontend web development, maar ik sta open voor totale nieuwe uitdaginen.<br></br>
-            Ik heb ook al ervaring met een reeks van frameworks, zoals react, Angular, Material Ui, gatsby en Asp.net Core Entity Framework.<br></br>
-            Mijn persoonlijke favoriete technologiën zijn Typescript, node en Typeorm.<br></br>
+            Welkom op mijn portfolio site.<br></br>
+            Ik ben Kasper Bosteels, in 2023 ben ik afgestudeerd aan Artesis Plantijn Hogeschool met grote onderscheiding<br></br>
+            Om een Fullstack programmeur te worden, volgde ik er de richting Programmeren.<br></br>
+            Nu sta ik open voor totale nieuwe uitdagingen.<br></br>
+
+            Ik volgde de richting Programmeren om een full stack developer te worden.<br></br>
+            ik sta open voor totale nieuwe uitdagingen.<br></br>
+            Naast de verschillende programmeer talen heb ik al ervaring met een reeks van frameworks, zoals react, Angular, Material Ui, gatsby en Asp.net Core Entity Framework.<br></br>
+            Mijn favoriete technologiën zijn Typescript, node en Typeorm.<br></br>
             Buiten IT doe ik ook nog Scuba duiken.
             <br></br>
             <br></br>
-            Mocht u interesse hebben of nog enkele vragen, kan je zeker een emailtje sturen
+            Mocht u interesse hebben of nog vragen, stuur me dan zeker een mailtje.
             <br></br>
             <br></br>
             Met vriendelijke groet,<br></br>
