@@ -1,0 +1,45 @@
+[
+    {
+        "id":"Slimmii",
+        "title":"Slimmii remote energy monitoring",
+        "tags":["html","css","MaterialUI","express","react","typescript","Typeorm","Entity Framework","node"],
+        "description":"Dit project was deel van mijn opleiding dat ik in een team heb voltooid.\n Het is een webapplicatie die de gebruiker toelaat om zijn energie verbruik remote te monitoren. De gebruiker kan zijn verbruik bekijken in een door in te loggen in een webapplicatie.\nMijn verantwoordelijkheden binnen het project waren in de eerste helft de backend en database ontwerpen en bouwen samen met de functies die zich hiermee bezig hielden. In de tweede helft van het project heb ik nog geholpen met het verder ontwikkelen van de frontend.",
+        "image":"",
+        "extraImages":["Slimmii_EF.png"],
+        "details":"",
+        "link":"https://github.com/SlimmiiProject/UsageLogServer",
+        "year":2023,
+        "file":""
+    },
+    {
+        "id":"theone",
+        "title":"LOTR 'the One'quiz application",
+        "tags":["html","css","javascript","react","typescript","node", "javascript", "ejs"],
+        "description":"Dit project was deel van mijn opleiding dat ik in een team heb voltooid.\n Deze applicatie bevat een quiz over de Lord of the Rings films, met een account system en leaderboards.\n",
+        "image":"theone_quiz_card.png",
+        "extraImages":["theone_favorites.png","theone_quiz.png"],
+        "details":"Onze groep heeft een webapplicatie gebouwd omtrent ‘the one API’ die data leveren van ‘the lord of the rings’ film trilogy.\nHet plan was om met express, node.js, Mongodb en Axios, een applicatie te bouwen met een quiz waar de user een reeks quotes kreeg en moest raden van welke film en personage deze kwamen.\nIn de loop van dit project is de scope verder uitgegroeid naar user accounts, security, afbeeldingen van personages, een extra lijst voor personages en meer.\nVanzelfsprekend is de introductie van nieuwe technologieën nodig geweest naarmate onze scope groeide.",
+        "link":"https://github.com/GremlinsAP/TheOne",
+        "year":2021,
+        "file":""
+    },
+    {
+        "id":"robonext",
+        "title":"Robonext KPI dashboard",
+        "tags":["html","css","typescript","react","C#","node.ts",".Net Core","Swagger","nunite","MaterialUI","Entity Framework","ASP","SqLite","UiPath","Identity","CORS","Hosted Service"],
+        "description":"Een KPI dashboard voor Robonext, een bedrijg dat ARPs ontwerpt voor hun klanten.\nThe project uses ASP.NET Core as a backend, and a react application as frontend.\nThis project was made during my internshit at Robonext.",
+        "image":"Robonext_kpi.png",
+        "details":"",
+        "year":2023,
+        "file":""
+    },{
+        "id":"discord bot",
+        "title":"Discord bot",
+        "tags":["javascript","node.js","discord.js","discord","mysql","typeorm"],
+        "description":"Een discord bot die ik tijden mijn opleiding heb gebouwd, enkele features van de bot waren, muziek spelen, een economy systeem, een level systeem, een ticket systeem en meer.",
+        "year":2019,
+        "file":"",
+        "details":"Ik heb deze discord bot gebouw om mezelf meer vertrouw te maken met javascript, wat ik op dat moment aan het leren was. De bot maate gebruik van een lokaal gehoste MySQL database, waarmee het playlists kan opslagen, en de economy van de bot kan opslagen. De bot maakt ook gebruik van een level systeem, waarbij de gebruikers een level krijgen als ze berichten sturen in de server. De bot heeft ook een ticket systeem, waarbij gebruikers een ticket kunnen aanmaken, en de staff van de server kan reageren op de ticket. De bot heeft ook een muziek systeem, waarbij gebruikers muziek kunnen afspelen in een voice channel. de gehele bot kan worden gehost op een kleine raspberry pi, die ik thuis heb staan.",
+        "link":"https://github.com/KasperBosteels/Little_Korean_Rice_Cooker"
+    }
+]
