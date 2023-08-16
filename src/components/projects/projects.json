@@ -29,6 +29,7 @@
         "tags":["html","css","typescript","react","C#","node.ts",".Net Core","Swagger","nunite","MaterialUI","Entity Framework","ASP","SqLite","UiPath","Identity","CORS","Hosted Service"],
         "description":"Een KPI dashboard voor Robonext, een bedrijg dat ARPs ontwerpt voor hun klanten.\nThe project uses ASP.NET Core as a backend, and a react application as frontend.\nThis project was made during my internshit at Robonext.",
         "image":"Robonext_kpi.png",
+        "extraImages":["Robonext_admin_panel.png","Robonext_robots_panel.png","Robonext_organization_panel.png","Robonext_robot_panel.png","Robonext_tenant_panel.png"],
         "details":"",
         "year":2023,
         "file":""
@@ -41,5 +42,14 @@
         "file":"",
         "details":"Ik heb deze discord bot gebouw om mezelf meer vertrouw te maken met javascript, wat ik op dat moment aan het leren was. De bot maate gebruik van een lokaal gehoste MySQL database, waarmee het playlists kan opslagen, en de economy van de bot kan opslagen. De bot maakt ook gebruik van een level systeem, waarbij de gebruikers een level krijgen als ze berichten sturen in de server. De bot heeft ook een ticket systeem, waarbij gebruikers een ticket kunnen aanmaken, en de staff van de server kan reageren op de ticket. De bot heeft ook een muziek systeem, waarbij gebruikers muziek kunnen afspelen in een voice channel. de gehele bot kan worden gehost op een kleine raspberry pi, die ik thuis heb staan.",
         "link":"https://github.com/KasperBosteels/Little_Korean_Rice_Cooker"
+    },
+    {
+        "id":"advent_of_code_2022",
+        "title":"Advent of code 2022",
+        "tags":[],
+        "description":"Advent of code is een jaarlijks terugkerend evenement waarbij er elke dag een nieuwe programmeer uitdaging wordt gegeven. Ik probeer elk jaar mee te doen, enkele van mijn oplossingen van het laatste jaar(2022) staan nu op github. ik probeer ook sommige uitdagingen in verschillende talen te doen, zoals python, javascript, C# en meer.",
+        "image":"Advent_Of_Code_Logo.png",
+        "file":"",
+        "link":"https://github.com/KasperBosteels/Advent-of-code-2022"
     }
 ]

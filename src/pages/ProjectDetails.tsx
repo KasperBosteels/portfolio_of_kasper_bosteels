@@ -53,14 +53,18 @@ useEffect(() => {
                         variant="quilted"
                         cols={2}
                         rowHeight={300}
+                        gap={7}
                         
                         >
                         {
                             proj.image ?
                             <ImageListItem key={proj.image} cols={1} rows={1}>
                                 <img 
+                                    style={{
+                                        boxShadow:"0px 0px 10px 0px rgba(0,0,0,0.4)",
+
+                                    }}
                                     src={"/"+proj.image}
-                                    
                                     loading="lazy"
                                     alt={"/"+proj.image}
                                     />
@@ -73,7 +77,9 @@ useEffect(() => {
                             proj.extraImages ?
                             proj.extraImages.map((img,i)=>
                             <ImageListItem key={i}>
-                                <img 
+                                <img  style={{
+                                      boxShadow:"0px 0px 10px 0px rgba(0,0,0,0.4)",
+                                    }}
                                     src={"/"+img}
                                     loading="lazy"
                                     alt={"/"+img}
