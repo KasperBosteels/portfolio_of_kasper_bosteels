@@ -49,7 +49,7 @@ useEffect(() => {
                 </Box>
                 <Box sx={{display:{md:"none", lg:"flex"}}} padding="1rem" justifyContent="center" alignContent="center" margin="auto" minWidth="40%" flexDirection="column" height="fit-content">
                     <ImageList
-                        sx={{minWidth:500, width:"100%", height:"fit-content"}}
+                        sx={{minWidth:500, width:"100%", height:"fit-content", padding:"1rem"}}
                         variant="quilted"
                         cols={2}
                         rowHeight={300}
@@ -61,8 +61,7 @@ useEffect(() => {
                             <ImageListItem key={proj.image} cols={1} rows={1}>
                                 <img 
                                     style={{
-                                        boxShadow:"0px 0px 10px 0px rgba(0,0,0,0.4)",
-
+                                        boxShadow:" 0px 1px 4px rgba(0,0,0,0.16)",
                                     }}
                                     src={"/"+proj.image}
                                     loading="lazy"
@@ -78,7 +77,7 @@ useEffect(() => {
                             proj.extraImages.map((img,i)=>
                             <ImageListItem key={i}>
                                 <img  style={{
-                                      boxShadow:"0px 0px 10px 0px rgba(0,0,0,0.4)",
+                                        boxShadow:" 0px 1px 4px rgba(0,0,0,0.16)",
                                     }}
                                     src={"/"+img}
                                     loading="lazy"
