@@ -1,6 +1,5 @@
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
-import NYTimes from '../components/NYTimes';
 import Box from '@mui/material/Box';
 import SkillsPanel from '../components/SkillsPanel';
 import LatestBlogs from '../components/blog/latestBlogs';
@@ -58,7 +57,6 @@ const HomePage = ()=>{
         </Box>
             <FrontEnd/>
             <LatestBlogs/>
-            <NYTimes timeout={30*60*1000}/>    
         </Grid>
         </Box>
     )

@@ -7,6 +7,7 @@ import Container from '@mui/material/Container'
 import VerticalMenu from './verticalMenu'
 import HorizontalMenu from './HorizontalMenu'
 import ThemeAndSocials from './themeAndSocials'
+
 export interface menuprops{
     theme:string;
     toggle:()=>void;

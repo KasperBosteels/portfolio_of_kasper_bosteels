@@ -8,6 +8,9 @@ import { createTheme, ThemeProvider } from "@mui/material";
 import "./App.css";
 import ErrorPage from "./pages/404";
 import Blog from "./pages/Blog";
+import Projects from "./pages/Projects";
+import ProjectDetails from "./pages/ProjectDetails";
+import React from "react";
 
 const customtheme = createTheme({
   palette: {
@@ -51,6 +54,8 @@ function App() {
   const toggle = () =>{
    setTheme(!theme);
   }
+
+
   const router = createBrowserRouter([
     {
       path:"/",
@@ -69,6 +74,14 @@ function App() {
           element:<Blog/>
         },
         {
+          path:"Projects",
+          element:<Projects/>,
+        },
+        {
+          path:"/Projects/:id",
+          element:<ProjectDetails/>
+        },
+        {
           path:"*",
           element:<ErrorPage/>
         }
@@ -78,7 +91,8 @@ function App() {
   ])
   const mode = theme ? customDarkTheme : customtheme
   return (
-<>
+< >
+
     <ThemeProvider theme={mode}>
     <CssBaseline/>
     <RouterProvider router={router}/>

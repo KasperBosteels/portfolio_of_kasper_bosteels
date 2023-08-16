@@ -8,6 +8,7 @@ const HorizontalMenu = ()=>{
         <NavLink className="topBarbuttons" to="/" style={{ textDecoration:"none"}}><Button variant="text" sx={{color:"text.primary"}}>Home</Button></NavLink>
         <NavLink className="topBarbuttons" to="Contact" style={{ textDecoration:"none"}}><Button variant="text"sx={{color:"text.primary"}}>Contact</Button></NavLink>
         <NavLink className="topBarButtons" to="Blog" style={{textDecoration:"none"}}><Button variant="text" sx={{color:"text.primary"}}>Blog</Button></NavLink>
+        <NavLink className="topBarButtons" to="Projects" style={{textDecoration:"none"}}><Button variant="text" sx={{color:"text.primary"}}>Projects</Button></NavLink>
     </Box>
     </>
     )

@@ -1,6 +1,5 @@
-import Box from "@mui/material/Box";
 import AllBlogs from "../components/blog/allBlogs";
-
+import Box from "@mui/material/Box";
 
 
 
