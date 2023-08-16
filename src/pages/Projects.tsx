@@ -2,6 +2,7 @@ import Box from "@mui/material/Box"
 import CircularProgress from "@mui/material/CircularProgress";
 import { useState } from "react";
 import Project from "../components/Project";
+import './pageStyling.css'
 export interface project {
     id:string,
     title:string,
@@ -19,11 +20,11 @@ const Projects = () => {
     const [projects] = useState<project[]>(require("../components/projects/projects.json"));
 
     return (
-        <Box sx={{alignContent:"center",  display:"flex",margin:"auto", marginTop:"1rem", flexDirection:"column"}}>
+        <Box className="Projects_Page_Container" >
             <Box sx={{margin:"auto"}}>
                 <h2>Projecten</h2>
             </Box>
-            <Box sx={{margin:"auto",marginTop:"5rem", width:"70%", display:"flex", flexWrap:"wrap", justifyContent:"center"}}>
+            <Box className="Projects_Container" >
             {
                 (projects.map.length > 0) ? projects.map((p,i)=><Project proj={p} key={"key-"+p.id}/>) : <CircularProgress/>
             }

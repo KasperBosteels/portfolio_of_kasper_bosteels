@@ -4,14 +4,13 @@ import Box from '@mui/material/Box';
 import SkillsPanel from '../components/SkillsPanel';
 import LatestBlogs from '../components/blog/latestBlogs';
 import FrontEnd from '../components/Technologies';
+import './pageStyling.css'
 const HomePage = ()=>{
     return (
         <Box 
-        sx={{ 
-        width:"100%", 
-        display:"flex",
-        justifyContent:"center",}}>
+        className="Home_page_container">
         <Grid 
+            className="Home_page_Grid"
             container
             sx={{
             color:"text.primary", 
