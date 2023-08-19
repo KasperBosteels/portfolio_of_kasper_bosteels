@@ -32,12 +32,25 @@ useEffect(() => {
                     <Typography variant="h4" component="div">{proj.title}</Typography>
                     <Paper elevation={3} sx={{padding:2, marginTop:5}}>
                     <Typography variant="body1" component="div" marginTop="2rem">
+                    {proj.year}
+                    </Typography>
+                    <Typography variant="h5" component="div" marginTop="2rem">
+                        Description:
+                    </Typography>
+                    <Typography variant="body1" component="div" marginTop=".5rem">
                     {proj.description}
                     </Typography>
-                    <Typography variant="body1" component="div" marginTop="2rem">
+                    { proj.details ? <>
+                    <Typography variant="h5" component="div" marginTop="2rem">
+                        Details:
+                    </Typography>
+                    <Typography variant="body1" component="div" marginTop=".5rem">
                     {proj.details}
                     </Typography>
-                    
+                    </>
+                    :
+                    <></>
+                    }
                     {proj.link ? 
                     <Link to={proj.link} style={{ textDecoration:"none"}}>
                     <Typography variant="body1" component="div" marginTop="5rem">

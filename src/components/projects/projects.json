@@ -3,10 +3,10 @@
         "id":"Slimmii",
         "title":"Slimmii remote energy monitoring",
         "tags":["html","css","MaterialUI","express","react","typescript","Typeorm","Entity Framework","node"],
-        "description":"Dit project was deel van mijn opleiding dat ik in een team heb voltooid.\n Het is een webapplicatie die de gebruiker toelaat om zijn energie verbruik remote te monitoren. De gebruiker kan zijn verbruik bekijken in een door in te loggen in een webapplicatie.\nMijn verantwoordelijkheden binnen het project waren in de eerste helft de backend en database ontwerpen en bouwen samen met de functies die zich hiermee bezig hielden. In de tweede helft van het project heb ik nog geholpen met het verder ontwikkelen van de frontend.",
+        "description":"Dit project was deel van mijn opleiding dat ik in een team heb voltooid. Het is een webapplicatie die de gebruiker toelaat om zijn energie verbruik remote te monitoren. De gebruiker kan zijn verbruik bekijken in een door in te loggen in een webapplicatie.\nMijn verantwoordelijkheden binnen het project waren in de eerste helft de backend en database ontwerpen en bouwen samen met de functies die zich hiermee bezig hielden. In de tweede helft van het project heb ik nog geholpen met het verder ontwikkelen van de frontend.",
         "image":"",
         "extraImages":["Slimmii_EF.png"],
-        "details":"",
+        "details":"Deze applicatie ontvangt gegevens van een microcontroller die is opgezet bij uw elektriciteitsmeter, die op bepaalde intervallen een afbeelding zal versturen ter verwerking. Deze afbeelding wordt vervolgens naar een Python-instantie gestuurd, die de gegevens uitleest vanuit de afbeelding. Die gegevens worden teruggestuurd en opgeslagen bij het account waartoe deze meter behoort. Dit geeft u de mogelijkheid om uw analoge meter in een digitale omgeving te volgen, vanaf elke locatie in uw huis. De applicatie gebruikt React voor de frontend en Express voor de backend, en beide kunnen worden gebouwd en gestart met NPM. De Express-backend maakt gebruik van TypeORM als Entity Framework om de entiteiten in de database te creëren. Ook maakt het gebruik van een getimed proces om bepaalde datapunten te comprimeren, om de database zo klein mogelijk te houden. De frontend maakt gebruik van MaterialUI als UI-framework en is gebouwd met React en TypeScript. Daarnaast maakt de frontend gebruik van een aangepaste hook om de API-oproepen naar de backend te beheren. De applicatie heeft ook de volgende extra functies: een ticketsysteem, een geautomatiseerd e-mailsysteem voor resetten, beheerderspanelen voor gebruikersmoderatie en -creatie, en de mogelijkheid om uw metingen te filteren op datum.",
         "link":"https://github.com/SlimmiiProject/UsageLogServer",
         "year":2023,
         "file":""
@@ -18,7 +18,7 @@
         "description":"Dit project was deel van mijn opleiding dat ik in een team heb voltooid.\n Deze applicatie bevat een quiz over de Lord of the Rings films, met een account system en leaderboards.\n",
         "image":"theone_quiz_card.png",
         "extraImages":["theone_favorites.png","theone_quiz.png"],
-        "details":"Onze groep heeft een webapplicatie gebouwd omtrent ‘the one API’ die data leveren van ‘the lord of the rings’ film trilogy.\nHet plan was om met express, node.js, Mongodb en Axios, een applicatie te bouwen met een quiz waar de user een reeks quotes kreeg en moest raden van welke film en personage deze kwamen.\nIn de loop van dit project is de scope verder uitgegroeid naar user accounts, security, afbeeldingen van personages, een extra lijst voor personages en meer.\nVanzelfsprekend is de introductie van nieuwe technologieën nodig geweest naarmate onze scope groeide.",
+        "details":"Onze groep heeft een webapplicatie gebouwd omtrent ‘the one API’ die data leveren van ‘the lord of the rings’ film trilogy.\nHet plan was om met express, node.js, Mongodb en Axios, een applicatie te bouwen met een quiz waar de user een reeks quotes kreeg en moest raden van welke film en personage deze kwamen.\nIn de loop van dit project is de scope verder uitgegroeid naar user accounts om je vooruitgang en favorieten op te slagen, security, afbeeldingen van personages van de wiki ophalend aan de hand van een webscraper, een extra lijst voor personages en meer.\nVanzelfsprekend is de introductie van nieuwe technologieën nodig geweest naarmate onze scope groeide.",
         "link":"https://github.com/GremlinsAP/TheOne",
         "year":2021,
         "file":""
@@ -27,10 +27,10 @@
         "id":"robonext",
         "title":"Robonext KPI dashboard",
         "tags":["html","css","typescript","react","C#","node.ts",".Net Core","Swagger","nunite","MaterialUI","Entity Framework","ASP","SqLite","UiPath","Identity","CORS","Hosted Service"],
-        "description":"Een KPI dashboard voor Robonext, een bedrijg dat ARPs ontwerpt voor hun klanten.\nThe project uses ASP.NET Core as a backend, and a react application as frontend.\nThis project was made during my internshit at Robonext.",
+        "description":"Een KPI dashboard voor Robonext, een bedrijg dat ARPs ontwerpt voor hun klanten. Dit project gebruikt ASP.NET Core als backend, En react als frontend.\nDit project was mijn hoofdopdracht tijdens mijn stage bij Robonext.",
         "image":"Robonext_kpi.png",
         "extraImages":["Robonext_admin_panel.png","Robonext_robots_panel.png","Robonext_organization_panel.png","Robonext_robot_panel.png","Robonext_tenant_panel.png"],
-        "details":"",
+        "details":"Voor dit project werd er specifiek gevraagd om de backend in ASP.Net te maken, met Entity Framework als ORM. Maar voor frontend had ik vrije keuze, dus heb ik gekozen om React te gebruiken. Voor de database werd er gevraagd om SqLite te gebruiken voor testdoeleinden. De backend maakt ook gebruik van het Identity package, die de authenticatie en autorisatie van de gebruikers regelt. De backend maakt ook gebruik van een Hosted Service, die periodiek een request zal sturen naar de UiPath API om ervoor te zorgen dat de data in de database actueel is. De frontend maakt gebruik van MaterialUI als UI-framework, en maakt gebruik van Axios om requests te sturen naar de backend server. De applicatie ondersteund enkele levels van users, deze zijn 'Robonext employee'(administrator), 'Organization'(administrator voor één organizatie), 'Orchestrator'(de account die enkel de KPI's van weergeven), hier komt nog één level bij dat is Default administrator, deze account kan niet worden verwijderd worden, en is de eerste account die wordt aangemaakt bij het opzetten van de database.",
         "year":2023,
         "file":""
     },{
@@ -40,7 +40,7 @@
         "description":"Een discord bot die ik tijden mijn opleiding heb gebouwd, enkele features van de bot waren, muziek spelen, een economy systeem, een level systeem, een ticket systeem en meer.",
         "year":2019,
         "file":"",
-        "details":"Ik heb deze discord bot gebouw om mezelf meer vertrouw te maken met javascript, wat ik op dat moment aan het leren was. De bot maate gebruik van een lokaal gehoste MySQL database, waarmee het playlists kan opslagen, en de economy van de bot kan opslagen. De bot maakt ook gebruik van een level systeem, waarbij de gebruikers een level krijgen als ze berichten sturen in de server. De bot heeft ook een ticket systeem, waarbij gebruikers een ticket kunnen aanmaken, en de staff van de server kan reageren op de ticket. De bot heeft ook een muziek systeem, waarbij gebruikers muziek kunnen afspelen in een voice channel. de gehele bot kan worden gehost op een kleine raspberry pi, die ik thuis heb staan.",
+        "details":"Ik heb deze discord bot gebouw om mezelf meer vertrouw te maken met javascript, wat ik op dat moment aan het leren was. De bot maakte gebruik van een lokaal gehoste MySQL database op een raspberry pi, waarmee het playlists kan opslagen, en de economy van de bot kan opslagen. De bot maakt ook gebruik van een level systeem, waarbij de gebruikers een level krijgen als ze berichten sturen in de server. De bot heeft ook een muziek systeem, waarbij gebruikers muziek kunnen afspelen in een voice channel. de gehele bot kan worden gehost op een kleine raspberry pi, die ik thuis heb staan.",
         "link":"https://github.com/KasperBosteels/Little_Korean_Rice_Cooker"
     },
     {
