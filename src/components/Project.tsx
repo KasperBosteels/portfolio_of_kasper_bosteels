@@ -10,7 +10,7 @@ interface props {
 
 const Project = ({proj}:props) => {
     return (
-        <Card sx={{maxWidth:350, margin:"1%", display:"flex", flexDirection:"column",}}>
+        <Card elevation={3} sx={{maxWidth:350, margin:"1%", display:"flex", flexDirection:"column",}}>
             {
                 proj.image ? <CardMedia component="img" sx={{maxHeight:300}} image={"./"+proj.image} alt={proj.title}/> : <></>
             }
