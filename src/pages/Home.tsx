@@ -30,24 +30,22 @@ const HomePage = ()=>{
             padding:"1rem",
             }}>
             <Box>
-            <Typography> 
-            Welkom op mijn portfolio site.<br></br>
-            Ik ben Kasper Bosteels, in 2023 ben ik afgestudeerd aan Artesis Plantijn Hogeschool met grote onderscheiding<br></br>
-            Om een Fullstack programmeur te worden, volgde ik er de richting Programmeren.<br></br>
-            Nu sta ik open voor totale nieuwe uitdagingen.<br></br>
+            <Typography>Welkom op mijn portfolio website.<br></br>
+Ik ben Kasper Bosteels en in 2023 ben ik met grote onderscheiding afgestudeerd aan Artesis Plantijn Hogeschool.<br></br>
+Mijn passie voor Fullstack programmeren bracht me naar de opleiding Programmeren, waar ik mijn vaardigheden heb verfijnd.<br></br>
+Ik sta nu open voor boeiende en vernieuwende uitdagingen.<br></br>
 
-            Ik volgde de richting Programmeren om een full stack developer te worden.<br></br>
-            ik sta open voor totale nieuwe uitdagingen.<br></br>
-            Naast de verschillende programmeer talen heb ik al ervaring met een reeks van frameworks, zoals react, Angular, Material Ui, gatsby en Asp.net Core Entity Framework.<br></br>
-            Mijn favoriete technologiën zijn Typescript, node en Typeorm.<br></br>
-            Buiten IT doe ik ook nog Scuba duiken.
-            <br></br>
-            <br></br>
-            Mocht u interesse hebben of nog vragen, stuur me dan zeker een mailtje.
-            <br></br>
-            <br></br>
-            Met vriendelijke groet,<br></br>
-            Kasper Bosteels
+Het volgen van de richting Programmeren heeft me de kennis bijgebracht om een ervaren full stack developer te worden.<br></br>
+Mijn nieuwsgierigheid leidde me tot het ontdekken van diverse programmeertalen en frameworks, waaronder React, Angular, Material UI, Gatsby en ASP.NET Core Entity Framework.<br></br>
+Ik ben met name enthousiast over technologieën zoals TypeScript, Node.js en TypeORM.<br></br>
+Naast mijn IT-interesses ben ik ook een gepassioneerde duiker, klaar om nieuwe dieptes te verkennen.
+<br></br>
+<br></br>
+Indien u geïnteresseerd bent of vragen heeft, aarzel dan niet om contact met mij op te nemen via e-mail.
+<br></br>
+<br></br>
+Met vriendelijke groet,<br></br>
+Kasper Bosteels
             </Typography>
             </Box>
            <Box sx={{minWidth:"30%", display:{lg:"flex",md:"none",xs:"none"}}}>
