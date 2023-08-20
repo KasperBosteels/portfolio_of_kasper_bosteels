@@ -11,7 +11,6 @@ export interface ComponentCardProps {
     Path:number
 }
 const ComponentCard = ({Title,Description,Path}:ComponentCardProps)=>{
-    
     return (
     <Card sx={{maxWidth:250, margin:"1%"}}>
         <CardActionArea>

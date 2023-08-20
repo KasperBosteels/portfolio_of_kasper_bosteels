@@ -1,5 +1,5 @@
 import { project } from "../pages/Projects"
-import { Button, Card, CardActions, CardContent, CardMedia, IconButton, Typography} from "@mui/material";
+import { Button, Card, CardActions, CardContent, CardMedia, Chip, IconButton, Stack, Typography} from "@mui/material";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { Link } from "react-router-dom";
 
@@ -17,14 +17,14 @@ const Project = ({proj}:props) => {
             <CardContent sx={{display:"flex", flexDirection:"column", height:"100%", overflow:"hidden"}}>
                 
                 <Typography variant="h5" component="div">
-                    {proj.title}
+                    {proj.title} - {proj.year}
                 </Typography>
                 <Typography variant="body2" color="text.secondary" sx={{flex: "1 0 auto", maxHeight:"15rem", overflow:"hidden"}}>
                     {proj.description}
                 </Typography>
                 <Typography variant="body2" color="text.secondary" marginTop="1rem" alignItems="end">
                     Tags:<br></br>
-                    {proj.tags?.map((t,i)=><span key={i}>{t}, </span>)}
+                    {proj.tags?.map((t,i)=><Chip key={i} label={t} color="default" sx={{marginLeft:".3rem", marginTop:".2rem"}} />)}
                 </Typography>
             </CardContent>
             <CardActions sx={{marginTop:"auto"}}>

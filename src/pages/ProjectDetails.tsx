@@ -35,7 +35,7 @@ useEffect(() => {
                     {proj.year}
                     </Typography>
                     <Typography variant="h5" component="div" marginTop="2rem">
-                        Description:
+                        Beschrijving:
                     </Typography>
                     <Typography variant="body1" component="div" marginTop=".5rem">
                     {proj.description}
