@@ -121,6 +121,11 @@
             "tags":["mei"],
             "text":"Maandag:\n- Vrije dag.\n\nDinsdag:\n- Opnieuw onderzoeken van CORS gerelateerde problemen.\n- Testen van CORS met een virtuele machine.\n- Verbeteren van backend code.\n- Debuggen van enkele kleine problemen met autorisatie door cors.\n- Bijwerken van de readme om enkele wijzigingen in de endpoints weer te geven.\n\nWoensdag:\n- Testen van CORS met 2 verschillende fysieke machines.\n- Doorgaan met het oplossen van een van de bugs die problemen veroorzaken met autorisatie.\n\nDonderdag:\n- Verbeteren van de code door deze leesbaarder te maken en het toepassen van SOLID-principes op code waar dit nog niet het geval was.\n\nVrijdag:\n- De frontend en backend nog eens nakijken, en zorgen dat alles klaar is om over te handingen aan het Robonext team.\n- Proberen Jellis te helpen met het oplossen van een bug in zijn project.\n\nReflectie:\nDeze week heb ik me gericht op het oplossen van bugs en het verbeteren van de code. Ik heb ook tijd besteed aan het testen van CORS en het oplossen van problemen met autorisatie.\nDit was de laatste week van mijn stage bij Robonext.\nIk ben tevreden met de resultaten van mijn stage en ik heb veel geleerd over het werken in een team en het werken met nieuwe technologieën.\nIk heb ook veel geleerd over het oplossen van bugs en het schrijven van unit tests.\nIk ben blij dat ik de kans heb gekregen om deel uit te maken van dit team en ik kijk uit naar de volgende keer dat ik met hen kan samenwerken."
 
+        },{
+            "title":"Afgestudeerd!",
+            "date":"2023/08/20",
+            "tags":[],
+            "text":"Ik ben Eindelijk afgestudeerd met een grote onderscheiding!\nIk ben momenteel op zoek naar een interresante job, en ik ben ook van plan om een nieuwe programeer taal te leren, namelijk Rust."
         }
     ]
 }
