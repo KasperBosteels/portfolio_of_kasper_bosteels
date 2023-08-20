@@ -1,5 +1,5 @@
 import { project } from "../pages/Projects"
-import { Button, Card, CardActions, CardContent, CardMedia, Chip, IconButton, Stack, Typography} from "@mui/material";
+import { Button, Card, CardActions, CardContent, CardMedia, Chip, IconButton, Typography} from "@mui/material";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { Link } from "react-router-dom";
 
