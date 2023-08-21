@@ -1,7 +1,7 @@
 import { project } from "../pages/Projects"
 import { Button, Card, CardActions, CardContent, CardMedia, Chip, IconButton, Typography} from "@mui/material";
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 interface props {
     proj:project
@@ -30,7 +30,7 @@ const Project = ({proj}:props) => {
             <CardActions sx={{marginTop:"auto"}}>
             <Button variant="outlined" size="small" color="secondary" href={"Projects/"+proj.id}>Details </Button>
             {
-                proj.link ? <Link to={proj.link} style={{ textDecoration:"none"}}><IconButton href={proj.link}><GitHubIcon/></IconButton></Link> : <></>
+                proj.link ? <NavLink to={proj.link} style={{ textDecoration:"none"}}><IconButton href={proj.link}><GitHubIcon/></IconButton></NavLink> : <></>
             }
             </CardActions>
     </Card>
