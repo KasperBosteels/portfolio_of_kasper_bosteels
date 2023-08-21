@@ -40,7 +40,7 @@ const Project = ({proj}:props) => {
                 </Typography>
             </CardContent>
             <CardActions sx={{marginTop:"auto"}}>
-            <Link to={proj.id}><Button href={proj.id} variant="outlined" size="small" color="secondary">Details </Button></Link>
+            <Link to={proj.id}><Button variant="outlined" size="small" color="secondary">Details </Button></Link>
             <Button onClick={handleClickOpen} variant="outlined" size="small" color="secondary">Details </Button>
             {
                 proj.link ? <Link to={proj.link} style={{ textDecoration:"none"}}><IconButton href={proj.link}><GitHubIcon/></IconButton></Link> : <></>
