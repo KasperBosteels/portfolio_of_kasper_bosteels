@@ -11,8 +11,8 @@
 
 .Projects_Container {
     margin:auto;
-    margin-top: 5rem;
-    width: 70%;
+    margin-top: 2rem;
+    width: 95%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
