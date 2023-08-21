@@ -1,7 +1,7 @@
 import { project } from "../pages/Projects"
-import { Button, Card, CardActions, CardContent, CardMedia, Chip, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, IconButton, Typography, useMediaQuery} from "@mui/material";
+import { Button, Card, CardActions, CardContent, CardMedia, Chip, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, IconButton, Typography} from "@mui/material";
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 
 interface props {
@@ -40,9 +40,10 @@ const Project = ({proj}:props) => {
                 </Typography>
             </CardContent>
             <CardActions sx={{marginTop:"auto"}}>
-            <NavLink to={proj.id}><Button variant="outlined" size="small" color="secondary">Details </Button></NavLink>
+            <NavLink to={proj.id}><Button href={proj.id} variant="outlined" size="small" color="secondary">Details </Button></NavLink>
+            <Button onClick={handleClickOpen} variant="outlined" size="small" color="secondary">Details </Button>
             {
-                proj.link ? <NavLink to={proj.link} style={{ textDecoration:"none"}}><IconButton href={proj.link}><GitHubIcon/></IconButton></NavLink> : <></>
+                proj.link ? <Link to={proj.link} style={{ textDecoration:"none"}}><IconButton href={proj.link}><GitHubIcon/></IconButton></Link> : <></>
             }
             </CardActions>
             <Dialog open={Open}>
