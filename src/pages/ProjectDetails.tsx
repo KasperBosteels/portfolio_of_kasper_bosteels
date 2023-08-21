@@ -100,7 +100,7 @@ useEffect(() => {
                 </Box>
                 ) : (
                     <Box margin="auto" marginTop="5rem" display="flex" alignContent="center" justifyItems="center" alignItems="center" justifyContent="center">
-                        <h1>Project not found</h1>
+                        <h3>Project not found</h3>
                     </Box>
                 )
 
