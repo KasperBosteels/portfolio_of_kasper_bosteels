@@ -1,7 +1,8 @@
 import { project } from "../pages/Projects"
-import { Button, Card, CardActions, CardContent, CardMedia, Chip, IconButton, Typography} from "@mui/material";
+import { Button, Card, CardActions, CardContent, CardMedia, Chip, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, IconButton, Typography, useMediaQuery} from "@mui/material";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 interface props {
     proj:project
@@ -9,8 +10,19 @@ interface props {
 
 
 const Project = ({proj}:props) => {
+    const [Open,setOpen] = useState<boolean>(false);
+    
+    const handleClickOpen = () => {
+        setOpen(true);
+        };
+    
+    const handleClose = () => {
+        setOpen(false);
+        };
+    
+
     return (
-        <Card elevation={3} sx={{maxWidth:350, margin:"1%", display:"flex", flexDirection:"column",}}>
+    <Card elevation={3} sx={{maxWidth:350, margin:"1%", display:"flex", flexDirection:"column",}}>
             {
                 proj.image ? <CardMedia component="img" sx={{maxHeight:300}} image={"./"+proj.image} alt={proj.title}/> : <></>
             }
@@ -28,11 +40,22 @@ const Project = ({proj}:props) => {
                 </Typography>
             </CardContent>
             <CardActions sx={{marginTop:"auto"}}>
-            <Button variant="outlined" size="small" color="secondary" href={"Projects/"+proj.id}>Details </Button>
+            <NavLink to={proj.id}><Button variant="outlined" size="small" color="secondary">Details </Button></NavLink>
             {
                 proj.link ? <NavLink to={proj.link} style={{ textDecoration:"none"}}><IconButton href={proj.link}><GitHubIcon/></IconButton></NavLink> : <></>
             }
             </CardActions>
+            <Dialog open={Open}>
+                <DialogTitle>{proj.title}</DialogTitle>
+                <DialogContent>
+                    <DialogContentText>
+                        {proj.details}
+                    </DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={handleClose}>Close</Button>
+                </DialogActions>
+            </Dialog>
     </Card>
     )
 }
