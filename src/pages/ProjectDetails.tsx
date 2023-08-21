@@ -8,20 +8,18 @@ import { Link } from "react-router-dom";
 
 
 const ProjectDetails = () => {
+const [projects] = useState<project[]>(require("../components/projects/projects.json") ?? []);
 const id = useParams().id;
 const [proj, setProj] = useState<project>();
-
+/*
 const getProject =async () => {
     let project = require("../components/projects/projects.json").find((x:project) => x.id === id)?? [];
     return project;
 }
-
+*/
 useEffect(() => {
-    getProject()
-    .then((res:any) => {
-        setProj(res);
-    })
-});
+    setProj(projects.filter(x=>x.id === id)[0]?? undefined);
+}, [id,projects]);
 
     return (
     <Box className="Project_container">
@@ -57,8 +55,8 @@ useEffect(() => {
                         {proj.link}
                     </Typography>
                     </Link>
-                    
-                    : <></>}
+                    : <></>
+                    }
                     </Paper>
                 </Box>
                 <Box className="Project_images_container" sx={{display:{md:"none", lg:"flex"}}} >
@@ -67,15 +65,13 @@ useEffect(() => {
                         variant="quilted"
                         cols={2}
                         rowHeight={300}
-                        gap={7}
-                        
+                        gap={7}                    
                         >
                         {
                             proj.image ?
                             <ImageListItem key={proj.image} cols={1} rows={1}>
                                 <img 
-                                className="Project_image"
-                                   
+                                    className="Project_image"
                                     src={"/"+proj.image}
                                     loading="lazy"
                                     alt={"/"+proj.image}
@@ -84,7 +80,6 @@ useEffect(() => {
                             :
                             <></>
                         }
-
                         {
                             proj.extraImages ?
                             proj.extraImages.map((img,i)=>
@@ -99,14 +94,12 @@ useEffect(() => {
                             )
                             :
                             <></>
-
                         }
-
                     </ImageList>
                 </Box>
                 </Box>
                 ) : (
-                    <Box>
+                    <Box margin="auto" marginTop="5rem" display="flex" alignContent="center" justifyItems="center" alignItems="center" justifyContent="center">
                         <h1>Project not found</h1>
                     </Box>
                 )
