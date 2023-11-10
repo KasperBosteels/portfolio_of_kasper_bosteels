@@ -61,7 +61,7 @@
         "file":"",
         "link":"JannickOste/image-generator-app",
         "description":"Dit project maakte deel uit van mijn graduaats opleiding. Deze opdracht heb ik voltooid in samenwerking met mijn collega student Jannick Oste. De Applicatie maakt gebruik van de Open AI API om afbeeldingen te genereren op basis van een tekst die de gebruiker ingeeft. De applicatie is gebouwd met React Native en Expo. Voor dit project lag mijn focus op het Front-end gedeelte en user interface. Mijn collega heeft zich vooral bezig gehouden met de api-calls en het opslagen van de files.",
-        "extraImages":["ImageGenerator_3.png","ImageGenerator_2.png","ImageGenerator.png"],
+        "extraImages":["ImageGenerator_3.png","ImageGenerator_2.png","ImageGenerator.png","imageGenerator11.png", "imageGenerator12.png","imageGenerator13.png"],
         "image":"ImageGenerator_banner.png"
     }
 ]
