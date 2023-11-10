@@ -11,7 +11,7 @@ const ProjectDetails = () => {
 const [projects] = useState<project[]>(require("../components/projects/projects.json") ?? []);
 const id = useParams().id;
 const [proj, setProj] = useState<project>();
-const link:string = "https://github.com/";
+const link:string = "https://github.com/GremlinsAP/TheOne";
 /*
 const getProject =async () => {
     let project = require("../components/projects/projects.json").find((x:project) => x.id === id)?? [];
