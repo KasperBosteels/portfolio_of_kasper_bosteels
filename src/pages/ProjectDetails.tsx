@@ -50,11 +50,11 @@ useEffect(() => {
                     <></>
                     }
                     {proj.link ? 
-                    <Link to={proj.link} style={{ textDecoration:"none"}}>
+                    <a href={proj.link} style={{ textDecoration:"none"}} target="_blank">
                     <Typography variant="body1" component="div" marginTop="5rem">
                         {proj.link}
                     </Typography>
-                    </Link>
+                    </a>
                     : <></>
                     }
                     </Paper>
