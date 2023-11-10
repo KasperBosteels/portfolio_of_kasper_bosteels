@@ -11,7 +11,7 @@ const ProjectDetails = () => {
 const [projects] = useState<project[]>(require("../components/projects/projects.json") ?? []);
 const id = useParams().id;
 const [proj, setProj] = useState<project>();
-const link:string = "https://github.com/GremlinsAP/TheOne";
+const link:string = "";
 /*
 const getProject =async () => {
     let project = require("../components/projects/projects.json").find((x:project) => x.id === id)?? [];
@@ -51,11 +51,17 @@ useEffect(() => {
                     <></>
                     }
                     {proj.link ? 
-                    <Link href={link+proj.link}>
+                    <Link href={"https://github.com/GremlinsAP/TheOne"}>
                     <Button variant="outlined" sx={{marginTop:"2rem"}}>Bekijk het project op GitHub</Button>
                     </Link>
+                    
+                    
                     : <></>
                     }
+                    
+                    <Link href="https://github.com/GremlinsAP/TheOne">
+                    <Button variant="outlined" sx={{marginTop:"2rem"}}>test het project op GitHub</Button>
+                    </Link>
                     </Paper>
                 </Box>
                 <Box className="Project_images_container" sx={{display:{md:"none", lg:"flex"}}} >
