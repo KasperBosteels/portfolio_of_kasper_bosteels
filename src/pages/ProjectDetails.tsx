@@ -39,18 +39,12 @@ useEffect(() => {
                     <Typography variant="body1" component="div" marginTop=".5rem">
                     {proj.details}
                     </Typography>
-                    <Typography variant="h5" component="div" marginTop="2rem">
-                        Downloadable Files
-                    </Typography>
-                    <Link href="https://github.com/GremlinsAP/TheOne">
-                    <Button variant="outlined" sx={{marginTop:"2rem"}}></Button>
-                    </Link>
                     </>
                     :
                     <></>
                     }
                     {proj.link ? 
-                    <Link href={"https://github.com/GremlinsAP/TheOne"}>
+                    <Link href={"https://github.com/"+proj.link}>
                     <Button variant="outlined" sx={{marginTop:"2rem"}}>Bekijk het project op GitHub</Button>
                     </Link>
                     
