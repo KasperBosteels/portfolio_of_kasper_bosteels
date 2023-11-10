@@ -46,6 +46,9 @@ useEffect(() => {
                     <Typography variant="body1" component="div" marginTop=".5rem">
                     {proj.details}
                     </Typography>
+                    <Link href="https://github.com/GremlinsAP/TheOne">
+                    <Button variant="outlined" sx={{marginTop:"2rem"}}>test het project op GitHub</Button>
+                    </Link>
                     </>
                     :
                     <></>
@@ -59,9 +62,7 @@ useEffect(() => {
                     : <></>
                     }
                     
-                    <Link href="https://github.com/GremlinsAP/TheOne">
-                    <Button variant="outlined" sx={{marginTop:"2rem"}}>test het project op GitHub</Button>
-                    </Link>
+                    
                     </Paper>
                 </Box>
                 <Box className="Project_images_container" sx={{display:{md:"none", lg:"flex"}}} >
