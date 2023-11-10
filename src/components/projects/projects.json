@@ -7,7 +7,7 @@
         "image":"",
         "extraImages":["Slimmii_EF.png"],
         "details":"Deze applicatie ontvangt gegevens van een microcontroller die is opgezet bij uw elektriciteitsmeter, die op bepaalde intervallen een afbeelding zal versturen ter verwerking. Deze afbeelding wordt vervolgens naar een Python-instantie gestuurd, die de gegevens uitleest vanuit de afbeelding. Die gegevens worden teruggestuurd en opgeslagen bij het account waartoe deze meter behoort. Dit geeft u de mogelijkheid om uw analoge meter in een digitale omgeving te volgen, vanaf elke locatie in uw huis. De applicatie gebruikt React voor de frontend en Express voor de backend, en beide kunnen worden gebouwd en gestart met NPM. De Express-backend maakt gebruik van TypeORM als Entity Framework om de entiteiten in de database te creëren. Ook maakt het gebruik van een getimed proces om bepaalde datapunten te comprimeren, om de database zo klein mogelijk te houden. De frontend maakt gebruik van MaterialUI als UI-framework en is gebouwd met React en TypeScript. Daarnaast maakt de frontend gebruik van een aangepaste hook om de API-oproepen naar de backend te beheren. De applicatie heeft ook de volgende extra functies: een ticketsysteem, een geautomatiseerd e-mailsysteem voor resetten, beheerderspanelen voor gebruikersmoderatie en -creatie, en de mogelijkheid om uw metingen te filteren op datum.",
-        "link":"https://github.com/SlimmiiProject/UsageLogServer",
+        "link":"SlimmiiProject/UsageLogServer",
         "year":"2022-2023",
         "file":""
     },
@@ -41,7 +41,7 @@
         "year":"2019-2023",
         "file":"",
         "details":"Ik heb deze Discord-bot gebouwd om mezelf vertrouwder te maken met JavaScript, dat ik op dat moment aan het leren was. De bot maakte gebruik van een lokaal gehoste MySQL-database op een Raspberry Pi, waarmee het afspeellijsten kan opslaan en de economie van de bot kan bijhouden. De bot gebruikt ook een levelsysteem, waarbij gebruikers een level krijgen naarmate ze berichten sturen in de server. Daarnaast heeft de bot een muzieksysteem waarmee gebruikers muziek kunnen afspelen in een spraakkanaal. De volledige bot kan worden gehost op een kleine Raspberry Pi die ik thuis heb staan.",
-        "link":"https://github.com/KasperBosteels/Little_Korean_Rice_Cooker"
+        "link":"KasperBosteels/Little_Korean_Rice_Cooker"
     },
     {
         "id":"advent_of_code_2022",
@@ -51,6 +51,6 @@
         "image":"Advent_Of_Code_Logo.png",
         "year":"2022",
         "file":"",
-        "link":"https://github.com/KasperBosteels/Advent-of-code-2022"
+        "link":"KasperBosteels/Advent-of-code-2022"
     }
 ]

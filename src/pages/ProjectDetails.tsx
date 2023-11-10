@@ -45,7 +45,9 @@ useEffect(() => {
                     }
                     {proj.link ? 
                     <Link href={"https://github.com/"+proj.link}>
-                    <Button variant="outlined" sx={{marginTop:"2rem"}}>Bekijk het project op GitHub</Button>
+                    <Typography variant="h5" component="div" marginTop="2rem">
+                    {"https://github.com/"+proj.link}
+                    </Typography>
                     </Link>
                     
                     
