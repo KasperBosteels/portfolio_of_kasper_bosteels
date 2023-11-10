@@ -50,7 +50,7 @@ useEffect(() => {
                     <></>
                     }
                     {proj.link ? 
-                    <a href={`${proj.link}`} style={{ textDecoration:"none"}} target="_blank">
+                    <a href={`https://${proj.link.split("://")[1]}`} style={{ textDecoration:"none"}} target="_blank">
                     <Typography variant="body1" component="div" marginTop="5rem">
                         {proj.link}
                     </Typography>
