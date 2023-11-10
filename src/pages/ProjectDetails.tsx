@@ -3,7 +3,7 @@ import './pageStyling.css'
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { project } from "./Projects";
-import { ImageList, ImageListItem, Paper, Typography } from "@mui/material";
+import { Button, ImageList, ImageListItem, Paper, Typography } from "@mui/material";
 import Link from "@mui/material/Link"
 
 
@@ -50,10 +50,8 @@ useEffect(() => {
                     <></>
                     }
                     {proj.link ? 
-                    <Link rel='noopener noreferrer' href={proj.link} style={{ textDecoration:"none"}} target="_blank">
-                    <Typography variant="body1" component="div" marginTop="5rem">
-                        {proj.link}
-                    </Typography>
+                    <Link href={proj.link}>
+                    <Button variant="contained" sx={{marginTop:"2rem"}}>Bekijk het project op GitHub</Button>
                     </Link>
                     : <></>
                     }
