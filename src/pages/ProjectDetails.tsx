@@ -50,7 +50,7 @@ useEffect(() => {
                     <></>
                     }
                     {proj.link ? 
-                    <Link href={proj.link}>
+                    <Link href={"https://"+proj.link}>
                     <Button variant="contained" sx={{marginTop:"2rem"}}>Bekijk het project op GitHub</Button>
                     </Link>
                     : <></>

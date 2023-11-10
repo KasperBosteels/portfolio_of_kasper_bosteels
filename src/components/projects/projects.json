@@ -19,7 +19,7 @@
         "image":"theone_quiz_card.png",
         "extraImages":["theone_favorites.png","theone_quiz.png"],
         "details":"Onze groep heeft een webapplicatie gebouwd rond 'The One API', die gegevens levert van de 'The Lord of the Rings'-filmtrilogie. Het plan was om met Express, Node.js, MongoDB en Axios een applicatie te ontwikkelen met een quiz waarbij de gebruiker een reeks citaten kreeg en moest raden uit welke film en van welk personage deze afkomstig waren. Gedurende dit project is de scope verder uitgebreid naar gebruikersaccounts om voortgang en favorieten op te slaan, beveiliging, het ophalen van afbeeldingen van personages van de wiki door middel van een webscraper, een extra lijst voor personages en meer. Uiteraard waren de introductie van nieuwe technologieën noodzakelijk naarmate onze scope groeide.",
-        "link":"https://github.com/GremlinsAP/TheOne",
+        "link":"github.com/GremlinsAP/TheOne",
         "year":"2021-2022",
         "file":""
     },
