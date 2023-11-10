@@ -5,12 +5,22 @@ import { useParams } from "react-router-dom";
 import { project } from "./Projects";
 import { Button, ImageList, ImageListItem, Paper, Typography } from "@mui/material";
 import Link from "@mui/material/Link"
-
+import Backdrop from '@mui/material/Backdrop';
 
 const ProjectDetails = () => {
 const [projects] = useState<project[]>(require("../components/projects/projects.json") ?? []);
 const id = useParams().id;
 const [proj, setProj] = useState<project>();
+const [openimg, setOpenimg] = useState<string|null>();
+
+const openimgHandler = (img:string) => {
+    setOpenimg(img);
+}
+
+const closeimgHandler = () => {
+    setOpenimg(null);
+}
+
 useEffect(() => {
     setProj(projects.filter(x=>x.id === id)[0]?? undefined);
 }, [id,projects]);
@@ -57,22 +67,24 @@ useEffect(() => {
                     
                     </Paper>
                 </Box>
-                <Box className="Project_images_container" sx={{display:{md:"none", lg:"flex"}}} >
+                <Box className="Project_images_container" sx={{display:{md:"none", lg:"inline-flex"}}} >
                     <ImageList
                         sx={{minWidth:500, width:"100%", height:"fit-content", padding:"1rem"}}
                         variant="quilted"
                         cols={2}
-                        rowHeight={300}
-                        gap={7}                    
+                        rowHeight="auto"
+                        gap={1}               
                         >
                         {
                             proj.image ?
                             <ImageListItem key={proj.image} cols={1} rows={1}>
                                 <img 
+                                    key={proj.image+"_image"}
                                     className="Project_image"
-                                    src={"/"+proj.image}
+                                    src={"/"+proj.image+"?w=300&fit=crop&aut"}
                                     loading="lazy"
                                     alt={"/"+proj.image}
+                                    onClick={()=>openimgHandler("/"+proj.image)}
                                     />
                             </ImageListItem>
                             :
@@ -87,6 +99,7 @@ useEffect(() => {
                                     src={"/"+img}
                                     loading="lazy"
                                     alt={"/"+img}
+                                    onClick={()=>openimgHandler("/"+img)}
                                     />
                             </ImageListItem>
                             )
@@ -103,6 +116,20 @@ useEffect(() => {
                 )
 
        }
+       {
+        openimg != null ?
+       <Backdrop
+        sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        open={openimg !== null}
+        onClick={closeimgHandler}>
+        <img className="selectedImage"
+            src={openimg}
+            loading="lazy"
+            alt={openimg}
+            style={{maxWidth:"90%", maxHeight:"90%"}}
+            />       
+        </Backdrop> : <></>
+        }
     </Box>
     );
 

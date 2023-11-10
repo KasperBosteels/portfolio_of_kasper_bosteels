@@ -52,5 +52,16 @@
         "year":"2022",
         "file":"",
         "link":"KasperBosteels/Advent-of-code-2022"
+    },
+    {
+        "id":"open_ai_app",
+        "title":"Image Generator App",
+        "tags":["React-native", "expo", "Open ai", "typescript", "html, css"],
+        "year":2023,
+        "file":"",
+        "link":"JannickOste/image-generator-app",
+        "description":"Dit project maakte deel uit van mijn graduaats opleiding. Deze opdracht heb ik voltooid in samenwerking met mijn collega student Jannick Oste. De Applicatie maakt gebruik van de Open AI API om afbeeldingen te genereren op basis van een tekst die de gebruiker ingeeft. De applicatie is gebouwd met React Native en Expo. Voor dit project lag mijn focus op het Front-end gedeelte en user interface. Mijn collega heeft zich vooral bezig gehouden met de api-calls en het opslagen van de files.",
+        "extraImages":["ImageGenerator_3.png","ImageGenerator_2.png","ImageGenerator.png"],
+        "image":"ImageGenerator_banner.png"
     }
 ]

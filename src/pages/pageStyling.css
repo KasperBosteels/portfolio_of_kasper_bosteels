@@ -40,18 +40,28 @@
 }
 
 .Project_images_container {
-    padding:1rem;
     justify-content: center;
     align-content: center;
     margin: auto;
     min-width:40%;
     flex-direction: column;
     height: fit-content;
+    overflow: visible;
+    z-index: 999;
+    transition-duration: 0.3s;
+    transition-property: all;
+    transition-timing-function: ease;
 }
 
 .Project_image {
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
+    z-index: -1;
+    transition-duration: 0.3s;
+    transition-property: all;
+    transition-timing-function: ease;
+    transform: scale(0.7);
 }
+
 
 .Home_page_container {
     width: 100%;
