@@ -29,7 +29,7 @@ const Project = ({proj}:props) => {
             <CardActions sx={{marginTop:"auto", height:"fit-content"}}>
             <Link to={proj.id}><Button variant="outlined" size="small" color="secondary">Details </Button></Link>
             {
-                proj.link ? <Link to={"https://github.com/"+proj.link} style={{ textDecoration:"none"}}><IconButton href={proj.link}><GitHubIcon/></IconButton></Link> : <></>
+                proj.link ? <a href={"https://github.com/"+proj.link} style={{ textDecoration:"none"}}><IconButton href={"https://github.com/"+proj.link}><GitHubIcon/></IconButton></a> : <></>
             }
             </CardActions>
     </Card>
