@@ -11,7 +11,7 @@ const ProjectDetails = () => {
 const [projects] = useState<project[]>(require("../components/projects/projects.json") ?? []);
 const id = useParams().id;
 const [proj, setProj] = useState<project>();
-let link:string = `https://github.com/${proj?.link}`;
+const link:string = "https://github.com/";
 /*
 const getProject =async () => {
     let project = require("../components/projects/projects.json").find((x:project) => x.id === id)?? [];
@@ -51,7 +51,7 @@ useEffect(() => {
                     <></>
                     }
                     {proj.link ? 
-                    <Link href={link}>
+                    <Link href={link+proj.link}>
                     <Button variant="outlined" sx={{marginTop:"2rem"}}>Bekijk het project op GitHub</Button>
                     </Link>
                     : <></>
