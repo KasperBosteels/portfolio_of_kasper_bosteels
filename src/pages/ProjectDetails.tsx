@@ -11,13 +11,6 @@ const ProjectDetails = () => {
 const [projects] = useState<project[]>(require("../components/projects/projects.json") ?? []);
 const id = useParams().id;
 const [proj, setProj] = useState<project>();
-const link:string = "";
-/*
-const getProject =async () => {
-    let project = require("../components/projects/projects.json").find((x:project) => x.id === id)?? [];
-    return project;
-}
-*/
 useEffect(() => {
     setProj(projects.filter(x=>x.id === id)[0]?? undefined);
 }, [id,projects]);
@@ -46,8 +39,11 @@ useEffect(() => {
                     <Typography variant="body1" component="div" marginTop=".5rem">
                     {proj.details}
                     </Typography>
+                    <Typography variant="h5" component="div" marginTop="2rem">
+                        Downloadable Files
+                    </Typography>
                     <Link href="https://github.com/GremlinsAP/TheOne">
-                    <Button variant="outlined" sx={{marginTop:"2rem"}}>test het project op GitHub</Button>
+                    <Button variant="outlined" sx={{marginTop:"2rem"}}></Button>
                     </Link>
                     </>
                     :
