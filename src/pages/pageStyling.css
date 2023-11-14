@@ -51,6 +51,8 @@
     transition-duration: 0.3s;
     transition-property: all;
     transition-timing-function: ease;
+
+
 }
 
 .Project_image {
@@ -59,7 +61,7 @@
     transition-duration: 0.3s;
     transition-property: all;
     transition-timing-function: ease;
-    transform: scale(0.7);
+    transform: scale(0.95);
 }
 
 

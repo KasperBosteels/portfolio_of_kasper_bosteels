@@ -75,21 +75,7 @@ useEffect(() => {
                         rowHeight="auto"
                         gap={1}               
                         >
-                        {
-                            proj.image ?
-                            <ImageListItem key={proj.image} cols={1} rows={1}>
-                                <img 
-                                    key={proj.image+"_image"}
-                                    className="Project_image"
-                                    src={"/"+proj.image+"?w=300&fit=crop&aut"}
-                                    loading="lazy"
-                                    alt={"/"+proj.image}
-                                    onClick={()=>openimgHandler("/"+proj.image)}
-                                    />
-                            </ImageListItem>
-                            :
-                            <></>
-                        }
+                        
                         {
                             proj.extraImages ?
                             proj.extraImages.map((img,i)=>
