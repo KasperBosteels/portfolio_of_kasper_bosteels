@@ -70,10 +70,6 @@ function App() {
           element: <Contact/>
         },
         {
-          path:"Blog",
-          element:<Blog/>
-        },
-        {
           path:"Projects",
           element:<Projects/>,
         },

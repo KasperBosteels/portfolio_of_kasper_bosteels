@@ -33,7 +33,6 @@ const VerticalMenu = ({open,anchor,closeMenu,setopen}:VerticalMenuProps)=>{
                     MenuListProps={{'aria-labelledby':'menuButton'}}>
                         <NavLink to="/" style={{ textDecoration:"none"}}><MenuItem><Typography color="text.primary">Home</Typography></MenuItem></NavLink>
                         <NavLink to="Contact" style={{ textDecoration:"none"}}><MenuItem><Typography color="text.primary">Contact</Typography></MenuItem></NavLink>
-                        <NavLink to="Blog" style={{textDecoration:"none"}}><MenuItem><Typography color="text.primary">Blog</Typography></MenuItem></NavLink>
                         <NavLink to="Projects" style={{textDecoration:"none"}}><MenuItem><Typography color="text.primary">Projects</Typography></MenuItem></NavLink>
                     </Menu>
                 </Box>

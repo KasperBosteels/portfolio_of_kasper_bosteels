@@ -53,7 +53,6 @@ Kasper Bosteels
            </Box>
         </Box>
             <FrontEnd/>
-            <LatestBlogs/>
         </Grid>
         </Box>
     )
